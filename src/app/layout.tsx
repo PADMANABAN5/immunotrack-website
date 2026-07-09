@@ -13,7 +13,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
        <body className={avenir.className}>
         <Header />
-        {children}
+        <main className="pt-24">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

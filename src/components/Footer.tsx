@@ -18,11 +18,10 @@ export default function Footer() {
           <div className="footer-brand footer-divider">
             <Link href="/">
               <Image
-                src={footerLogo}
+                src="/images/logo.jpg"
                 alt="ImmunoTrack"
-                width={250}
-                height={80}
-                priority
+                width={280}
+                height={85}
                 className="footer-logo"
               />
             </Link>

@@ -54,7 +54,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: transparent;
+  background-color: #ffffff;
   padding: 0; /* Remove outer floating padding */
   transition: all 0.3s ease;
 }
@@ -62,13 +62,13 @@ body {
 .header-container {
   max-width: 100%; /* Full bleed width */
   margin: 0;
-  background-color: rgba(2, 18, 79, 0.92); /* ImmunoTrack dark navy with opacity */
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafb 100%);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Bottom boundary line only */
+  border-bottom: 2px solid rgba(27, 184, 199, 0.2);
   border-radius: 0; /* Remove floating rounded corners */
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 32px rgba(2, 18, 79, 0.12);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -78,7 +78,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 24px; /* Reduced vertical padding for lower height */
+  padding: 12px 32px; /* Enhanced vertical and horizontal padding */
+  gap: 32px; /* Better spacing between elements */
 }
 
 /* .header-logo {
@@ -91,37 +92,42 @@ body {
 }
 
 .nav-link {
-  color: #cfd4e6; /* Soft blue-gray for normal state */
+  color: #02124f; /* Dark navy text for a white header */
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
-  padding: 6px 12px; /* Reduced link padding */
-  border-radius: 6px;
+  padding: 10px 18px; /* Increased padding */
+  border-radius: 10px;
   position: relative;
-  transition: all 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(27, 184, 199, 0.12); /* Subtle teal background */
+  box-shadow: 0px 2px 8px rgba(27, 184, 199, 0.08);
 }
 
 .nav-link:hover {
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #1bb8c7;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(27, 184, 199, 0.2);
 }
 
 .nav-link--active {
-  color: #2dd6e5; /* Brand Cyan */
+  color: #ffffff; /* White text for active */
   font-weight: 600;
-  background-color: rgba(45, 214, 229, 0.06);
+  background-color: #1bb8c7; /* Solid teal background */
+  box-shadow: 0px 4px 16px rgba(27, 184, 199, 0.3);
 }
 
 .nav-link--active::after {
   content: "";
   position: absolute;
-  left: 12px;
-  right: 12px;
+  left: 0;
+  right: 0;
   bottom: 0px;
-  height: 2px;
-  background: #2dd6e5;
+  height: 0px;
+  background: transparent;
   border-radius: 2px;
-  box-shadow: 0 0 8px rgba(45, 214, 229, 0.6);
+  box-shadow: none;
 }
 
 .desktop-cta {
@@ -129,35 +135,35 @@ body {
 }
 
 .cta-btn {
-  background: linear-gradient(135deg, #2dd6e5 0%, #1bb8c7 100%);
-  color: #02124f; /* High contrast dark navy text */
-  font-weight: 500;
-  font-size: 14px; /* Sleeker text size */
-  padding: 8px 18px; /* Compact padding */
+  background: linear-gradient(135deg, #02124f 0%, #0b2e7a 100%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 28px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0px 4px 12px rgba(45, 214, 229, 0.25);
+  box-shadow: 0px 6px 20px rgba(2, 18, 79, 0.2);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .cta-btn:hover {
-  background: linear-gradient(135deg, #3cf0ff 0%, #20cedd 100%);
-  transform: translateY(-1px);
-  box-shadow: 0px 6px 16px rgba(45, 214, 229, 0.35);
+  background: linear-gradient(135deg, #0b2e7a 0%, #132a5e 100%);
+  transform: translateY(-3px);
+  box-shadow: 0px 12px 28px rgba(2, 18, 79, 0.25);
 }
 
 .cta-btn:active {
-  transform: translateY(0);
-  box-shadow: 0px 2px 8px rgba(45, 214, 229, 0.25);
+  transform: translateY(-1px);
+  box-shadow: 0px 6px 16px rgba(2, 18, 79, 0.2);
 }
 
 .mobile-menu-btn {
   font-size: 28px;
-  color: #ffffff;
+  color: #02124f;
   background: none;
   border: none;
   cursor: pointer;
@@ -168,57 +174,59 @@ body {
 }
 
 .mobile-menu-btn:hover {
-  color: #2dd6e5;
+  color: #1bb8c7;
 }
 
 .mobile-menu {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(2, 18, 79, 0.12);
   padding: 16px 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background-color: rgba(2, 18, 79, 0.95);
+  background-color: #ffffff;
 }
 
 .mobile-nav-link {
-  color: #cfd4e6;
+  color: #02124f;
   font-weight: 500;
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 10px 16px;
   border-radius: 8px;
   transition: all 0.25s ease;
+  background-color: rgba(27, 184, 199, 0.12);
 }
 
 .mobile-nav-link:hover {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.05);
+  color: #02124f;
+  background-color: rgba(27, 184, 199, 0.25);
 }
 
 .mobile-nav-link.nav-link--active {
-  color: #2dd6e5;
+  color: #ffffff;
   font-weight: 600;
-  background-color: rgba(45, 214, 229, 0.06);
-  border-left: 3px solid #2dd6e5;
-  border-radius: 0 8px 8px 0;
+  background-color: #1bb8c7;
+  border-left: none;
+  border-radius: 8px;
 }
 
 .mobile-cta-btn {
   margin-top: 8px;
-  background: linear-gradient(135deg, #2dd6e5 0%, #1bb8c7 100%);
-  color: #02124f;
+  background: linear-gradient(135deg, #02124f 0%, #0b2e7a 100%);
+  color: #ffffff;
   font-weight: 600;
   border: none;
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 12px 24px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(45, 214, 229, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 6px 20px rgba(2, 18, 79, 0.2);
 }
 
 .mobile-cta-btn:hover {
-  background: linear-gradient(135deg, #3cf0ff 0%, #20cedd 100%);
-  box-shadow: 0px 6px 14px rgba(45, 214, 229, 0.3);
+  background: linear-gradient(135deg, #0b2e7a 0%, #132a5e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 24px rgba(2, 18, 79, 0.25);
 }
 .footer {
   background: #02124f;
@@ -232,7 +240,7 @@ body {
 }
 
 .footer-logo {
-  width: 100px;
+  width: 120px;
   height: auto;
   margin-bottom: 20px;
 }
