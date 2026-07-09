@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import "@/assets/styles/clinicians.css";
 
 export const metadata: Metadata = {
@@ -14,17 +15,29 @@ export default function CliniciansPage() {
       {/* ── HERO SECTION ──────────────────────────────────────── */}
       <section className="cl-hero" aria-label="Hero">
         <div className="cl-hero-container">
-          <span className="cl-hero-tag">Built for allergy & immunology</span>
-          <h1 className="cl-hero-title">
-            Remote therapeutic monitoring — finally built for allergy and immunology.
-          </h1>
-          <p className="cl-hero-subtitle">
-            ImmunoTrack gives allergy and immunology practices the tools to monitor patients remotely, qualify for RTM billing, and catch flares before they become ER visits.
-          </p>
-          <div className="cl-hero-actions">
-            <Link href="/contact" className="cl-btn cl-btn-cyan">
-              Request Access
-            </Link>
+          <div className="cl-hero-content">
+            <span className="cl-hero-tag">Built for allergy & immunology</span>
+            <h1 className="cl-hero-title">
+              Remote therapeutic monitoring — finally built for allergy and immunology.
+            </h1>
+            <p className="cl-hero-subtitle">
+              ImmunoTrack gives allergy and immunology practices the tools to monitor patients remotely, qualify for RTM billing, and catch flares before they become ER visits.
+            </p>
+            <div className="cl-hero-actions">
+              <Link href="/contact" className="cl-btn cl-btn-cyan">
+                Request Access
+              </Link>
+            </div>
+          </div>
+          <div className="cl-hero-image">
+            <Image
+              src="/images/clinician-hero-banner.jpeg"
+              alt="Clinician with patient using ImmunoTrack"
+              width={600}
+              height={500}
+              priority
+              className="cl-hero-img"
+            />
           </div>
         </div>
       </section>

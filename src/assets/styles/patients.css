@@ -1,0 +1,214 @@
+/* ============================================================
+   IMMUNOTRACK PATIENTS STYLES  —  patients.css
+   prefix: pt-
+   ============================================================ */
+
+:root {
+  --pt-navy:          #02124f;
+  --pt-navy-mid:      #151a58;
+  --pt-navy-dark:     #010724;
+  --pt-cyan:          #2dd6e5;
+  --pt-cyan-d:        #1bb8c7;
+  --pt-cyan-pale:     rgba(45, 214, 229, 0.06);
+  --pt-cyan-border:   rgba(45, 214, 229, 0.2);
+  --pt-bg-light:      #f8fafc;
+  --pt-border:        #e2e8f0;
+  --pt-text-head:     #151a58;
+  --pt-text-body:     #2b2f5e;
+  --pt-text-muted:    #6b6f9a;
+  --pt-radius:        16px;
+  --pt-radius-lg:     24px;
+  --pt-shadow:        0 10px 30px -10px rgba(2, 18, 79, 0.06);
+  --pt-shadow-lg:     0 20px 40px -15px rgba(2, 18, 79, 0.12);
+}
+
+/* ── LAYOUT WIDTH CONSISTENCY ───────────────────────────── */
+.pt-container,
+.pt-hero-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .pt-container, .pt-hero-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .pt-container, .pt-hero-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .pt-container, .pt-hero-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pt-container, .pt-hero-container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .pt-container, .pt-hero-container {
+    max-width: 1320px;
+  }
+}
+
+/* ── HERO SECTION ────────────────────────────────────────── */
+.pt-hero {
+  position: relative;
+  background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
+              linear-gradient(135deg, var(--pt-navy-mid) 0%, var(--pt-navy) 100%);
+  color: #ffffff;
+  padding: 40px 16px 140px;
+  overflow: hidden;
+}
+
+.pt-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(45, 214, 229, 0.05) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.pt-hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .pt-hero-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+.pt-hero-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 991px) {
+  .pt-hero-content {
+    text-align: center;
+  }
+}
+
+.pt-hero-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--pt-cyan);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  align-self: flex-start;
+}
+
+@media (max-width: 991px) {
+  .pt-hero-tag {
+    align-self: center;
+  }
+}
+
+.pt-hero-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.pt-hero-subtitle {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin-bottom: 40px;
+}
+
+.pt-hero-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.pt-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* ── BUTTONS ────────────────────────────────────────────── */
+.pt-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .pt-hero-actions {
+    justify-content: center;
+  }
+}
+
+.pt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.pt-btn-cyan {
+  background: var(--pt-cyan);
+  color: var(--pt-navy);
+}
+
+.pt-btn-cyan:hover {
+  background: #3cf0ff;
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 20px rgba(45, 214, 229, 0.4);
+}
+
+.pt-btn-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.pt-btn-outline:hover {
+  background: #ffffff;
+  color: var(--pt-navy);
+  border-color: #ffffff;
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}

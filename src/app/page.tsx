@@ -48,8 +48,8 @@ export default function Page() {
           <div className="hm-hero-visual">
             <div className="hm-hero-visual-inner">
               <Image
-                src="/clinician-dashboard-mockup.png"
-                alt="ImmunoTrack Clinician Dashboard Mockup"
+                src="/images/home-screen.jpeg"
+                alt="ImmunoTrack AI-Powered Allergy and Asthma Monitoring"
                 width={580}
                 height={380}
                 priority

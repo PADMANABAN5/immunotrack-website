@@ -39,44 +39,54 @@
    ============================================================ */
 .ts-hero {
   position: relative;
-  min-height: 420px;
-  display: flex;
-  align-items: center;
+  background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
+              linear-gradient(135deg, var(--ts-navy-mid) 0%, var(--ts-navy) 100%);
+  color: #ffffff;
+  padding: 40px 16px 140px;
   overflow: hidden;
-  background-image: url('/terms-hero-bg.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .ts-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(2, 18, 79, 0.92) 0%,
-      rgba(9, 21, 87, 0.82) 60%,
-      rgba(2, 18, 79, 0.70) 100%
-    ),
-    radial-gradient(ellipse 60% 80% at 20% 50%, rgba(45, 214, 229, 0.10) 0%, transparent 70%);
+  background-image: radial-gradient(rgba(45, 214, 229, 0.05) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+  opacity: 0.7;
   pointer-events: none;
-  z-index: 0;
 }
 
-.ts-hero-inner {
+.ts-hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 100%;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 40px 16px 48px;
-  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+@media (min-width: 992px) {
+  .ts-hero-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0;
+  }
 }
 
 .ts-hero-copy {
-  max-width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 991px) {
+  .ts-hero-copy {
+    text-align: center;
+  }
 }
 
 .ts-hero-label {
@@ -86,10 +96,17 @@
   text-transform: uppercase;
   color: var(--ts-cyan);
   margin: 0 0 20px;
+  align-self: flex-start;
+}
+
+@media (max-width: 991px) {
+  .ts-hero-label {
+    align-self: center;
+  }
 }
 
 .ts-hero-title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 800;
   color: #ffffff;
   line-height: 1.1;
@@ -101,8 +118,14 @@
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.78);
   line-height: 1.75;
-  margin: 0 0 28px;
-  max-width: 520px;
+  margin: 0 0 16px;
+}
+
+.ts-hero-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.65;
+  margin: 0 0 24px;
 }
 
 .ts-hero-meta {
@@ -115,6 +138,31 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
   padding: 8px 16px;
+  align-self: flex-start;
+}
+
+@media (max-width: 991px) {
+  .ts-hero-meta {
+    align-self: center;
+  }
+}
+
+.ts-hero-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.ts-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 /* ============================================================
@@ -122,13 +170,16 @@
    ============================================================ */
 .ts-layout {
   width: 100%;
-  margin: 0 auto;
-  padding: 24px 16px 48px;
+  max-width: 1320px;
+  margin: -60px auto 0;
+  padding: 60px 16px 48px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   align-items: start;
+  position: relative;
+  z-index: 10;
 }
 
 /* ── Main content column ───────────────────────────────── */

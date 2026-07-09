@@ -4,32 +4,50 @@
    ============================================================ */
 
 :root {
-  --hm-navy:          #02124f;
-  --hm-navy-mid:      #091557;
-  --hm-navy-dark:     #010a30;
-  --hm-cyan:          #2dd6e5;
-  --hm-cyan-d:        #1ab8c8;
-  --hm-cyan-pale:     rgba(45, 214, 229, 0.06);
-  --hm-cyan-border:   rgba(45, 214, 229, 0.25);
-  --hm-bg-light:      #f8fafc;
-  --hm-border:        #e2e8f0;
-  --hm-text-head:     #0f172a;
-  --hm-text-body:     #334155;
-  --hm-text-muted:    #64748b;
-  --hm-radius:        16px;
-  --hm-radius-lg:     24px;
-  --hm-shadow:        0 10px 30px -10px rgba(2, 18, 79, 0.08);
-  --hm-shadow-lg:     0 20px 40px -15px rgba(2, 18, 79, 0.15);
+  --hm-navy: #02124f;
+  --hm-navy-mid: #091557;
+  --hm-navy-dark: #010a30;
+  --hm-cyan: #2dd6e5;
+  --hm-cyan-d: #1ab8c8;
+  --hm-cyan-pale: rgba(45, 214, 229, 0.06);
+  --hm-cyan-border: rgba(45, 214, 229, 0.25);
+  --hm-bg-light: #f8fafc;
+  --hm-border: #e2e8f0;
+  --hm-text-head: #0f172a;
+  --hm-text-body: #334155;
+  --hm-text-muted: #64748b;
+  --hm-radius: 16px;
+  --hm-radius-lg: 24px;
+  --hm-shadow: 0 10px 30px -10px rgba(2, 18, 79, 0.08);
+  --hm-shadow-lg: 0 20px 40px -15px rgba(2, 18, 79, 0.15);
 }
 
 /* ── Hero Section ────────────────────────────────────────── */
 .hm-hero {
   position: relative;
   background: radial-gradient(circle at 80% 20%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
-              linear-gradient(135deg, var(--hm-navy-mid) 0%, var(--hm-navy-dark) 100%);
+    linear-gradient(135deg, var(--hm-navy-mid) 0%, var(--hm-navy-dark) 100%);
   color: #ffffff;
-  padding: 80px 16px 100px;
+  padding: 60px 16px;
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .hm-hero {
+    padding: 0;
+    height: 720px;
+    background-color: #08134a;
+    background-image:
+      linear-gradient(90deg,
+        rgba(8, 19, 74, 1) 0%,
+        rgba(8, 19, 74, .92) 35%,
+        rgba(8, 19, 74, .55) 55%,
+        rgba(8, 19, 74, 0) 72%),
+      url('/images/home-screen.jpeg');
+    background-position: left top, right -150px top;
+    background-size: auto, cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .hm-hero::before {
@@ -47,7 +65,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 48px;
+  gap: 40px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -56,6 +74,10 @@
 @media (min-width: 992px) {
   .hm-hero-container {
     grid-template-columns: 1.1fr 0.9fr;
+    gap: 0;
+    padding: 0 24px;
+    height: 720px;
+    align-items: stretch;
   }
 }
 
@@ -63,6 +85,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+@media (min-width: 992px) {
+  .hm-hero-content {
+    justify-content: center;
+    height: 100%;
+    padding-right: 48px;
+  }
 }
 
 .hm-hero-pill {
@@ -77,14 +107,14 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--hm-cyan);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .hm-hero-title {
   font-size: clamp(1.8rem, 3.2vw, 2.5rem);
   font-weight: 800;
   line-height: 1.15;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   letter-spacing: -0.02em;
 }
 
@@ -92,7 +122,7 @@
   font-size: clamp(1rem, 1.5vw, 1.15rem);
   color: #cbd5e1;
   line-height: 1.6;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 .hm-hero-actions {
@@ -143,17 +173,22 @@
   display: flex;
   justify-content: center;
   position: relative;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .hm-hero-visual {
+    display: none;
+  }
 }
 
 .hm-hero-visual-inner {
   position: relative;
   width: 100%;
   max-width: 580px;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
-              0 0 40px rgba(45, 214, 229, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* ── Trust / Compliance Bar ────────────────────────────── */
@@ -303,7 +338,8 @@
 
 .hm-pillar-card {
   background: #ffffff;
-  border: 1px solid rgba(45, 214, 229, 0.2); /* Subtle brand cyan tint in normal view */
+  border: 1px solid rgba(45, 214, 229, 0.2);
+  /* Subtle brand cyan tint in normal view */
   border-radius: 20px;
   padding: 40px;
   box-shadow: 0 12px 30px -10px rgba(2, 18, 79, 0.06);
@@ -323,12 +359,14 @@
   width: 100%;
   height: 4px;
   background: linear-gradient(90deg, var(--hm-cyan) 0%, var(--hm-cyan-d) 100%);
-  opacity: 1; /* Top gradient bar visible in normal view */
+  opacity: 1;
+  /* Top gradient bar visible in normal view */
 }
 
 .hm-pillar-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(45, 214, 229, 0.4); /* Highlight border on hover */
+  border-color: rgba(45, 214, 229, 0.4);
+  /* Highlight border on hover */
   box-shadow: 0 25px 50px -12px rgba(2, 18, 79, 0.12), 0 0 1px rgba(2, 18, 79, 0.05);
 }
 
@@ -336,7 +374,8 @@
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--hm-cyan) 0%, var(--hm-cyan-d) 100%); /* Gradient wrap in normal view */
+  background: linear-gradient(135deg, var(--hm-cyan) 0%, var(--hm-cyan-d) 100%);
+  /* Gradient wrap in normal view */
   border: none;
   display: flex;
   align-items: center;
@@ -352,7 +391,8 @@
 }
 
 .hm-pillar-icon {
-  filter: brightness(0) saturate(100%) invert(100%); /* White icon in normal view */
+  filter: brightness(0) saturate(100%) invert(100%);
+  /* White icon in normal view */
   transition: all 0.3s ease;
 }
 
@@ -768,6 +808,7 @@
 }
 
 @media (min-width: 576px) {
+
   .hm-hero-container,
   .hm-pillars-grid,
   .hm-steps-grid,
@@ -778,6 +819,7 @@
 }
 
 @media (min-width: 768px) {
+
   .hm-hero-container,
   .hm-pillars-grid,
   .hm-steps-grid,
@@ -788,6 +830,7 @@
 }
 
 @media (min-width: 992px) {
+
   .hm-hero-container,
   .hm-pillars-grid,
   .hm-steps-grid,
@@ -798,6 +841,7 @@
 }
 
 @media (min-width: 1200px) {
+
   .hm-hero-container,
   .hm-pillars-grid,
   .hm-steps-grid,
@@ -808,6 +852,7 @@
 }
 
 @media (min-width: 1400px) {
+
   .hm-hero-container,
   .hm-pillars-grid,
   .hm-steps-grid,

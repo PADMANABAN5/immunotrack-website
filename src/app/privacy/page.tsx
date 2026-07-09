@@ -70,7 +70,7 @@ export default function PrivacyPage() {
           HERO
           ════════════════════════════════════════════ */}
       <section className="pp-hero" aria-label="Privacy Policy hero">
-        <div className="pp-hero-inner">
+        <div className="pp-hero-container">
           <div className="pp-hero-copy">
             <p className="pp-hero-label">PRIVACY POLICY</p>
             <h1 className="pp-hero-title">Your privacy is our priority.</h1>
@@ -90,6 +90,16 @@ export default function PrivacyPage() {
               </svg>
               Effective Date: April 1, 2026 &nbsp;·&nbsp; Version 1.1 &nbsp;·&nbsp; Last Updated: April 2026
             </div>
+          </div>
+          <div className="pp-hero-image">
+            <Image
+              src="/images/privacy-policy.jpeg"
+              alt="Privacy and data security"
+              width={600}
+              height={500}
+              priority
+              className="pp-hero-img"
+            />
           </div>
         </div>
       </section>

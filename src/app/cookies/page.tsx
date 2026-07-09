@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import "@/assets/styles/cookies.css";
 import ContactSection from "@/components/ContactSection";
 
@@ -24,17 +25,37 @@ export default function CookiesPage() {
     <main className="ck-page">
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className="ck-hero" aria-label="Cookie Policy Hero">
-        <div className="ck-hero-inner">
-          <h1 className="ck-hero-title">
-            Cookie <span>Policy</span>
-          </h1>
-          {/* <p className="ck-hero-subtitle">
-           ImmunoTrack Inc. and Aman Medical Consulting LLC  ·  Atlanta, Georgia
-          </p>
-          <p className="ck-hero-subtitle">Questions about this policy: privacy@immunotrack.ai</p>
-          <p className="ck-hero-meta">
-            Version&nbsp;1.0 &bull; Effective May&nbsp;1,&nbsp;2026
-          </p> */}
+        <div className="ck-hero-container">
+          <div className="ck-hero-content">
+            <p className="ck-hero-label">COOKIE POLICY</p>
+            <h1 className="ck-hero-title">
+              How we use cookies to serve you better.
+            </h1>
+            <p className="ck-hero-subtitle">
+              ImmunoTrack uses cookies and similar technologies to provide a secure, reliable, and personalized experience. This policy explains what we use and how you can manage them.
+            </p>
+            <div className="ck-hero-meta">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                strokeLinejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              Version 1.0 · Effective May 1, 2026
+            </div>
+          </div>
+          <div className="ck-hero-image">
+            <Image
+              src="/images/cookie-policy.jpeg"
+              alt="Cookie and data privacy policy"
+              width={600}
+              height={500}
+              priority
+              className="ck-hero-img"
+            />
+          </div>
         </div>
       </section>
 

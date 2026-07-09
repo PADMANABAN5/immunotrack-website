@@ -1,7 +1,7 @@
 "use client";
 
-
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import "@/assets/styles/support.css";
 
@@ -112,12 +112,35 @@ export default function SupportPage() {
           §5.1  HERO / PAGE HEADER
           ════════════════════════════════════════════════════ */}
       <section className="sp-hero" aria-label="Help and Support hero">
-        <div className="sp-hero-inner">
-          <p className="sp-hero-label">HELP &amp; SUPPORT</p>
-          <h1 className="sp-hero-title">How can we help?</h1>
-          <p className="sp-hero-subtitle">
-            Find answers to common questions or reach our support team directly.
-          </p>
+        <div className="sp-hero-container">
+          <div className="sp-hero-content">
+            <p className="sp-hero-label">HELP &amp; SUPPORT</p>
+            <h1 className="sp-hero-title">How can we help?</h1>
+            <p className="sp-hero-subtitle">
+              Our support team is here to help with account access, onboarding, technical support, and general questions. Reach out and we'll get back to you as soon as possible.
+            </p>
+            <div className="sp-hero-actions">
+              <Link href="/contact" className="sp-btn sp-btn-cyan">
+                Contact Support
+              </Link>
+              <Link href="/contact" className="sp-btn sp-btn-outline">
+                Request Access
+              </Link>
+            </div>
+            <p className="sp-hero-sla">
+              ⓘ We typically respond within 1 business day.
+            </p>
+          </div>
+          <div className="sp-hero-image">
+            <Image
+              src="/images/help-and-support.jpeg"
+              alt="Help and support team"
+              width={600}
+              height={500}
+              priority
+              className="sp-hero-img"
+            />
+          </div>
         </div>
       </section>
 

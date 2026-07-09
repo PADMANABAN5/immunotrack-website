@@ -1,0 +1,272 @@
+/* ============================================================
+   IMMUNOTRACK CONTACT PAGE STYLES  —  contact.css
+   prefix: ct-
+   ============================================================ */
+
+:root {
+  --ct-navy:          #02124f;
+  --ct-navy-mid:      #151a58;
+  --ct-navy-dark:     #010724;
+  --ct-cyan:          #2dd6e5;
+  --ct-cyan-d:        #1bb8c7;
+  --ct-cyan-pale:     rgba(45, 214, 229, 0.06);
+  --ct-cyan-border:   rgba(45, 214, 229, 0.2);
+  --ct-bg-light:      #f8fafc;
+  --ct-border:        #e2e8f0;
+  --ct-text-head:     #151a58;
+  --ct-text-body:     #2b2f5e;
+  --ct-text-muted:    #6b6f9a;
+  --ct-radius:        16px;
+  --ct-radius-lg:     24px;
+  --ct-shadow:        0 10px 30px -10px rgba(2, 18, 79, 0.06);
+  --ct-shadow-lg:     0 20px 40px -15px rgba(2, 18, 79, 0.12);
+}
+
+/* ── LAYOUT WIDTH CONSISTENCY ───────────────────────────── */
+.ct-hero-container,
+.ct-contact-container {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* ── HERO SECTION ────────────────────────────────────────── */
+.ct-hero {
+  position: relative;
+  background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
+              linear-gradient(135deg, var(--ct-navy-mid) 0%, var(--ct-navy) 100%);
+  color: #ffffff;
+  padding: 40px 16px 140px;
+  overflow: hidden;
+}
+
+.ct-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(45, 214, 229, 0.05) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.ct-hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 16px;
+}
+
+@media (min-width: 992px) {
+  .ct-hero-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0;
+  }
+}
+
+.ct-hero-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 991px) {
+  .ct-hero-content {
+    text-align: center;
+  }
+}
+
+.ct-hero-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--ct-cyan);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  align-self: flex-start;
+}
+
+@media (max-width: 991px) {
+  .ct-hero-tag {
+    align-self: center;
+  }
+}
+
+.ct-hero-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.ct-hero-subtitle {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin-bottom: 40px;
+}
+
+.ct-hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .ct-hero-actions {
+    justify-content: center;
+  }
+}
+
+.ct-hero-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.ct-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* ── BUTTONS ────────────────────────────────────────────── */
+.ct-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.ct-btn-cyan {
+  background: var(--ct-cyan);
+  color: var(--ct-navy);
+}
+
+.ct-btn-cyan:hover {
+  background: #3cf0ff;
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 20px rgba(45, 214, 229, 0.4);
+}
+
+/* ── CONTACT FORM SECTION ────────────────────────────────── */
+.ct-contact {
+  background: var(--ct-bg-light);
+  padding: 80px 16px;
+}
+
+.ct-contact-container {
+  padding: 0 16px;
+}
+
+.ct-contact-header {
+  max-width: 600px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.ct-contact-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--ct-text-head);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.ct-contact-subtitle {
+  font-size: 1.05rem;
+  color: var(--ct-text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── FORM STYLES ────────────────────────────────────────── */
+.ct-form {
+  background: #ffffff;
+  border-radius: var(--ct-radius-lg);
+  padding: 40px 24px;
+  box-shadow: var(--ct-shadow-lg);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ct-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .ct-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ct-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.ct-form-group-full {
+  grid-column: 1 / -1;
+}
+
+.ct-form-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ct-text-head);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.ct-form-input,
+.ct-form-textarea {
+  padding: 12px 16px;
+  border: 1.5px solid var(--ct-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--ct-text-body);
+  transition: all 0.25s ease;
+  background: #ffffff;
+}
+
+.ct-form-input:focus,
+.ct-form-textarea:focus {
+  outline: none;
+  border-color: var(--ct-cyan);
+  box-shadow: 0 0 0 3px var(--ct-cyan-pale);
+}
+
+.ct-form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.ct-form-input::placeholder,
+.ct-form-textarea::placeholder {
+  color: var(--ct-text-muted);
+}

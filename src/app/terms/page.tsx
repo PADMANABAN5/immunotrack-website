@@ -59,12 +59,15 @@ export default function TermsPage() {
     <main className="ts-page" id="terms-page">
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className="ts-hero" aria-label="Terms of Service hero">
-        <div className="ts-hero-inner">
+        <div className="ts-hero-container">
           <div className="ts-hero-copy">
             <p className="ts-hero-label">LEGAL DOCUMENT</p>
             <h1 className="ts-hero-title">Terms of Service</h1>
             <p className="ts-hero-subtitle">
               ImmunoTrack Patient App · Effective May 1, 2026
+            </p>
+            <p className="ts-hero-description">
+              These Terms of Service govern your access to and use of the ImmunoTrack platform, including our mobile applications, web dashboard, and related services.
             </p>
             <div className="ts-hero-meta">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -77,6 +80,16 @@ export default function TermsPage() {
               </svg>
               Version 1.1 — June 2026 &nbsp;·&nbsp; ImmunoTrack Inc.
             </div>
+          </div>
+          <div className="ts-hero-image">
+            <Image
+              src="/images/terms-of-service.jpg"
+              alt="Terms of Service compliance"
+              width={600}
+              height={500}
+              priority
+              className="ts-hero-img"
+            />
           </div>
         </div>
       </section>
