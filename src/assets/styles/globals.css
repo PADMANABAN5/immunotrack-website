@@ -243,6 +243,11 @@ body {
   width: 120px;
   height: auto;
   margin-bottom: 20px;
+  transition: transform var(--pui-dur, 320ms) var(--pui-ease-out, ease);
+}
+
+.footer-brand a:hover .footer-logo {
+  transform: scale(1.04);
 }
 
 /* =====================
@@ -253,6 +258,20 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 40px;
+  align-items: start;
+}
+
+/* CONTACT column — distinct floating glass card, matching the header's
+   premium glass treatment. Targets the last (contact) column only; the
+   other three columns keep their plain layout. */
+.footer-top > .footer-column:last-child {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(45, 214, 229, 0.16);
+  border-radius: 20px;
+  padding: 24px;
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  box-shadow: 0 20px 40px -20px rgba(2, 18, 79, 0.4);
 }
 
 .footer-brand h2 {
@@ -293,10 +312,19 @@ body {
 .footer a {
   color: #fff;
   text-decoration: none;
+  background-image: linear-gradient(#2fd6e5, #2fd6e5);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  padding-bottom: 2px;
+  transition:
+    color var(--pui-dur, 320ms) var(--pui-ease-out, ease),
+    background-size var(--pui-dur, 320ms) var(--pui-ease-out, ease);
 }
 
 .footer a:hover {
   color: #2fd6e5;
+  background-size: 100% 1px;
 }
 
 /* =====================
@@ -308,17 +336,39 @@ body {
   align-items: flex-start;
   gap: 15px;
   margin-bottom: 25px;
+  padding: 8px;
+  margin-left: -8px;
+  border-radius: 14px;
+  transition:
+    background-color var(--pui-dur, 320ms) var(--pui-ease-out, ease),
+    transform var(--pui-dur, 320ms) var(--pui-ease-out, ease);
+}
+
+.support-item:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: translateX(2px);
 }
 
 .support-icon {
   width: 55px;
   height: 55px;
-  border: 2px solid #2dd6e6;
+  border: 1px solid rgba(45, 214, 230, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  transition:
+    border-color var(--pui-dur, 320ms) var(--pui-ease-out, ease),
+    box-shadow var(--pui-dur, 320ms) var(--pui-ease-out, ease);
+}
+
+.support-item:hover .support-icon {
+  border-color: #2dd6e6;
+  box-shadow: 0 0 0 1px rgba(45, 214, 230, 0.18), 0 8px 20px -6px rgba(45, 214, 230, 0.35);
 }
 
 .support-icon img,
@@ -346,18 +396,38 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 0 20px;
+  padding: 12px 20px;
+  border-radius: 16px;
+  transition:
+    background-color var(--pui-dur, 320ms) var(--pui-ease-out, ease),
+    transform var(--pui-dur, 320ms) var(--pui-ease-out, ease);
+}
+
+.security-card:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: translateY(-2px);
 }
 
 .security-icon {
   width: 75px;
   height: 75px;
-  border: 2px solid #2dd6e6;
+  border: 1px solid rgba(45, 214, 230, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  transition:
+    border-color var(--pui-dur, 320ms) var(--pui-ease-out, ease),
+    box-shadow var(--pui-dur, 320ms) var(--pui-ease-out, ease);
+}
+
+.security-card:hover .security-icon {
+  border-color: #2dd6e6;
+  box-shadow: 0 0 0 1px rgba(45, 214, 230, 0.18), 0 10px 24px -6px rgba(45, 214, 230, 0.4);
 }
 
 .security-card h4 {
@@ -462,6 +532,10 @@ body {
 
   .footer-brand h2 {
     font-size: 30px;
+  }
+
+  .footer-top > .footer-column:last-child {
+    padding: 20px;
   }
 
   .support-item {

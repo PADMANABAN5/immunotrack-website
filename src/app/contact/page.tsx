@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 import "@/assets/styles/contact.css";
 
 export const metadata: Metadata = {
@@ -22,10 +22,10 @@ export default function Contact() {
               Ready to transform your practice?
             </h1>
             <p className="ct-hero-subtitle">
-              Join leading allergy and immunology practices using ImmunoTrack to monitor patients remotely, qualify for RTM billing, and improve outcomes. We'll get back to you within 1 business day.
+              Join leading allergy and immunology practices using ImmunoTrack to monitor patients remotely, qualify for RTM billing, and improve outcomes. We&apos;ll get back to you within 1 business day.
             </p>
             <div className="ct-hero-actions">
-              <a href="#contact-form" className="ct-btn ct-btn-cyan">
+              <a href="#contact-form" className="ct-btn ct-btn-cyan pui-btn pui-focus">
                 Get Started
               </a>
             </div>
@@ -35,7 +35,7 @@ export default function Contact() {
               src="/images/contact.jpeg"
               alt="Healthcare professional using ImmunoTrack"
               width={600}
-              height={500}
+              height={400}
               priority
               className="ct-hero-img"
             />
@@ -53,33 +53,33 @@ export default function Contact() {
             </p>
           </div>
           
-          <form className="ct-form">
+          <Reveal as="form" className="ct-form">
             <div className="ct-form-grid">
               <div className="ct-form-group">
                 <label htmlFor="name" className="ct-form-label">Name</label>
-                <input type="text" id="name" name="name" className="ct-form-input" required />
+                <input type="text" id="name" name="name" className="ct-form-input pui-input-glow" required />
               </div>
               <div className="ct-form-group">
                 <label htmlFor="email" className="ct-form-label">Email</label>
-                <input type="email" id="email" name="email" className="ct-form-input" required />
+                <input type="email" id="email" name="email" className="ct-form-input pui-input-glow" required />
               </div>
               <div className="ct-form-group">
                 <label htmlFor="phone" className="ct-form-label">Phone</label>
-                <input type="tel" id="phone" name="phone" className="ct-form-input" />
+                <input type="tel" id="phone" name="phone" className="ct-form-input pui-input-glow" />
               </div>
               <div className="ct-form-group">
                 <label htmlFor="practice" className="ct-form-label">Practice Name</label>
-                <input type="text" id="practice" name="practice" className="ct-form-input" required />
+                <input type="text" id="practice" name="practice" className="ct-form-input pui-input-glow" required />
               </div>
               <div className="ct-form-group ct-form-group-full">
                 <label htmlFor="message" className="ct-form-label">Tell us about your practice</label>
-                <textarea id="message" name="message" rows={4} className="ct-form-textarea" required></textarea>
+                <textarea id="message" name="message" rows={4} className="ct-form-textarea pui-input-glow" required></textarea>
               </div>
             </div>
-            <button type="submit" className="ct-btn ct-btn-cyan">
+            <button type="submit" className="ct-btn ct-btn-cyan pui-btn pui-focus">
               Request Access
             </button>
-          </form>
+          </Reveal>
         </div>
       </section>
     </main>

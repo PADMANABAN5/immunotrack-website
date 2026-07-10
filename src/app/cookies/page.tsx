@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import "@/assets/styles/cookies.css";
 import ContactSection from "@/components/ContactSection";
 
@@ -51,7 +50,7 @@ export default function CookiesPage() {
               src="/images/cookie-policy.jpeg"
               alt="Cookie and data privacy policy"
               width={600}
-              height={500}
+              height={327}
               priority
               className="ck-hero-img"
             />
@@ -98,10 +97,10 @@ export default function CookiesPage() {
                 the ImmunoTrack clinician web dashboard.
               </p>
               <div className="ck-callout" role="note">
-                {/* <div className="ck-callout-header">
+                <div className="ck-callout-header">
                   <Image src={alertIcon} alt="" width={18} height={18} aria-hidden="true" className="ck-svg-icon ck-svg-amber" />
                   <strong>Important Compliance Note</strong>
-                </div> */}
+                </div>
                 ImmunoTrack does not use localStorage to store health data. All
                 Protected Health Information (PHI) is stored exclusively on
                 HIPAA-eligible encrypted servers. Cookies and web storage are
@@ -356,9 +355,6 @@ export default function CookiesPage() {
               </p>
 
               <div className="ck-health-highlight" role="note">
-                {/* <div className="ck-health-icon-wrap">
-                  <Image src={lungsIcon} alt="" width={26} height={26} aria-hidden="true" className="ck-svg-icon ck-svg-green" />
-                </div> */}
                 <p className="ck-health-text">
                   <strong>No PHI in cookies</strong>
                   We do not store any Protected Health Information in cookies or
@@ -369,9 +365,6 @@ export default function CookiesPage() {
               </div>
 
               <div className="ck-health-highlight" role="note">
-                {/* <div className="ck-health-icon-wrap">
-                  <Image src={adherenceIcon} alt="" width={26} height={26} aria-hidden="true" className="ck-svg-icon ck-svg-green" />
-                </div> */}
                 <p className="ck-health-text">
                   <strong>No PHI in analytics</strong>
                   If analytics are added in a future release, they will be
@@ -380,9 +373,6 @@ export default function CookiesPage() {
                 </p>
               </div>
               <div className="ck-health-highlight" role="note">
-                {/* <div className="ck-health-icon-wrap">
-                  <Image src={adherenceIcon} alt="" width={26} height={26} aria-hidden="true" className="ck-svg-icon ck-svg-green" />
-                </div> */}
                 <p className="ck-health-text">
                   <strong>AWS infrastructure</strong>
                   The ImmunoTrack platform is hosted on HIPAA-eligible AWS
@@ -393,9 +383,6 @@ export default function CookiesPage() {
                 </p>
               </div>
               <div className="ck-health-highlight" role="note">
-                {/* <div className="ck-health-icon-wrap">
-                  <Image src={adherenceIcon} alt="" width={26} height={26} aria-hidden="true" className="ck-svg-icon ck-svg-green" />
-                </div> */}
                 <p className="ck-health-text">
                   <strong>JWT authentication</strong>
                   Session management uses JSON Web Tokens (JWT) issued by AWS
@@ -509,7 +496,7 @@ export default function CookiesPage() {
                       src={cloudSyncIcon}
                       alt=""
                       width={22}
-                      height={22}
+                      height={21}
                       aria-hidden="true"
                       className="ck-svg-icon ck-svg-teal"
                     />

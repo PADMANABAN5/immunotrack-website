@@ -18,10 +18,10 @@ export default function Footer() {
           <div className="footer-brand footer-divider">
             <Link href="/">
               <Image
-                src="/images/logo.jpg"
+                src={footerLogo}
                 alt="ImmunoTrack"
-                width={280}
-                height={85}
+                width={1135}
+                height={1101}
                 className="footer-logo"
               />
             </Link>
@@ -70,9 +70,6 @@ export default function Footer() {
               <li>
                 <Link href="/cookies">Cookie Policy</Link>
               </li>
-              <li>
-                <Link href="">HIPAA Notice</Link>
-              </li>
             </ul>
           </div>
 
@@ -87,7 +84,7 @@ export default function Footer() {
                   src={notificationIcon}
                   alt="General Inquiries"
                   width={24}
-                  height={24}
+                  height={21}
                 />
               </div>
 
@@ -114,7 +111,7 @@ export default function Footer() {
                   src={timelineIcon}
                   alt="Technical Support"
                   width={24}
-                  height={24}
+                  height={19}
                 />
               </div>
 

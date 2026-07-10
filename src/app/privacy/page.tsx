@@ -5,15 +5,7 @@ import "@/assets/styles/privacy.css";
 import shieldIcon     from "@/assets/icons/noun-tracking-8269731.svg";
 import profileIcon    from "@/assets/icons/noun-profile-8205839.svg";
 import insightsIcon   from "@/assets/icons/noun-insights-8300657.svg";
-import settingsIcon   from "@/assets/icons/noun-settings-2650525.svg";
 import cloudIcon      from "@/assets/icons/noun-cloud-sync-8146798.svg";
-import alertIcon      from "@/assets/icons/noun-alert-8253230.svg";
-import historyIcon    from "@/assets/icons/noun-history-5834074.svg";
-import correlationIcon from "@/assets/icons/noun-correlation-1893443.svg";
-import notifIcon      from "@/assets/icons/noun-notification-3408005.svg";
-import trendingIcon   from "@/assets/icons/noun-trending-7934313.svg";
-import timelineIcon   from "@/assets/icons/noun-timeline-8109095.svg";
-import realTimeIcon   from "@/assets/icons/noun-real-time-8114634.svg";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -26,21 +18,25 @@ export const metadata: Metadata = {
 const glanceItems = [
   {
     icon: shieldIcon,
+    iconHeight: 20,
     title: "We Protect Your Data",
     desc: "Your health information is encrypted at rest (AES-256) and in transit (TLS 1.2+).",
   },
   {
     icon: profileIcon,
+    iconHeight: 20,
     title: "You're in Control",
     desc: "Access, amend, or request deletion of your information at any time.",
   },
   {
     icon: cloudIcon,
+    iconHeight: 19,
     title: "We Never Sell Data",
     desc: "We do not sell, rent, or trade your personal information — ever.",
   },
   {
     icon: insightsIcon,
+    iconHeight: 22,
     title: "We're Transparent",
     desc: "Clear about what we collect, why we collect it, and how we use it.",
   },
@@ -96,7 +92,7 @@ export default function PrivacyPage() {
               src="/images/privacy-policy.jpeg"
               alt="Privacy and data security"
               width={600}
-              height={500}
+              height={335}
               priority
               className="pp-hero-img"
             />
@@ -608,7 +604,7 @@ export default function PrivacyPage() {
               {glanceItems.map((item) => (
                 <li key={item.title} className="pp-glance-item">
                   <div className="pp-glance-icon" aria-hidden="true">
-                    <Image src={item.icon} alt="" width={20} height={20} className="pp-icon-cyan" />
+                    <Image src={item.icon} alt="" width={20} height={item.iconHeight} className="pp-icon-cyan" />
                   </div>
                   <div>
                     <p className="pp-glance-item-title">{item.title}</p>

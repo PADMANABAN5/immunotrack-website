@@ -8,13 +8,8 @@ import lungsIcon from "@/assets/icons/noun-lungs-8244560.svg";
 import predictionIcon from "@/assets/icons/noun-prediction-8286021.svg";
 import airQualityIcon from "@/assets/icons/noun-air-quality-7857604.svg";
 import profileIcon from "@/assets/icons/noun-profile-8205839.svg";
-import medicationIcon from "@/assets/icons/noun-medication-7320568.svg";
-import dashboardIcon from "@/assets/icons/noun-analytic-dashboard-8346089.svg";
 import trackingIcon from "@/assets/icons/noun-tracking-8269731.svg";
 import cloudIcon from "@/assets/icons/noun-cloud-sync-8146798.svg";
-import settingsIcon from "@/assets/icons/noun-settings-2650525.svg";
-import inhalerIcon from "@/assets/icons/noun-inhaler-7094921.svg";
-import timelineIcon from "@/assets/icons/noun-timeline-8109095.svg";
 
 export const metadata: Metadata = {
   title: "ImmunoTrack — AI-Powered RTM for Allergy & Immunology",
@@ -51,7 +46,7 @@ export default function Page() {
                 src="/images/home-screen.jpeg"
                 alt="ImmunoTrack AI-Powered Allergy and Asthma Monitoring"
                 width={580}
-                height={380}
+                height={324}
                 priority
                 className="w-full h-auto object-cover"
               />
@@ -75,7 +70,7 @@ export default function Page() {
           {/* Pillar 1 */}
           <div className="hm-pillar-card">
             <div className="hm-pillar-icon-wrap">
-              <Image src={lungsIcon} alt="RTM-Ready Icon" width={28} height={28} className="hm-pillar-icon" />
+              <Image src={lungsIcon} alt="RTM-Ready Icon" width={28} height={26} className="hm-pillar-icon" />
             </div>
             <div className="hm-pillar-tag">Billing & Compliance</div>
             <h3 className="hm-pillar-title">RTM-Ready</h3>
@@ -90,7 +85,7 @@ export default function Page() {
           {/* Pillar 2 */}
           <div className="hm-pillar-card">
             <div className="hm-pillar-icon-wrap">
-              <Image src={predictionIcon} alt="Nightly AI Insights Icon" width={28} height={28} className="hm-pillar-icon" />
+              <Image src={predictionIcon} alt="Nightly AI Insights Icon" width={28} height={29} className="hm-pillar-icon" />
             </div>
             <div className="hm-pillar-tag">Predictive Analytics</div>
             <h3 className="hm-pillar-title">Nightly AI Insights</h3>
@@ -105,7 +100,7 @@ export default function Page() {
           {/* Pillar 3 */}
           <div className="hm-pillar-card">
             <div className="hm-pillar-icon-wrap">
-              <Image src={airQualityIcon} alt="Environmental Triggers Icon" width={28} height={28} className="hm-pillar-icon" />
+              <Image src={airQualityIcon} alt="Environmental Triggers Icon" width={28} height={26} className="hm-pillar-icon" />
             </div>
             <div className="hm-pillar-tag">Data Integration</div>
             <h3 className="hm-pillar-title">Environmental Triggers</h3>
@@ -158,57 +153,18 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ── BILLING CPT CODE DETAILS BAR ─────────────────────── */}
-      {/* <section className="hm-billing" aria-label="CPT Code Details">
-        <div className="hm-billing-container">
-          <div className="hm-billing-header">
-            <span className="hm-billing-tag">CPT Codes</span>
-            <span className="hm-billing-title">RTM Billing</span>
-          </div>
-          <div className="hm-billing-grid">
-            <div className="hm-billing-item">
-              <Image src={settingsIcon} alt="" width={16} height={16} className="hm-billing-icon" />
-              <span>CPT 98975 — RTM setup</span>
-            </div>
-            <div className="hm-billing-item">
-              <Image src={inhalerIcon} alt="" width={16} height={16} className="hm-billing-icon" />
-              <span>CPT 98976-77 — device supply</span>
-            </div>
-            <div className="hm-billing-item">
-              <Image src={medicationIcon} alt="" width={16} height={16} className="hm-billing-icon" />
-              <span>CPT 98980-81 — treatment mgmt</span>
-            </div>
-            <div className="hm-billing-item">
-              <Image src={timelineIcon} alt="" width={16} height={16} className="hm-billing-icon" />
-              <span>16-day threshold tracking</span>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* ── CLINICIAN TESTIMONIAL ────────────────────────────── */}
-      <section className="hm-testimonial" aria-label="Clinician Testimonial">
+      {/* ── WHY IMMUNOTRACK ──────────────────────────────────── */}
+      <section className="hm-testimonial" aria-label="Why ImmunoTrack">
         <div className="hm-testimonial-container">
           <div className="hm-testimonial-badge">
-            <span className="hm-testimonial-tag">Clinician Spotlight</span>
+            <span className="hm-testimonial-tag">Why ImmunoTrack</span>
           </div>
 
           <blockquote className="hm-testimonial-quote">
-            &ldquo;ImmunoTrack gives me visibility between visits that I&apos;ve never had before.&rdquo;
+            &ldquo;Built to give allergy and immunology practices visibility between
+            visits — nightly flare risk scores, RTM logging progress, and
+            symptom trends, without adding work to your day.&rdquo;
           </blockquote>
-
-          <div className="hm-testimonial-footer">
-            <div className="hm-testimonial-avatar" aria-hidden="true">
-              <span>MV</span>
-            </div>
-            <div className="hm-testimonial-meta">
-              <div className="hm-testimonial-author">Dr. Marcus Vance, MD</div>
-              <div className="hm-testimonial-role">Allergy & Immunology, Atlanta (Pilot Program)</div>
-            </div>
-            <div className="hm-testimonial-program">
-              <span className="hm-testimonial-program-badge">Verified Partner</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -225,7 +181,7 @@ export default function Page() {
               <span>HIPAA Compliant</span>
             </div>
             <div className="hm-compliance-item">
-              <Image src={cloudIcon} alt="" width={16} height={16} className="hm-compliance-icon" />
+              <Image src={cloudIcon} alt="" width={16} height={15} className="hm-compliance-icon" />
               <span>AWS Infrastructure</span>
             </div>
             <div className="hm-compliance-item">

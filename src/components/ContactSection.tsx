@@ -13,6 +13,7 @@ interface ContactCard {
   href: string;
   iconVariant: "cyan" | "navy";
   icon: StaticImageData;
+  iconHeight?: number;
 }
 
 interface FooterItem {
@@ -20,6 +21,7 @@ interface FooterItem {
   iconVariant: "cyan" | "navy";
   label: string;
   text: React.ReactNode;
+  iconHeight?: number;
 }
 
 interface ContactSectionProps {
@@ -41,6 +43,7 @@ const defaultCards: ContactCard[] = [
     href: "mailto:privacy@immunotrack.ai",
     iconVariant: "cyan",
     icon: profileIcon,
+    iconHeight: 22,
   },
   {
     id: "contact-support-email",
@@ -50,6 +53,7 @@ const defaultCards: ContactCard[] = [
     href: "mailto:support@immunotrack.ai",
     iconVariant: "cyan",
     icon: insightsIcon,
+    iconHeight: 25,
   },
 ];
 
@@ -58,12 +62,14 @@ const defaultFooterItems: FooterItem[] = [
   {
     icon: trackingIcon,
     iconVariant: "cyan",
+    iconHeight: 20,
     label: "Mailing Address",
     text: "ImmunoTrack Inc. / Aman Medical Consulting LLC · Atlanta, Georgia 30328",
   },
   {
     icon: alertIcon,
     iconVariant: "cyan",
+    iconHeight: 19,
     label: "HIPAA Complaints",
     text: (
       <>
@@ -104,7 +110,7 @@ export default function ContactSection({
       <div className="cs-hero">
         {/* Background image layer — absolutely fills the hero div */}
         <Image
-          src="/contact-hero-bg.png"
+          src="/images/iStock-2244690121.jpg"
           alt=""
           fill
           priority
@@ -129,7 +135,7 @@ export default function ContactSection({
           <a
             key={card.id}
             href={card.href}
-            className="cs-card"
+            className="cs-card pui-focus"
             id={card.id}
           >
             <div className={`cs-card-icon cs-icon-${card.iconVariant}`}>
@@ -137,7 +143,7 @@ export default function ContactSection({
                 src={card.icon}
                 alt=""
                 width={22}
-                height={22}
+                height={card.iconHeight ?? 22}
                 aria-hidden="true"
                 style={{ filter: card.iconVariant === "cyan" ? cyanFilter : navyFilter }}
               />
@@ -161,7 +167,7 @@ export default function ContactSection({
                 src={item.icon}
                 alt=""
                 width={20}
-                height={20}
+                height={item.iconHeight ?? 20}
                 aria-hidden="true"
                 style={{ filter: item.iconVariant === "cyan" ? cyanFilter : navyFilter }}
               />

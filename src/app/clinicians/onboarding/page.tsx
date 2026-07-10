@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 import "@/assets/styles/onboarding.css";
 
 export const metadata: Metadata = {
@@ -109,7 +110,7 @@ export default function ClinicianOnboarding() {
 
           <div className="ob-grid ob-grid-2col">
             {/* Left Column: What ImmunoTrack Configures */}
-            <div className="ob-split-card">
+            <Reveal className="ob-split-card">
               <div className="ob-split-card-header">
                 <h3 className="ob-split-card-title">1. What ImmunoTrack Configures (Before Login)</h3>
               </div>
@@ -148,10 +149,10 @@ export default function ClinicianOnboarding() {
                   </div>
                 </li>
               </ul>
-            </div>
+            </Reveal>
 
             {/* Right Column: What You Do on Day One */}
-            <div className="ob-split-card" style={{ borderTop: "4px solid var(--ob-cyan)" }}>
+            <Reveal className="ob-split-card" delay={1} style={{ borderTop: "4px solid var(--ob-cyan)" }}>
               <div className="ob-split-card-header">
                 <h3 className="ob-split-card-title">2. What You Do (Day One Activation)</h3>
               </div>
@@ -192,11 +193,11 @@ export default function ClinicianOnboarding() {
                   </div>
                   <div>
                     <div className="ob-list-item-title">Invite Your First Patient</div>
-                    <div className="ob-list-item-desc">Send the initial enrollment link. The practice's default welcome message pre-fills, ready to send.</div>
+                    <div className="ob-list-item-desc">Send the initial enrollment link. The practice&apos;s default welcome message pre-fills, ready to send.</div>
                   </div>
                 </li>
               </ul>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -214,7 +215,7 @@ export default function ClinicianOnboarding() {
 
           <div className="ob-tier-grid">
             {/* Tier 1 */}
-            <div className="ob-tier-card">
+            <Reveal className="ob-tier-card">
               <span className="ob-tier-label">Tier 1</span>
               <h3 className="ob-tier-title">System Default</h3>
               <p className="ob-tier-desc">
@@ -223,25 +224,25 @@ export default function ClinicianOnboarding() {
               <div className="ob-system-quote">
                 &ldquo;Welcome to our monitoring program. Your clinician uses ImmunoTrack to keep track of your health between visits. We look forward to supporting you.&rdquo;
               </div>
-            </div>
+            </Reveal>
 
             {/* Tier 2 */}
-            <div className="ob-tier-card">
+            <Reveal className="ob-tier-card" delay={1}>
               <span className="ob-tier-label">Tier 2</span>
               <h3 className="ob-tier-title">Practice Default</h3>
               <p className="ob-tier-desc">
                 Customized by the Practice Admin to align with the clinic&apos;s specific workflow, patient panel, or specialty style.
               </p>
-            </div>
+            </Reveal>
 
             {/* Tier 3 */}
-            <div className="ob-tier-card">
+            <Reveal className="ob-tier-card" delay={2}>
               <span className="ob-tier-label">Tier 3</span>
               <h3 className="ob-tier-title">Clinician Edit</h3>
               <p className="ob-tier-desc">
                 Clinicians can review and perform a one-time edit on the note immediately before sending an individual patient invitation.
               </p>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -258,30 +259,30 @@ export default function ClinicianOnboarding() {
           </div>
 
           <div className="ob-examples-grid">
-            <div className="ob-example-card">
+            <Reveal className="ob-example-card">
               <div className="ob-example-type">General Allergy & Immunology</div>
               <p className="ob-example-text">
                 &ldquo;Welcome to our monitoring program. We look forward to tracking your progress and keeping your care on track between visits.&rdquo;
               </p>
-            </div>
-            <div className="ob-example-card">
+            </Reveal>
+            <Reveal className="ob-example-card" delay={1}>
               <div className="ob-example-type">Pediatric Allergy</div>
               <p className="ob-example-text">
                 &ldquo;Welcome to our monitoring program. We&apos;re glad to have you with us. Daily logging helps us understand your child&apos;s symptoms and adjust their care plan.&rdquo;
               </p>
-            </div>
-            <div className="ob-example-card">
+            </Reveal>
+            <Reveal className="ob-example-card" delay={2}>
               <div className="ob-example-type">Asthma Clinic</div>
               <p className="ob-example-text">
                 &ldquo;Welcome to ImmunoTrack. Tracking your daily symptoms helps us keep your asthma well-controlled and catch any changes early.&rdquo;
               </p>
-            </div>
-            <div className="ob-example-card">
+            </Reveal>
+            <Reveal className="ob-example-card" delay={3}>
               <div className="ob-example-type">Academic / Hospital Practice</div>
               <p className="ob-example-text">
                 &ldquo;Welcome. Your clinician at [Practice name] has enrolled you in a remote monitoring program. This helps us monitor your condition between appointments.&rdquo;
               </p>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -296,7 +297,7 @@ export default function ClinicianOnboarding() {
             </p>
           </div>
           <div className="ob-onboarding-action">
-            <Link href="/contact" className="ob-btn ob-btn-outline">
+            <Link href="/contact" className="ob-btn ob-btn-outline pui-btn pui-focus">
               Request Access
             </Link>
           </div>

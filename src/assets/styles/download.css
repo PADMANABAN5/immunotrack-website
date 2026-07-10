@@ -73,6 +73,8 @@
   align-self: flex-start;
   padding: 6px 14px;
   background: rgba(45, 214, 229, 0.15);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
   border: 1px solid rgba(45, 214, 229, 0.3);
   border-radius: 100px;
   color: var(--dl-cyan);
@@ -80,6 +82,12 @@
   font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  transition: border-color 320ms ease, box-shadow 320ms ease;
+}
+
+.dl-hero-badge:hover {
+  border-color: rgba(45, 214, 229, 0.5);
+  box-shadow: 0 8px 24px -8px rgba(45, 214, 229, 0.3);
 }
 
 .dl-hero-title {
@@ -117,8 +125,13 @@
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  /* subtle drop shadow */
-  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3));
+  /* layered ambient drop shadow */
+  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.28)) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.18));
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dl-hero-img-wrap:hover .dl-hero-mockups {
+  transform: translateY(-4px) scale(1.015);
 }
 
 /* ============================================================
@@ -169,9 +182,15 @@
 .dl-card-container {
   background: var(--dl-bg-card);
   border-radius: var(--dl-radius-lg);
-  box-shadow: var(--dl-shadow);
+  box-shadow: 0 24px 48px -20px rgba(2, 18, 79, 0.14), 0 4px 12px -4px rgba(2, 18, 79, 0.06);
   border: 1px solid var(--dl-border);
   padding: 48px;
+  transition: box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1), transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dl-card-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 32px 60px -20px rgba(2, 18, 79, 0.18), 0 8px 16px -6px rgba(2, 18, 79, 0.08);
 }
 
 .dl-grid {
@@ -279,8 +298,12 @@
 
 .dl-badge-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 16px 28px -10px rgba(0, 0, 0, 0.35);
   opacity: 0.8;
+}
+
+.dl-badge-btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 /* Tooltip on hover for disabled state */
@@ -319,7 +342,13 @@
   display: flex;
   gap: 24px;
   align-items: center;
-  box-shadow: 0 6px 20px rgba(45, 214, 229, 0.05);
+  box-shadow: 0 20px 40px -18px rgba(45, 214, 229, 0.22), 0 4px 12px -4px rgba(2, 18, 79, 0.04);
+  transition: box-shadow 350ms ease, transform 350ms ease;
+}
+
+.dl-invite-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 48px -18px rgba(45, 214, 229, 0.3), 0 6px 16px -4px rgba(2, 18, 79, 0.06);
 }
 
 .dl-invite-icon-wrap {
