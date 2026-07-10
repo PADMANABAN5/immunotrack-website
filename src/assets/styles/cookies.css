@@ -125,7 +125,7 @@
 
 @media (min-width: 992px) {
   .ck-hero {
-    min-height: 640px;
+    height: 640px;
     background-color: #02124f;
   }
 }

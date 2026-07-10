@@ -90,7 +90,7 @@
 
 @media (min-width: 992px) {
   .ab-hero {
-    min-height: 640px;
+    height: 640px;
     background-color: #02124f;
   }
 }

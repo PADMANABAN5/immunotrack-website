@@ -58,7 +58,7 @@
 
 @media (min-width: 992px) {
   .ts-hero {
-    min-height: 640px;
+    height: 640px;
     background-color: #02124f;
   }
 }
