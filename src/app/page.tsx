@@ -75,7 +75,7 @@ export default function Page() {
             <div className="hm-pillar-tag">Billing & Compliance</div>
             <h3 className="hm-pillar-title">RTM-Ready</h3>
             <p className="hm-pillar-desc">
-              Tracks symptom scores, medication adherence, and therapy response. Supports CPT codes 98975–98981 and the 16-day logging threshold.
+              Built for Remote Therapeutic Monitoring. ImmunoTrack supports CPT codes 98975–98981 and tracks the non-physiological data your billing requires: symptom scores, medication adherence, and therapy response.
             </p>
             <Link href="/clinicians" className="hm-pillar-link">
               Learn More

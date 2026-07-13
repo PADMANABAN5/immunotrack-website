@@ -90,7 +90,7 @@ export default function Footer() {
 
               <div>
                 <strong>General Inquiries</strong>
-                <p>hello@immunotrack.ai</p>
+                <p>support@immunotrack.ai</p>
               </div>
             </div>
 
@@ -117,8 +117,7 @@ export default function Footer() {
 
               <div>
                 <p>
-                  We typically respond within 1 business day.Emergency: Call 911
-                  Not this platform
+                  Within 30 days for privacy requests; within 1 business day for general support
                 </p>
               </div>
             </div>

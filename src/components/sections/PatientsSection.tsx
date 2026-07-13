@@ -13,17 +13,14 @@ export default function PatientsSection() {
           <div className="pt-hero-content">
             <span className="pt-hero-tag">Built for you, every day</span>
             <h1 className="pt-hero-title">
-              Take control of your allergy and asthma—anytime, anywhere.
+              Track your allergies and asthma. Share what matters with your care team.
             </h1>
             <p className="pt-hero-subtitle">
-              Track symptoms, receive personalized insights, get medication reminders, and stay connected with your care team—all from your phone.
+              "ImmunoTrack is the app your clinician uses to monitor your health between visits. Log your symptoms daily, track your medications, and let AI spot the patterns.
             </p>
             <div className="pt-hero-actions">
               <Link href="/download" className="pt-btn pt-btn-cyan pui-btn pui-focus">
                 Download the App
-              </Link>
-              <Link href="/contact" className="pt-btn pt-btn-outline pui-btn pui-focus">
-                Request Patient Access
               </Link>
             </div>
           </div>
@@ -44,7 +41,7 @@ export default function PatientsSection() {
       <section className="pt-features-section" aria-label="What you can do">
         <div className="pt-container">
           <div className="pt-features-content">
-            <span className="pt-section-tag">What you can do</span>
+            <span className="pt-section-tag">What the App Does</span>
             <h2 className="pt-section-title">Everything you need, in one simple app</h2>
           </div>
 
@@ -60,7 +57,7 @@ export default function PatientsSection() {
               </div>
               <h3 className="pt-feature-title">Daily symptom logging</h3>
               <p className="pt-feature-desc">
-                Log respiratory, nasal, and skin symptoms in under a minute a day, right from your phone.
+                Rate respiratory, nasal, and skin symptoms in under 2 minutes. Log every day to qualify for insurance-covered remote monitoring.
               </p>
             </Reveal>
 
@@ -73,7 +70,7 @@ export default function PatientsSection() {
               </div>
               <h3 className="pt-feature-title">Medication tracking</h3>
               <p className="pt-feature-desc">
-                Keep a record of every dose and get reminders so you never lose track of your treatment plan.
+                 Log your doses, set reminder times, and keep your care team up to date on how your treatment plan is working.
               </p>
             </Reveal>
 
@@ -92,7 +89,7 @@ export default function PatientsSection() {
               </div>
               <h3 className="pt-feature-title">AI Insights</h3>
               <p className="pt-feature-desc">
-                Get plain-language patterns in your symptoms over time. AI Insights are informational only — not medical advice — and never replace your clinician&rsquo;s guidance.
+                Every morning, see what patterns emerged from your data. High pollen yesterday? Your logs show it. AI Insights are informational only — not medical advice.
               </p>
             </Reveal>
 
@@ -104,7 +101,7 @@ export default function PatientsSection() {
               </div>
               <h3 className="pt-feature-title">Secure connection to your care team</h3>
               <p className="pt-feature-desc">
-                Your logs and trends are shared securely with your clinician so they can review your progress between visits.
+                Your clinician sees your data in real time. You don't need to send anything. It's always there when they need it.
               </p>
             </Reveal>
           </div>
@@ -119,7 +116,7 @@ export default function PatientsSection() {
               <span className="pt-section-tag">RTM Explained Simply</span>
               <h2 className="pt-section-title">What is Remote Therapeutic Monitoring?</h2>
               <p className="pt-rtm-desc">
-                Remote Therapeutic Monitoring, or RTM, just means your clinician can keep an eye on how you&rsquo;re doing between appointments using the symptom logs you enter in the app. If your clinician has enrolled you in RTM, logging on most days during each 30-day period — generally at least 16 days — helps them monitor your care and may allow your insurance to be billed for that monitoring service. The app always shows your progress toward that goal, and you can ask your clinician any questions about RTM coverage or costs at any time.
+                Remote Therapeutic Monitoring (RTM) is a healthcare service where your clinician monitors your health between visits using data you log on your phone. When you log regularly, your clinician can see how your symptoms are responding to treatment and may be able to bill your insurance for that monitoring. Most patients need to log on at least 16 days in a 30-day period to qualify.
               </p>
             </div>
             <Reveal className="pt-rtm-stat-card">
@@ -135,30 +132,30 @@ export default function PatientsSection() {
         <div className="pt-container">
           <div className="pt-privacy-content">
             <span className="pt-section-tag">Your Privacy</span>
-            <h2 className="pt-section-title">Your health data stays protected</h2>
+            <h2 className="pt-section-title">Your data is yours.</h2>
           </div>
 
           <div className="pt-privacy-grid">
             <div className="pt-privacy-item">
               <span className="pt-privacy-check" aria-hidden="true">&#10003;</span>
-              <span>HIPAA-compliant</span>
+              <span>HIPAA-compliant — built to the same standards as your doctor's office</span>
             </div>
             <div className="pt-privacy-item">
               <span className="pt-privacy-check" aria-hidden="true">&#10003;</span>
-              <span>Encrypted, always</span>
+              <span>Encrypted — your data is protected at rest and in transit</span>
             </div>
             <div className="pt-privacy-item">
               <span className="pt-privacy-check" aria-hidden="true">&#10003;</span>
-              <span>Never sold</span>
+              <span>Never sold — we do not sell your health information to anyone</span>
             </div>
             <div className="pt-privacy-item">
               <span className="pt-privacy-check" aria-hidden="true">&#10003;</span>
-              <span>Only your care team can see your data</span>
+              <span>Only your care team can see your clinical data</span>
             </div>
           </div>
 
           <p className="pt-privacy-link-row">
-            Read our full <Link href="/privacy" className="pt-inline-link">Privacy Policy</Link> for details on how your information is collected, used, and protected.
+            Read our Privacy Policy - <Link href="/privacy" className="pt-inline-link">Privacy Policy</Link>
           </p>
         </div>
       </section>
@@ -166,8 +163,8 @@ export default function PatientsSection() {
       {/* ── FOOTER CTA BAND ───────────────────────────────────── */}
       <section className="pt-cta-section" aria-label="Get started">
         <div className="pt-cta-container">
-          <h2 className="pt-cta-title">Ready to start tracking your health?</h2>
-          <p className="pt-cta-desc">ImmunoTrack is invitation-only. Ask your clinician for an invite, or download the app if you already have one.</p>
+          <h2 className="pt-cta-title">Get the ImmunoTrack patient app</h2>
+          <p className="pt-cta-desc">Available on iOS and Android. Your clinician will send you an invite — download the app and follow the link to get started.</p>
           <div className="pt-cta-actions">
             <Link href="/download" className="pt-btn pt-btn-cyan pui-btn pui-focus">
               Download the App

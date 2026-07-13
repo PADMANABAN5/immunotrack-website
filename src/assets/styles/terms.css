@@ -28,7 +28,6 @@
 
 /* ── Base page ─────────────────────────────────────────── */
 .ts-page {
-  font-family: 'Inter', 'Outfit', system-ui, sans-serif;
   background: var(--ts-bg-page);
   color: var(--ts-text-body);
   min-height: 100vh;

@@ -12,16 +12,11 @@ export default function AboutSection() {
           <div className="ab-hero-content">
             <span className="ab-hero-tag">Our Mission</span>
             <h1 className="ab-hero-title">
-              Building the future of allergy and asthma care with AI and compassion.
+              We built ImmunoTrack because allergy patients deserve better care between visits.
             </h1>
             <p className="ab-hero-subtitle">
-              ImmunoTrack was created by clinicians, data scientists, and technologists who believe better outcomes start with better insights. Together, we&apos;re building intelligent tools that empower providers and improve lives.
+             The platform is built on HIPAA-compliant AWS infrastructure, uses Anthropic's Claude AI for nightly insight generation, and is designed to comply with CMS Remote Therapeutic Monitoring guidelines.
             </p>
-            <div className="ab-hero-actions">
-              <Link href="/contact" className="ab-btn ab-btn-cyan pui-btn pui-focus">
-                Request Access
-              </Link>
-            </div>
           </div>
           <div className="ab-hero-image">
             <Image

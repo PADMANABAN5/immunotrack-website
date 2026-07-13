@@ -317,3 +317,63 @@
 .ct-form-textarea::placeholder {
   color: var(--ct-text-muted);
 }
+
+/* ── CONTACT DETAILS GRID ────────────────────────────────── */
+.ct-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .ct-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+/* ── DETAIL CARDS ────────────────────────────────────────── */
+.ct-detail-card {
+  background: #ffffff;
+  border: 1px solid rgba(2, 18, 79, 0.05);
+  border-radius: var(--ct-radius-lg);
+  padding: 32px 24px;
+  box-shadow: var(--ct-shadow);
+  transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ct-detail-card:hover {
+  box-shadow: var(--ct-shadow-lg);
+  transform: translateY(-4px);
+  border-color: rgba(45, 214, 229, 0.3);
+}
+
+.ct-detail-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ct-text-head);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.ct-detail-value {
+  font-size: 1rem;
+  color: var(--ct-text-body);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ct-detail-link {
+  color: var(--ct-cyan);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.ct-detail-link:hover {
+  color: var(--ct-cyan-d);
+  text-decoration: underline;
+}
