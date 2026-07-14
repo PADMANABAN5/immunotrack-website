@@ -77,9 +77,6 @@ export default function Page() {
             <p className="hm-pillar-desc">
               Built for Remote Therapeutic Monitoring. ImmunoTrack supports CPT codes 98975–98981 and tracks the non-physiological data your billing requires: symptom scores, medication adherence, and therapy response.
             </p>
-            <Link href="/clinicians" className="hm-pillar-link">
-              Learn More
-            </Link>
           </div>
 
           {/* Pillar 2 */}
@@ -92,9 +89,6 @@ export default function Page() {
             <p className="hm-pillar-desc">
               Every night, ImmunoTrack runs a flare risk model across your patient panel. Patients at elevated risk surface to the top of your dashboard so you can act early.
             </p>
-            <Link href="/clinicians" className="hm-pillar-link">
-              Learn More
-            </Link>
           </div>
 
           {/* Pillar 3 */}
@@ -107,9 +101,6 @@ export default function Page() {
             <p className="hm-pillar-desc">
               Pollen, air quality, and weather data are automatically paired with each patient&apos;s symptom log every night, helping you identify what&apos;s driving flares.
             </p>
-            <Link href="/clinicians" className="hm-pillar-link">
-              Learn More
-            </Link>
           </div>
         </div>
       </section>

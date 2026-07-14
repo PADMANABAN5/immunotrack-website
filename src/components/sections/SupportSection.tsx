@@ -124,9 +124,6 @@ export default function SupportSection() {
               <Link href="/contact" className="sp-btn sp-btn-cyan pui-btn pui-focus">
                 Contact Support
               </Link>
-              <Link href="/contact" className="sp-btn sp-btn-outline pui-btn pui-focus">
-                Request Access
-              </Link>
             </div>
             <p className="sp-hero-sla">
               ⓘ We typically respond within 1 business day.
