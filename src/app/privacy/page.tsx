@@ -111,10 +111,7 @@ export default function PrivacyPage() {
           {/* Intro */}
           <div className="pp-lead-card" id="intro">
             <p className="pp-lead-text">
-              This Privacy Policy describes how <strong>ImmunoTrack Inc.</strong> and{" "}
-              <strong>Aman Medical Consulting LLC</strong> (collectively
-              &ldquo;ImmunoTrack&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or
-              &ldquo;us&rdquo;) collect, use, disclose, and safeguard your information
+              This Privacy Policy describes how <strong>ImmunoTrack Inc. </strong> collect, use, disclose, and safeguard your information
               when you use the ImmunoTrack platform, including its mobile applications
               and web dashboard (collectively, the &ldquo;Platform&rdquo;). By using
               the Platform, you acknowledge that you have read and understood this
@@ -524,7 +521,7 @@ export default function PrivacyPage() {
                 please contact our Privacy Officer at:
               </p>
               <div className="pp-contact-block">
-                <p><strong>ImmunoTrack Inc. &nbsp;|&nbsp; Aman Medical Consulting LLC</strong></p>
+                <p><strong>ImmunoTrack Inc. </strong></p>
                 <p>Privacy Officer</p>
                 <p>
                   Email:{" "}
@@ -582,7 +579,7 @@ export default function PrivacyPage() {
                     <td>1.1</td>
                     <td>April 2026</td>
                     <td>
-                      Updated entity to ImmunoTrack Inc. + Aman Medical Consulting LLC. Updated email to
+                      Updated entity to ImmunoTrack Inc. Updated email to
                       privacy@immunotrack.ai. Added environmental data section, lab result upload,
                       AI/third-party services table, cookie detail, and security enhancements.
                     </td>

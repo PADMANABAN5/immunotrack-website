@@ -81,7 +81,7 @@ export default function TermsPage() {
                 <line x1="8" y1="2" x2="8" y2="6"/>
                 <line x1="3" y1="10" x2="21" y2="10"/>
               </svg>
-              Version 1.1 — May 2026 &nbsp;·&nbsp; Aman Medical Consulting LLC
+              Version 1.1 — May 2026 Immunotrack Inc. 
             </div>
           </div>
           <div className="ts-hero-image">

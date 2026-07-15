@@ -673,7 +673,7 @@ export default function CookiesPage() {
                   icon: trackingIcon,
                   iconVariant: "cyan" as const,
                   label: "Mailing Address",
-                  text: "ImmunoTrack Inc. / Aman Medical Consulting LLC, Atlanta, Georgia 30328",
+                  text: "ImmunoTrack Inc.",
                 },
                 {
                   icon: alertIcon,

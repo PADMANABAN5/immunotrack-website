@@ -28,8 +28,7 @@ export default function Footer() {
 
             <p>
               ImmunoTrack AI-Driven Clinical Intelligence for Allergy & Asthma ©
-              2026 ImmunoTrack Inc. Aman Medical Consulting LLC Atlanta,
-              Georgia.
+              2026 ImmunoTrack Inc.
             </p>
           </div>
 

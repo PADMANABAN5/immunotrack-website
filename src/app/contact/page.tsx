@@ -67,19 +67,6 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="ct-detail-card">
-              <h3 className="ct-detail-title">Mailing Address</h3>
-              <p className="ct-detail-value">
-                ImmunoTrack Inc. · Aman Medical Consulting LLC · Atlanta, Georgia
-              </p>
-            </div>
-
-            <div className="ct-detail-card">
-              <h3 className="ct-detail-title">Response Time</h3>
-              <p className="ct-detail-value">
-                Within 30 days for privacy requests; within 1 business day for general support
-              </p>
-            </div>
           </Reveal>
         </div>
       </section>

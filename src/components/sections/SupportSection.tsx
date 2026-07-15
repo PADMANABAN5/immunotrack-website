@@ -365,7 +365,7 @@ export default function SupportSection() {
           </div>
         </div>
         <p className="sp-app-version">
-          ImmunoTrack v1.1 &middot; &copy; 2026 Aman Medical Consulting LLC
+          ImmunoTrack v1.1 &middot; &copy; 
         </p>
       </section>
 

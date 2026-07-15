@@ -64,7 +64,7 @@ const defaultFooterItems: FooterItem[] = [
     iconVariant: "cyan",
     iconHeight: 20,
     label: "Mailing Address",
-    text: "ImmunoTrack Inc. / Aman Medical Consulting LLC · Atlanta, Georgia 30328",
+    text: "ImmunoTrack Inc.",
   },
   {
     icon: alertIcon,
