@@ -1,7 +1,7 @@
 /* ============================================================
    ContactSection Component Styles
    Reusable across all pages (Cookies, Privacy, Terms, etc.)
-   Brand: Navy #02124f · Cyan #2dd6e5
+   Brand: Navy var(--color-navy) · Cyan var(--color-cyan)
    ============================================================ */
 
 /* ── Design tokens (shared with the rest of the site) ──────
@@ -74,7 +74,7 @@
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #2dd6e5;
+  color: var(--color-cyan);
   background: rgba(45, 214, 229, 0.12);
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
@@ -125,7 +125,7 @@
 }
 
 .cs-card:hover {
-  border-color: #2dd6e5;
+  border-color: var(--color-cyan);
   box-shadow: 0 6px 28px rgba(45, 214, 229, 0.15);
   transform: translateY(-2px);
 }
@@ -144,13 +144,13 @@
 .cs-icon-cyan {
   background: rgba(45, 214, 229, 0.12);
   border: 1.5px solid rgba(45, 214, 229, 0.3);
-  color: #1bb8c7;
+  color: var(--color-cyan-d);
 }
 
 .cs-icon-navy {
   background: rgba(2, 18, 79, 0.07);
   border: 1.5px solid rgba(2, 18, 79, 0.15);
-  color: #151a58;
+  color: var(--color-navy-mid);
 }
 
 /* Card text */
@@ -171,7 +171,7 @@
 .cs-card-value {
   font-size: 0.9375rem;
   font-weight: 500;
-  color: #1bb8c7;
+  color: var(--color-cyan-d);
   margin: 0 0 4px;
   white-space: nowrap;
   overflow: hidden;
@@ -187,7 +187,7 @@
 /* Arrow indicator */
 .cs-card-arrow {
   font-size: 1.125rem;
-  color: #1bb8c7;
+  color: var(--color-cyan-d);
   flex-shrink: 0;
   opacity: 0.5;
   transition: opacity 0.15s ease, transform 0.15s ease;
@@ -247,7 +247,7 @@
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #1bb8c7;
+  color: var(--color-cyan-d);
   margin: 0 0 4px;
 }
 
@@ -261,14 +261,14 @@
 
 .cs-footer-link {
   font-weight: 500;
-  color: #1bb8c7;
+  color: var(--color-cyan-d);
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color 0.15s ease;
 }
 
 .cs-footer-link:hover {
-  color: #151a58;
+  color: var(--color-navy-mid);
 }
 
 /* ============================================================

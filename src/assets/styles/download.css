@@ -1,18 +1,12 @@
 /* ============================================================
    ImmunoTrack — App Download Page Styles
-   Brand Manual 2026: Navy #02124f · Cyan #2dd6e5 · Font: Avenir
+   Brand Manual 2026: Navy var(--color-navy) · Cyan var(--color-cyan) · Font: Avenir
    ============================================================ */
 
-:root {
-  --dl-navy:        #02124f;
-  --dl-navy-mid:    #151a58;
-  --dl-cyan:        #2dd6e5;
-  --dl-cyan-d:      #1bb8c7;
-  --dl-cyan-pale:   #f0fdfe;
-  --dl-cyan-glow:   rgba(45, 214, 229, 0.14);
+:root {
   --dl-text-body:   #2b2f5e;
   --dl-text-muted:  #6b6f9a;
-  --dl-text-head:   #151a58;
+  --dl-text-head:   var(--color-navy-mid);
   --dl-bg-page:     #f3f5fb;
   --dl-bg-card:     #ffffff;
   --dl-border:      rgba(21, 26, 88, 0.1);
@@ -25,7 +19,7 @@
   min-height: 100vh;
   background-color: var(--dl-bg-card);
   color: var(--dl-text-body);
-  font-family: var(--font-avenir), "Avenir", sans-serif;
+
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -36,7 +30,7 @@
    ============================================================ */
 .dl-hero {
   position: relative;
-  background: linear-gradient(135deg, #02124f 0%, #151a58 100%);
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-mid) 100%);
   color: #ffffff;
   padding: 80px 24px;
   overflow: hidden;
@@ -77,7 +71,7 @@
   -webkit-backdrop-filter: blur(12px) saturate(160%);
   border: 1px solid rgba(45, 214, 229, 0.3);
   border-radius: 100px;
-  color: var(--dl-cyan);
+  color: var(--color-cyan);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -98,7 +92,7 @@
 }
 
 .dl-hero-title span {
-  color: var(--dl-cyan);
+  color: var(--color-cyan);
 }
 
 .dl-hero-desc {
@@ -168,7 +162,7 @@
   display: block;
   width: 80px;
   height: 3px;
-  background: var(--dl-cyan);
+  background: var(--color-cyan);
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -313,7 +307,7 @@
   bottom: -40px;
   left: 50%;
   transform: translateX(-50%) translateY(5px);
-  background: #151a58;
+  background: var(--color-navy-mid);
   color: #ffffff;
   font-size: 11px;
   padding: 6px 12px;
@@ -335,8 +329,8 @@
    INVITATION ONLY SECTION
    ============================================================ */
 .dl-invite-card {
-  background: var(--dl-cyan-pale);
-  border: 2px solid var(--dl-cyan);
+  background: var(--color-cyan-pale);
+  border: 2px solid var(--color-cyan);
   border-radius: var(--dl-radius);
   padding: 32px;
   display: flex;
@@ -359,7 +353,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--dl-cyan);
+  border: 2px solid var(--color-cyan);
   flex-shrink: 0;
   box-shadow: 0 4px 15px rgba(45, 214, 229, 0.1);
 }

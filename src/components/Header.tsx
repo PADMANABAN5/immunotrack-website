@@ -40,8 +40,8 @@ export default function Header() {
               aria-hidden="true"
               className="h-9 w-9 object-contain xl:h-10 xl:w-10"
             />
-            <span className="text-lg font-bold tracking-tight text-[#132E7A] xl:text-xl">
-              Immuno<span className="text-[#2dd6e5]">Track</span>
+            <span className="text-lg font-bold tracking-tight text-navy xl:text-xl">
+              Immuno<span className="text-cyan">Track</span>
             </span>
           </Link>
 
@@ -54,7 +54,7 @@ export default function Header() {
           <div className="hidden lg:block">
             <Link
               href="/contact"
-              className="pui-btn pui-focus bg-[#132E7A] hover:bg-[#0F2562] text-white px-7 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              className="pui-btn pui-focus bg-navy hover:bg-navy-mid text-white px-7 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Request Access
             </Link>
@@ -80,7 +80,7 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="pui-btn pui-focus bg-[#132E7A] text-white rounded-full py-3 text-center font-semibold"
+                className="pui-btn pui-focus bg-navy text-white rounded-full py-3 text-center font-semibold"
               >
                 Request Access
               </Link>

@@ -5,7 +5,7 @@
 
    This file introduces ONLY visual/motion polish utilities.
    It does not define any brand color, font, or content —
-   it reuses the existing navy (#02124f) / cyan (#2dd6e5)
+   it reuses the existing navy (var(--color-navy)) / cyan (var(--color-cyan))
    brand palette already defined per-page.
 
    Usage: add these classes ALONGSIDE existing page-specific
@@ -15,9 +15,9 @@
 
 :root {
   /* Reuse of brand colors for token composition only */
-  --pui-navy: #02124f;
+  --pui-navy: var(--color-navy);
   --pui-navy-rgb: 2, 18, 79;
-  --pui-cyan: #2dd6e5;
+  --pui-cyan: var(--color-cyan);
   --pui-cyan-rgb: 45, 214, 229;
 
   /* Motion — Apple / Material-standard easing, always subtle */

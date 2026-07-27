@@ -1,21 +1,15 @@
 /* ============================================================
    ImmunoTrack — Help & Support Page Styles
-   Brand Manual 2026: Navy #02124f · Cyan #2dd6e5 · Font: Avenir
+   Brand Manual 2026: Navy var(--color-navy) · Cyan var(--color-cyan) · Font: Avenir
    ============================================================ */
 
 /* ============================================================
    DESIGN TOKENS
    ============================================================ */
-:root {
-  --sp-navy:        #02124f;
-  --sp-navy-mid:    #151a58;
-  --sp-cyan:        #2dd6e5;
-  --sp-cyan-d:      #1bb8c7;
-  --sp-cyan-pale:   #f0fdfe;
-  --sp-cyan-glow:   rgba(45, 214, 229, 0.14);
+:root {
   --sp-text-body:   #2b2f5e;
   --sp-text-muted:  #6b6f9a;
-  --sp-text-head:   #151a58;
+  --sp-text-head:   var(--color-navy-mid);
   --sp-bg-page:     #f3f5fb;
   --sp-bg-card:     #ffffff;
   --sp-border:      rgba(21, 26, 88, 0.1);
@@ -52,7 +46,7 @@
   min-height: 100vh;
   background-color: #fff;
   color: var(--sp-text-body);
-  font-family: var(--font-avenir), "Avenir", sans-serif;
+
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -68,7 +62,7 @@
 .sp-hero {
   position: relative;
   background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
-              linear-gradient(135deg, var(--sp-navy-mid) 0%, var(--sp-navy) 100%);
+              linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   color: #ffffff;
   padding: 40px 16px 140px;
   overflow: hidden;
@@ -87,7 +81,7 @@
 @media (min-width: 992px) {
   .sp-hero {
     height: 640px;
-    background-color: #02124f;
+    background-color: var(--color-navy);
   }
 }
 
@@ -144,7 +138,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--sp-cyan);
+  color: var(--color-cyan);
   margin: 0 0 20px;
   align-self: flex-start;
 }
@@ -165,7 +159,7 @@
 }
 
 .sp-hero-title span {
-  color: var(--sp-cyan);
+  color: var(--color-cyan);
 }
 
 .sp-hero-subtitle {
@@ -206,8 +200,8 @@
 }
 
 .sp-btn-cyan {
-  background: var(--sp-cyan);
-  color: var(--sp-navy);
+  background: var(--color-cyan);
+  color: var(--color-navy);
 }
 
 .sp-btn-cyan:hover {
@@ -224,7 +218,7 @@
 
 .sp-btn-outline:hover {
   background: #ffffff;
-  color: var(--sp-navy);
+  color: var(--color-navy);
   border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 16px 32px -10px rgba(255, 255, 255, 0.25);
@@ -300,7 +294,7 @@
 .sp-section-divider {
   width: 60px;
   height: 3px;
-  background: var(--sp-cyan);
+  background: var(--color-cyan);
   border-radius: 2px;
   margin: 0 auto 56px;
 }
@@ -334,14 +328,14 @@
 .sp-faq-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--sp-shadow-lg);
-  border-color: var(--sp-cyan);
+  border-color: var(--color-cyan);
 }
 
 .sp-faq-icon-wrap {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: var(--sp-cyan-pale);
+  background: var(--color-cyan-pale);
   border: 2px solid rgba(45, 214, 229, 0.3);
   display: flex;
   align-items: center;
@@ -352,7 +346,7 @@
 
 .sp-faq-card:hover .sp-faq-icon-wrap {
   background: var(--sp-cyan-glow);
-  border-color: var(--sp-cyan);
+  border-color: var(--color-cyan);
 }
 
 .sp-faq-card h3 {
@@ -413,7 +407,7 @@
   gap: 16px;
   cursor: pointer;
   text-align: left;
-  font-family: inherit;
+
 }
 
 .sp-accordion-question {
@@ -427,14 +421,14 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: var(--sp-cyan-pale);
+  background: var(--color-cyan-pale);
   border: 1.5px solid rgba(45, 214, 229, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   transition: transform 0.25s ease, background 0.25s ease;
-  color: var(--sp-cyan);
+  color: var(--color-cyan);
   font-size: 14px;
   font-weight: 700;
 }
@@ -442,7 +436,7 @@
 .sp-accordion-item[open] .sp-accordion-chevron,
 .sp-accordion-item.open .sp-accordion-chevron {
   transform: rotate(180deg);
-  background: var(--sp-cyan);
+  background: var(--color-cyan);
   color: #fff;
 }
 
@@ -473,7 +467,7 @@
 .sp-contact-divider {
   width: 50px;
   height: 3px;
-  background: var(--sp-cyan);
+  background: var(--color-cyan);
   border-radius: 2px;
   margin: 0 auto 40px;
 }
@@ -505,7 +499,7 @@
 .sp-email-icon-wrap {
   width: 60px;
   height: 60px;
-  background: var(--sp-cyan-pale);
+  background: var(--color-cyan-pale);
   border: 2px solid rgba(45, 214, 229, 0.35);
   border-radius: 50%;
   display: flex;
@@ -528,7 +522,7 @@
 }
 
 .sp-email-link {
-  color: var(--sp-cyan-d);
+  color: var(--color-cyan-d);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -538,7 +532,7 @@
 }
 
 .sp-email-link:hover {
-  color: var(--sp-navy);
+  color: var(--color-navy);
 }
 
 .sp-email-btn {
@@ -546,20 +540,20 @@
   align-items: center;
   gap: 8px;
   background: transparent;
-  border: 2px solid var(--sp-cyan);
-  color: var(--sp-navy-mid);
+  border: 2px solid var(--color-cyan);
+  color: var(--color-navy-mid);
   border-radius: 8px;
   padding: 9px 20px;
   font-size: 0.9rem;
   font-weight: 600;
-  font-family: inherit;
+
   cursor: pointer;
   text-decoration: none;
   transition: background 0.22s ease, color 0.22s ease;
 }
 
 .sp-email-btn:hover {
-  background: var(--sp-cyan);
+  background: var(--color-cyan);
   color: #fff;
 }
 
@@ -570,7 +564,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--sp-cyan-d);
+  color: var(--color-cyan-d);
   margin: 0 0 6px;
 }
 
@@ -585,7 +579,7 @@
 }
 
 .sp-email-address:hover {
-  color: var(--sp-cyan-d);
+  color: var(--color-cyan-d);
 }
 
 .sp-sla-text {
@@ -659,7 +653,7 @@
   padding: 9px 22px;
   font-size: 0.9rem;
   font-weight: 700;
-  font-family: inherit;
+
   cursor: pointer;
   text-decoration: none;
   transition: background 0.22s ease, color 0.22s ease;
@@ -700,7 +694,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--sp-cyan-d);
+  color: var(--color-cyan-d);
   margin: 0 0 10px;
 }
 
@@ -765,7 +759,7 @@
   /* background: linear-gradient(135deg, #eef0fb 0%, #dde1f8 100%);
   border-bottom: 1px solid rgba(21, 26, 88, 0.12); */
       background: linear-gradient(135deg, #e8fcfe 0%, #d0f7fb 100%);
-    border-bottom: 1px solid #2dd6e533;
+    border-bottom: 1px solid var(--color-cyan)33;
 }
 
 /* ── Icon circle ───────────────────────────────────────── */
@@ -787,16 +781,16 @@
 .sp-legal-card-icon--cyan {
   background: rgba(45, 214, 229, 0.18);
   border: 2px solid rgba(45, 214, 229, 0.4);
-  color: var(--sp-cyan-d);
+  color: var(--color-cyan-d);
 }
 
 .sp-legal-card-icon--navy {
   /* background: rgba(21, 26, 88, 0.1);
   border: 2px solid rgba(21, 26, 88, 0.2);
-  color: var(--sp-navy-mid); */
-  color: var(--sp-cyan-d);
-    background: #2dd6e52e;
-    border: 2px solid #2dd6e566;
+  color: var(--color-navy-mid); */
+  color: var(--color-cyan-d);
+    background: var(--color-cyan)2e;
+    border: 2px solid var(--color-cyan)66;
 }
 
 /* ── Card body ─────────────────────────────────────────── */
@@ -828,13 +822,13 @@
   gap: 6px;
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--sp-cyan-d);
+  color: var(--color-cyan-d);
   transition: gap 0.22s ease, color 0.22s ease;
 }
 
 .sp-legal-card:hover .sp-legal-card-cta {
   gap: 10px;
-  color: var(--sp-navy-mid);
+  color: var(--color-navy-mid);
 }
 
 /* ============================================================
@@ -1126,3 +1120,17 @@
   }
 }
 
+
+/* ── INJECTED RESPONSIVE LADDER (HERO ONLY) ─────────────── */
+@media (min-width: 576px) { .sp-hero-container { max-width: 540px; margin: 0 auto; } }
+@media (min-width: 768px) { .sp-hero-container { max-width: 720px; margin: 0 auto; } }
+@media (min-width: 992px) { .sp-hero-container { max-width: 960px; margin: 0 auto; } }
+@media (min-width: 1200px) { .sp-hero-container { max-width: 1140px; margin: 0 auto; } }
+@media (min-width: 1400px) { .sp-hero-container { max-width: 1320px; margin: 0 auto; } }
+
+/* ── INJECTED RESPONSIVE LADDER (HERO & MISSING CONTAINERS) ── */
+@media (min-width: 576px) { .sp-hero-container, .sp-legal-container, .sp-emergency-footer-container { max-width: 540px; margin: 0 auto; } }
+@media (min-width: 768px) { .sp-hero-container, .sp-legal-container, .sp-emergency-footer-container { max-width: 720px; margin: 0 auto; } }
+@media (min-width: 992px) { .sp-hero-container, .sp-legal-container, .sp-emergency-footer-container { max-width: 960px; margin: 0 auto; } }
+@media (min-width: 1200px) { .sp-hero-container, .sp-legal-container, .sp-emergency-footer-container { max-width: 1140px; margin: 0 auto; } }
+@media (min-width: 1400px) { .sp-hero-container, .sp-legal-container, .sp-emergency-footer-container { max-width: 1320px; margin: 0 auto; } }

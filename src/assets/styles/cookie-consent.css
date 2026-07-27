@@ -1,5 +1,5 @@
 /* Cookie acknowledgment banner
-   Brand Manual 2026: Navy #02124f · Cyan #2dd6e5 · Font: Avenir */
+   Brand Manual 2026: Navy var(--color-navy) · Cyan var(--color-cyan) · Font: Avenir */
 
 .cc-banner {
   position: fixed;
@@ -52,19 +52,19 @@
 }
 
 .cc-banner-link {
-  color: #2dd6e5;
+  color: var(--color-cyan);
   text-decoration: underline;
   font-weight: 600;
 }
 
 .cc-banner-link:hover {
-  color: #1bb8c7;
+  color: var(--color-cyan-d);
 }
 
 .cc-banner-button {
   flex: 0 0 auto;
-  background: #2dd6e5;
-  color: #02124f;
+  background: var(--color-cyan);
+  color: var(--color-navy);
   font-weight: 800;
   font-size: 14px;
   border: none;
@@ -75,7 +75,7 @@
 }
 
 .cc-banner-button:hover {
-  background: #1bb8c7;
+  background: var(--color-cyan-d);
   transform: translateY(-1px);
   box-shadow: 0 8px 20px -6px rgba(45, 214, 229, 0.4);
 }
@@ -85,7 +85,7 @@
 }
 
 .cc-banner-button:focus-visible {
-  outline: 2px solid #2dd6e5;
+  outline: 2px solid var(--color-cyan);
   outline-offset: 2px;
 }
 

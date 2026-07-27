@@ -1,6 +1,6 @@
 /* ============================================================
    ImmunoTrack — Cookie Policy Page Styles
-   Brand Manual 2026: Navy #02124f · Cyan #2dd6e5 · Font: Avenir
+   Brand Manual 2026: Navy var(--color-navy) · Cyan var(--color-cyan) · Font: Avenir
    ============================================================ */
 
 /* ============================================================
@@ -11,7 +11,7 @@
   flex-shrink: 0;
 }
 
-/* Brand cyan #2dd6e5 */
+/* Brand cyan var(--color-cyan) */
 .ck-svg-teal {
   filter: brightness(0) saturate(100%) invert(75%) sepia(60%)
     saturate(500%) hue-rotate(160deg) brightness(100%) contrast(95%);
@@ -51,19 +51,12 @@
    DESIGN TOKENS — Brand Manual 2026
    ============================================================ */
 :root {
-  /* Primary palette */
-  --ck-navy:         #151a58;     /* ImmunoTrack wordmark navy        */
-  --ck-navy-deep:    #02124f;     /* Darkest navy — hero, footer      */
-  --ck-navy-mid:     #1c2370;     /* Mid navy — gradients             */
-  --ck-cyan:         #2dd6e5;     /* Brand cyan accent                */
-  --ck-cyan-d:       #1bb8c7;     /* Darker cyan — hover, borders     */
-  --ck-cyan-pale:    #f0fdfe;     /* Pale cyan — strip bg             */
-  --ck-cyan-glow:    rgba(45, 214, 229, 0.12);
+  /* Primary palette */
 
   /* Text */
   --ck-text-body:    #2b2f5e;     /* Body text — dark navy tone       */
   --ck-text-muted:   #6b6f9a;     /* Secondary / muted text           */
-  --ck-text-heading: #151a58;     /* Headings — brand navy            */
+  --ck-text-heading: var(--color-navy-mid);     /* Headings — brand navy            */
 
   /* Surface */
   --ck-bg-page:      #f3f5fb;     /* Page background                  */
@@ -94,7 +87,7 @@
   /* background-color: var(--ck-bg-page); */
   color: var(--ck-text-body);
   /* Use the CSS variable exposed by next/font — NOT the literal string "Avenir" */
-  font-family: var(--font-avenir), sans-serif;
+
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -107,7 +100,7 @@
 .ck-hero {
   position: relative;
   background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
-              linear-gradient(135deg, var(--ck-navy-mid) 0%, var(--ck-navy-deep) 100%);
+              linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   color: #ffffff;
   padding: 40px 16px 140px;
   overflow: hidden;
@@ -126,7 +119,7 @@
 @media (min-width: 992px) {
   .ck-hero {
     height: 640px;
-    background-color: #02124f;
+    background-color: var(--color-navy);
   }
 }
 
@@ -167,7 +160,7 @@
 .ck-hero-label {
   font-size: 0.8rem;
   font-weight: 800;
-  color: var(--ck-cyan);
+  color: var(--color-cyan);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -257,7 +250,7 @@
   }
 }
 
-.ck-hero-inner {
+.ck-hero-container {
   position: relative;
   z-index: 1;
   max-width: 640px;
@@ -270,7 +263,7 @@
   gap: 8px;
   background: rgba(45, 214, 229, 0.15);
   border: 1px solid rgba(45, 214, 229, 0.35);
-  color: var(--ck-cyan);
+  color: var(--color-cyan);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -283,7 +276,7 @@
 .ck-hero-badge-dot {
   width: 6px;
   height: 6px;
-  background: var(--ck-cyan);
+  background: var(--color-cyan);
   border-radius: 50%;
   animation: ck-pulse 2s ease-in-out infinite;
 }
@@ -297,12 +290,12 @@
    OVERVIEW STRIP
    ============================================================ */
 .ck-overview {
-  background: var(--ck-cyan-pale);
+  background: var(--color-cyan-pale);
   border-bottom: 1px solid rgba(45, 214, 229, 0.2);
   padding: 0 24px;
 }
 
-.ck-overview-inner {
+.ck-overview-container {
   max-width: 800px;
   margin: 0 auto;
   display: grid;
@@ -345,14 +338,14 @@
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ck-cyan-d);
+  color: var(--color-cyan-d);
   margin-bottom: 4px;
 }
 
 .ck-overview-value {
   font-size: 0.9375rem;
   font-weight: 800;
-  color: var(--ck-navy);
+  color: var(--color-navy);
 }
 
 /* ============================================================
@@ -426,7 +419,7 @@
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ck-cyan-d);
+  color: var(--color-cyan-d);
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--ck-border);
@@ -454,13 +447,13 @@
 }
 
 .ck-toc-link:hover {
-  background: var(--ck-cyan-pale);
-  color: var(--ck-cyan-d);
+  background: var(--color-cyan-pale);
+  color: var(--color-cyan-d);
 }
 
 .ck-toc-link.active {
   background: var(--ck-cyan-glow);
-  color: var(--ck-cyan-d);
+  color: var(--color-cyan-d);
   font-weight: 800;
 }
 
@@ -524,7 +517,7 @@
 .ck-section-num {
   width: 32px;
   height: 32px;
-  background: var(--ck-navy-deep);
+  background: var(--color-navy);
   color: #ffffff;
   border-radius: 8px;
   display: flex;
@@ -601,7 +594,7 @@
 .ck-h3 {
   font-size: 20px;
   font-weight: 500;
-  color: var(--ck-navy);
+  color: var(--color-navy);
   margin: 0 0 10px;
   display: flex;
   align-items: center;
@@ -612,7 +605,7 @@
 .ck-h3-dot {
   width: 7px;
   height: 7px;
-  background: var(--ck-cyan);
+  background: var(--color-cyan);
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -649,7 +642,7 @@
 
 /* .ck-list-item::before {
   content: "→";
-  color: var(--ck-cyan-d);
+  color: var(--color-cyan-d);
   font-weight: 800;
   flex-shrink: 0;
   margin-top: 1px;
@@ -657,7 +650,7 @@
 
 .ck-list-item strong {
   font-weight: 500;
-  color: var(--ck-cyan-d);
+  color: var(--color-cyan-d);
 }
 
 /* ============================================================
@@ -696,7 +689,7 @@
   border-radius: 5px;
   font-size: 0.8125rem;
   color: var(--ck-red-text);
-  font-family: "Courier New", Courier, monospace;
+
   border: 1px solid var(--ck-border);
 }
 
@@ -745,15 +738,15 @@
 }
 
 .ck-provider-card:hover {
-  border-color: var(--ck-cyan);
-  background: var(--ck-cyan-pale);
+  border-color: var(--color-cyan);
+  background: var(--color-cyan-pale);
 }
 
 .ck-provider-icon {
   width: 42px;
   height: 42px;
-  /* background: var(--ck-cyan-pale); */
-  border: 1px solid var(--ck-cyan);
+  /* background: var(--color-cyan-pale); */
+  border: 1px solid var(--color-cyan);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -783,7 +776,7 @@
    ============================================================ */
 .ck-link {
   font-weight: 500;
-  color: var(--ck-cyan-d);
+  color: var(--color-cyan-d);
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-thickness: 2px;
@@ -791,7 +784,7 @@
 }
 
 .ck-link:hover {
-  color: var(--ck-navy);
+  color: var(--color-navy);
 }
 
 /* ============================================================
@@ -842,7 +835,7 @@
    SUMMARY BANNER
    ============================================================ */
 .ck-summary-banner {
-  background: linear-gradient(135deg, var(--ck-navy-deep) 0%, var(--ck-navy-mid) 100%);
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-mid) 100%);
   border-radius: var(--ck-radius-lg);
   padding: 32px;
   color: #fff;
@@ -854,7 +847,7 @@
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ck-cyan);
+  color: var(--color-cyan);
   margin-bottom: 20px;
 }
 
@@ -920,7 +913,7 @@
     min-height: 300px;
   }
 
-  .ck-hero-inner {
+  .ck-hero-container {
     max-width: 100%;
   }
 
@@ -1088,7 +1081,7 @@
   }
 
   /* Overview → stack as horizontal rows */
-  .ck-overview-inner {
+  .ck-overview-container {
     grid-template-columns: 1fr;
   }
 
@@ -1278,3 +1271,9 @@
     gap: 14px;
   }
 }
+/* ── INJECTED RESPONSIVE LADDER (HERO & MISSING CONTAINERS) ── */
+@media (min-width: 576px) { .ck-hero-container, .ck-overview-container { max-width: 540px; margin: 0 auto; } }
+@media (min-width: 768px) { .ck-hero-container, .ck-overview-container { max-width: 720px; margin: 0 auto; } }
+@media (min-width: 992px) { .ck-hero-container, .ck-overview-container { max-width: 960px; margin: 0 auto; } }
+@media (min-width: 1200px) { .ck-hero-container, .ck-overview-container { max-width: 1140px; margin: 0 auto; } }
+@media (min-width: 1400px) { .ck-hero-container, .ck-overview-container { max-width: 1320px; margin: 0 auto; } }

@@ -3,17 +3,10 @@
    prefix: ob-
    ============================================================ */
 
-:root {
-  --ob-navy:          #02124f;
-  --ob-navy-mid:      #151a58;
-  --ob-navy-dark:     #010724;
-  --ob-cyan:          #2dd6e5;
-  --ob-cyan-d:        #1bb8c7;
-  --ob-cyan-pale:     rgba(45, 214, 229, 0.06);
-  --ob-cyan-border:   rgba(45, 214, 229, 0.2);
+:root {
   --ob-bg-light:      #f8fafc;
   --ob-border:        #e2e8f0;
-  --ob-text-head:     #151a58;
+  --ob-text-head:     var(--color-navy-mid);
   --ob-text-body:     #2b2f5e;
   --ob-text-muted:    #6b6f9a;
   --ob-radius:        16px;
@@ -69,7 +62,7 @@
 .ob-hero {
   position: relative;
   background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
-              linear-gradient(135deg, var(--ob-navy-mid) 0%, var(--ob-navy) 100%);
+              linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   color: #ffffff;
   padding: 100px 16px 140px;
   text-align: center;
@@ -90,7 +83,7 @@
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 800;
-  color: var(--ob-cyan);
+  color: var(--color-cyan);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -142,8 +135,8 @@
 }
 
 .ob-btn-cyan {
-  background: var(--ob-cyan);
-  color: var(--ob-navy);
+  background: var(--color-cyan);
+  color: var(--color-navy);
 }
 
 .ob-btn-cyan:hover {
@@ -160,7 +153,7 @@
 
 .ob-btn-outline:hover {
   background: #ffffff;
-  color: var(--ob-navy);
+  color: var(--color-navy);
   border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 16px 32px -10px rgba(255, 255, 255, 0.25);
@@ -171,9 +164,9 @@
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 800;
-  color: var(--ob-cyan-d);
-  background-color: var(--ob-cyan-pale);
-  border: 1px solid var(--ob-cyan-border);
+  color: var(--color-cyan-d);
+  background-color: var(--color-cyan-pale);
+  border: 1px solid var(--color-cyan-d);
   padding: 6px 16px;
   border-radius: 20px;
   text-transform: uppercase;
@@ -184,7 +177,7 @@
 .ob-section-title {
   font-size: clamp(1.6rem, 3vw, 2.25rem);
   font-weight: 800;
-  color: var(--ob-navy);
+  color: var(--color-navy);
   margin-bottom: 20px;
   letter-spacing: -0.01em;
 }
@@ -221,7 +214,7 @@
 }
 
 .ob-table th {
-  background: var(--ob-navy);
+  background: var(--color-navy);
   color: #ffffff;
   font-weight: 700;
   font-size: 0.8rem;
@@ -247,14 +240,14 @@
 
 .ob-table-phase {
   font-weight: 800;
-  color: var(--ob-navy-mid);
+  color: var(--color-navy-mid);
 }
 
 .ob-table-who {
   font-weight: 700;
-  color: var(--ob-cyan-d);
+  color: var(--color-cyan-d);
   font-size: 0.85rem;
-  background-color: var(--ob-cyan-pale);
+  background-color: var(--color-cyan-pale);
   padding: 4px 10px;
   border-radius: 6px;
   display: inline-block;
@@ -308,7 +301,7 @@
 .ob-split-card-title {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--ob-navy);
+  color: var(--color-navy);
 }
 
 .ob-list {
@@ -333,7 +326,7 @@
 
 .ob-list-item-title {
   font-weight: 700;
-  color: var(--ob-navy-mid);
+  color: var(--color-navy-mid);
   margin-bottom: 4px;
 }
 
@@ -380,7 +373,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--ob-cyan) 0%, var(--ob-cyan-d) 100%);
+  background: linear-gradient(90deg, var(--color-cyan) 0%, var(--color-cyan-d) 100%);
   opacity: 0.8;
 }
 
@@ -402,7 +395,7 @@
 .ob-tier-title {
   font-size: 1.2rem;
   font-weight: 800;
-  color: var(--ob-navy);
+  color: var(--color-navy);
   margin-bottom: 16px;
 }
 
@@ -414,7 +407,7 @@
 
 .ob-system-quote {
   background: var(--ob-bg-light);
-  border-left: 3px solid var(--ob-cyan-d);
+  border-left: 3px solid var(--color-cyan-d);
   padding: 16px;
   font-style: italic;
   font-size: 0.88rem;
@@ -460,7 +453,7 @@
 .ob-example-type {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--ob-cyan-d);
+  color: var(--color-cyan-d);
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -480,7 +473,7 @@
 }
 
 .ob-onboarding-container {
-  background: linear-gradient(135deg, var(--ob-navy-mid) 0%, var(--ob-navy) 100%);
+  background: linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   border-radius: var(--ob-radius-lg);
   padding: 48px 32px;
   display: flex;

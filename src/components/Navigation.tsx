@@ -97,14 +97,14 @@ export default function Navigation({ onNavigate }: NavigationProps) {
             onClick={(e) => handleClick(e, link.href)}
             className={`pui-focus relative font-semibold text-[17px] transition-all duration-300 group ${
               isActive
-                ? "text-[#1D4ED8]"
-                : "text-slate-700 hover:text-[#1D4ED8]"
+                ? "text-cyan-d"
+                : "text-slate-700 hover:text-cyan-d"
             }`}
           >
             {link.name}
 
             <span
-              className={`absolute left-0 -bottom-2 h-[2px] bg-[#1D4ED8] transition-all duration-300 ${
+              className={`absolute left-0 -bottom-2 h-[2px] bg-cyan-d transition-all duration-300 ${
                 isActive ? "w-full" : "w-0 group-hover:w-full"
               }`}
             />

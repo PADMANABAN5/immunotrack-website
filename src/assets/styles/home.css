@@ -3,14 +3,7 @@
    prefix: hm-
    ============================================================ */
 
-:root {
-  --hm-navy: #02124f;
-  --hm-navy-mid: #091557;
-  --hm-navy-dark: #010a30;
-  --hm-cyan: #2dd6e5;
-  --hm-cyan-d: #1ab8c8;
-  --hm-cyan-pale: rgba(45, 214, 229, 0.06);
-  --hm-cyan-border: rgba(45, 214, 229, 0.25);
+:root {
   --hm-bg-light: #f8fafc;
   --hm-border: #e2e8f0;
   --hm-text-head: #0f172a;
@@ -26,7 +19,7 @@
 .hm-hero {
   position: relative;
   background: radial-gradient(circle at 80% 20%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
-    linear-gradient(135deg, var(--hm-navy-mid) 0%, var(--hm-navy-dark) 100%);
+    linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   color: #ffffff;
   padding: 60px 16px;
   overflow: hidden;
@@ -106,7 +99,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--hm-cyan);
+  color: var(--color-cyan);
   margin-bottom: 16px;
 }
 
@@ -146,13 +139,13 @@
 }
 
 .hm-btn-cyan {
-  background: var(--hm-cyan);
-  color: var(--hm-navy);
+  background: var(--color-cyan);
+  color: var(--color-navy);
 }
 
 .hm-btn-cyan:hover {
   background: #ffffff;
-  color: var(--hm-navy);
+  color: var(--color-navy);
   box-shadow: 0 0 20px rgba(45, 214, 229, 0.4);
   transform: translateY(-2px);
 }
@@ -193,7 +186,7 @@
 
 /* ── Trust / Compliance Bar ────────────────────────────── */
 .hm-compliance {
-  background: var(--hm-navy-dark);
+  background: var(--color-navy);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 24px 16px;
@@ -296,7 +289,7 @@
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 800;
-  color: var(--hm-cyan-d);
+  color: var(--color-cyan-d);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -358,7 +351,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--hm-cyan) 0%, var(--hm-cyan-d) 100%);
+  background: linear-gradient(90deg, var(--color-cyan) 0%, var(--color-cyan-d) 100%);
   opacity: 1;
   /* Top gradient bar visible in normal view */
 }
@@ -374,7 +367,7 @@
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--hm-cyan) 0%, var(--hm-cyan-d) 100%);
+  background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-cyan-d) 100%);
   /* Gradient wrap in normal view */
   border: none;
   display: flex;
@@ -408,7 +401,7 @@
 .hm-pillar-title {
   font-size: 1.3rem;
   font-weight: 800;
-  color: var(--hm-navy);
+  color: var(--color-navy);
   margin-bottom: 12px;
 }
 
@@ -422,7 +415,7 @@
 .hm-pillar-link {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--hm-cyan-d);
+  color: var(--color-cyan-d);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-decoration: none;
@@ -441,7 +434,7 @@
 }
 
 .hm-pillar-link:hover {
-  color: var(--hm-navy);
+  color: var(--color-navy);
 }
 
 .hm-pillar-link:hover::after {
@@ -450,7 +443,7 @@
 
 /* ── How It Works ──────────────────────────────────────── */
 .hm-steps {
-  background: var(--hm-navy-mid);
+  background: var(--color-navy-mid);
   color: #ffffff;
   padding: 95px 16px;
 }
@@ -498,7 +491,7 @@
 .hm-step-num {
   font-size: 3.5rem;
   font-weight: 800;
-  color: var(--hm-cyan);
+  color: var(--color-cyan);
   line-height: 1;
   margin-bottom: 20px;
 }
@@ -528,7 +521,7 @@
   margin: 0 auto;
   background: #ffffff;
   border: 1px solid rgba(2, 18, 79, 0.06);
-  border-top: 4px solid var(--hm-cyan);
+  border-top: 4px solid var(--color-cyan);
   border-radius: var(--hm-radius-lg);
   padding: 60px 40px;
   box-shadow: 0 30px 60px -15px rgba(2, 18, 79, 0.08), 0 0 1px rgba(2, 18, 79, 0.05);
@@ -553,7 +546,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: var(--hm-cyan-d);
+  color: var(--color-cyan-d);
   background-color: rgba(45, 214, 229, 0.08);
   padding: 6px 16px;
   border-radius: 20px;
@@ -563,7 +556,7 @@
   font-size: clamp(1.4rem, 2.8vw, 2rem);
   font-weight: 700;
   line-height: 1.4;
-  color: var(--hm-navy);
+  color: var(--color-navy);
   margin-bottom: 40px;
   position: relative;
   text-align: center;
@@ -572,7 +565,7 @@
 .hm-testimonial-quote::before {
   content: "“";
   font-size: 8rem;
-  font-family: Georgia, serif;
+
   color: rgba(45, 214, 229, 0.08);
   position: absolute;
   top: -70px;
@@ -593,7 +586,7 @@
 
 /* ── Footer CTA ────────────────────────────────────────── */
 .hm-footer-cta {
-  background: linear-gradient(135deg, var(--hm-navy) 0%, var(--hm-navy-dark) 100%);
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy) 100%);
   color: #ffffff;
   padding: 90px 16px;
   text-align: center;

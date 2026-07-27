@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+@theme {
+  --color-navy: #02124f;
+  --color-navy-mid: #151a58;
+  --color-cyan: #2dd6e5;
+  --color-cyan-d: #1bb8c7;
+  --color-cyan-pale: #f0fdfe;
+  --font-sans: "Avenir", sans-serif;
+}
+
 /* @font-face {
   font-family: "Avenir";
   src: url("./fonts/AvenirLTStd-Roman.otf") format("opentype");

@@ -3,17 +3,10 @@
    prefix: ab-
    ============================================================ */
 
-:root {
-  --ab-navy:          #02124f;
-  --ab-navy-mid:      #151a58;
-  --ab-navy-dark:     #010724;
-  --ab-cyan:          #2dd6e5;
-  --ab-cyan-d:        #1bb8c7;
-  --ab-cyan-pale:     rgba(45, 214, 229, 0.06);
-  --ab-cyan-border:   rgba(45, 214, 229, 0.2);
+:root {
   --ab-bg-light:      #f8fafc;
   --ab-border:        #e2e8f0;
-  --ab-text-head:     #151a58;
+  --ab-text-head:     var(--color-navy-mid);
   --ab-text-body:     #2b2f5e;
   --ab-text-muted:    #6b6f9a;
   --ab-radius:        16px;
@@ -72,7 +65,7 @@
 .ab-hero {
   position: relative;
   background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
-              linear-gradient(135deg, var(--ab-navy-mid) 0%, var(--ab-navy) 100%);
+              linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   color: #ffffff;
   padding: 40px 16px 140px;
   overflow: hidden;
@@ -91,7 +84,7 @@
 @media (min-width: 992px) {
   .ab-hero {
     height: 640px;
-    background-color: #02124f;
+    background-color: var(--color-navy);
   }
 }
 
@@ -128,7 +121,7 @@
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 800;
-  color: var(--ab-cyan);
+  color: var(--color-cyan);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -230,8 +223,8 @@
 }
 
 .ab-btn-cyan {
-  background: var(--ab-cyan);
-  color: var(--ab-navy);
+  background: var(--color-cyan);
+  color: var(--color-navy);
 }
 
 .ab-btn-cyan:hover {
@@ -248,7 +241,7 @@
 
 .ab-btn-outline:hover {
   background: #ffffff;
-  color: var(--ab-navy);
+  color: var(--color-navy);
   border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 16px 32px -10px rgba(255, 255, 255, 0.25);
@@ -294,8 +287,8 @@
 
 .ab-pillar-card:hover {
   transform: translateY(-8px);
-  background: var(--ab-cyan-pale);
-  border-color: var(--ab-cyan-border);
+  background: var(--color-cyan-pale);
+  border-color: var(--color-cyan-d);
   box-shadow: 0 24px 48px -20px rgba(2, 18, 79, 0.16);
 }
 
@@ -305,10 +298,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--ab-cyan-pale);
+  background: var(--color-cyan-pale);
   border-radius: 12px;
   margin-bottom: 20px;
-  color: var(--ab-cyan-d);
+  color: var(--color-cyan-d);
   flex-shrink: 0;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
 }

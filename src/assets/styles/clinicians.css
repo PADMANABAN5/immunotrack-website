@@ -3,17 +3,10 @@
    prefix: cl-
    ============================================================ */
 
-:root {
-  --cl-navy:          #02124f;
-  --cl-navy-mid:      #151a58;
-  --cl-navy-dark:     #010724;
-  --cl-cyan:          #2dd6e5;
-  --cl-cyan-d:        #1bb8c7;
-  --cl-cyan-pale:     rgba(45, 214, 229, 0.06);
-  --cl-cyan-border:   rgba(45, 214, 229, 0.2);
+:root {
   --cl-bg-light:      #f8fafc;
   --cl-border:        #e2e8f0;
-  --cl-text-head:     #151a58;
+  --cl-text-head:     var(--color-navy-mid);
   --cl-text-body:     #2b2f5e;
   --cl-text-muted:    #6b6f9a;
   --cl-radius:        16px;
@@ -79,7 +72,7 @@
 .cl-hero {
   position: relative;
   background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
-              linear-gradient(135deg, var(--cl-navy-mid) 0%, var(--cl-navy) 100%);
+              linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   color: #ffffff;
   padding: 40px 16px 140px;
   overflow: hidden;
@@ -98,7 +91,7 @@
 @media (min-width: 992px) {
   .cl-hero {
     height: 640px;
-    background-color: #02124f;
+    background-color: var(--color-navy);
   }
 }
 
@@ -135,7 +128,7 @@
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 800;
-  color: var(--cl-cyan);
+  color: var(--color-cyan);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -223,8 +216,8 @@
 }
 
 .cl-btn-cyan {
-  background: var(--cl-cyan);
-  color: var(--cl-navy);
+  background: var(--color-cyan);
+  color: var(--color-navy);
 }
 
 .cl-btn-cyan:hover {
@@ -241,7 +234,7 @@
 
 .cl-btn-outline:hover {
   background: #ffffff;
-  color: var(--cl-navy);
+  color: var(--color-navy);
   border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 16px 32px -10px rgba(255, 255, 255, 0.25);
@@ -285,7 +278,7 @@
 .cl-stats-val {
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 800;
-  color: var(--cl-cyan-d);
+  color: var(--color-cyan-d);
   line-height: 1.1;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
@@ -327,11 +320,11 @@
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 800;
-  color: var(--cl-cyan-d);
-  background-color: var(--cl-cyan-pale);
+  color: var(--color-cyan-d);
+  background-color: var(--color-cyan-pale);
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
-  border: 1px solid var(--cl-cyan-border);
+  border: 1px solid var(--color-cyan-d);
   padding: 6px 16px;
   border-radius: 20px;
   text-transform: uppercase;
@@ -342,7 +335,7 @@
 .cl-section-title {
   font-size: clamp(1.6rem, 3vw, 2.25rem);
   font-weight: 800;
-  color: var(--cl-navy);
+  color: var(--color-navy);
   margin-bottom: 20px;
   letter-spacing: -0.01em;
 }
@@ -402,7 +395,7 @@
 
 .cl-cpt-code {
   font-weight: 800;
-  color: var(--cl-cyan-d);
+  color: var(--color-cyan-d);
   font-size: 1.1rem;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
@@ -457,7 +450,7 @@
 }
 
 .cl-db-header {
-  background: var(--cl-navy);
+  background: var(--color-navy);
   padding: 18px 24px;
   display: flex;
   justify-content: space-between;
@@ -526,7 +519,7 @@
 .cl-db-sum-val {
   font-size: 1.6rem;
   font-weight: 800;
-  color: var(--cl-navy-mid);
+  color: var(--color-navy-mid);
   line-height: 1.1;
 }
 
@@ -652,7 +645,7 @@
 .cl-feature-title {
   font-size: 1.2rem;
   font-weight: 800;
-  color: var(--cl-navy);
+  color: var(--color-navy);
   margin-bottom: 14px;
   letter-spacing: -0.01em;
 }
@@ -700,7 +693,7 @@
 }
 
 .cl-specialty-card:hover {
-  border-color: var(--cl-cyan);
+  border-color: var(--color-cyan);
   box-shadow: var(--cl-shadow);
   transform: translateY(-2px);
 }
@@ -708,7 +701,7 @@
 .cl-specialty-title {
   font-size: 1.1rem;
   font-weight: 800;
-  color: var(--cl-navy);
+  color: var(--color-navy);
   margin-bottom: 12px;
 }
 
@@ -725,7 +718,7 @@
 }
 
 .cl-onboarding-container {
-  background: linear-gradient(135deg, var(--cl-navy-mid) 0%, var(--cl-navy) 100%);
+  background: linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   border-radius: var(--cl-radius-lg);
   padding: 48px 32px;
   display: flex;

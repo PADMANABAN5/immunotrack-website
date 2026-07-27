@@ -3,17 +3,10 @@
    prefix: ct-
    ============================================================ */
 
-:root {
-  --ct-navy:          #02124f;
-  --ct-navy-mid:      #151a58;
-  --ct-navy-dark:     #010724;
-  --ct-cyan:          #2dd6e5;
-  --ct-cyan-d:        #1bb8c7;
-  --ct-cyan-pale:     rgba(45, 214, 229, 0.06);
-  --ct-cyan-border:   rgba(45, 214, 229, 0.2);
+:root {
   --ct-bg-light:      #f8fafc;
   --ct-border:        #e2e8f0;
-  --ct-text-head:     #151a58;
+  --ct-text-head:     var(--color-navy-mid);
   --ct-text-body:     #2b2f5e;
   --ct-text-muted:    #6b6f9a;
   --ct-radius:        16px;
@@ -36,7 +29,7 @@
 .ct-hero {
   position: relative;
   background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
-              linear-gradient(135deg, var(--ct-navy-mid) 0%, var(--ct-navy) 100%);
+              linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   color: #ffffff;
   padding: 40px 16px 140px;
   overflow: hidden;
@@ -55,7 +48,7 @@
 @media (min-width: 992px) {
   .ct-hero {
     height: 640px;
-    background-color: #02124f;
+    background-color: var(--color-navy);
   }
 }
 
@@ -94,7 +87,7 @@
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 800;
-  color: var(--ct-cyan);
+  color: var(--color-cyan);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -193,8 +186,8 @@
 }
 
 .ct-btn-cyan {
-  background: var(--ct-cyan);
-  color: var(--ct-navy);
+  background: var(--color-cyan);
+  color: var(--color-navy);
 }
 
 .ct-btn-cyan:hover {
@@ -290,7 +283,7 @@
   border: 1.5px solid var(--ct-border);
   border-radius: 10px;
   font-size: 1rem;
-  font-family: inherit;
+
   color: var(--ct-text-body);
   transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
   background: #ffffff;
@@ -304,7 +297,7 @@
 .ct-form-input:focus,
 .ct-form-textarea:focus {
   outline: none;
-  border-color: var(--ct-cyan);
+  border-color: var(--color-cyan);
   box-shadow: 0 0 0 4px rgba(45, 214, 229, 0.14);
 }
 
@@ -366,7 +359,7 @@
 }
 
 .ct-detail-link {
-  color: var(--ct-cyan);
+  color: var(--color-cyan);
   text-decoration: none;
   font-weight: 600;
   transition: all 0.25s ease;
@@ -374,6 +367,20 @@
 }
 
 .ct-detail-link:hover {
-  color: var(--ct-cyan-d);
+  color: var(--color-cyan-d);
   text-decoration: underline;
 }
+
+/* ── INJECTED RESPONSIVE LADDER ─────────────────────────── */
+@media (min-width: 576px) { .ct-hero-container, .ct-contact-container { max-width: 540px; } }
+@media (min-width: 768px) { .ct-hero-container, .ct-contact-container { max-width: 720px; } }
+@media (min-width: 992px) { .ct-hero-container, .ct-contact-container { max-width: 960px; } }
+@media (min-width: 1200px) { .ct-hero-container, .ct-contact-container { max-width: 1140px; } }
+@media (min-width: 1400px) { .ct-hero-container, .ct-contact-container { max-width: 1320px; } }
+
+/* ── INJECTED RESPONSIVE LADDER (HERO & MISSING CONTAINERS) ── */
+@media (min-width: 576px) { .ct-hero-container, .ct-contact-container { max-width: 540px; margin: 0 auto; } }
+@media (min-width: 768px) { .ct-hero-container, .ct-contact-container { max-width: 720px; margin: 0 auto; } }
+@media (min-width: 992px) { .ct-hero-container, .ct-contact-container { max-width: 960px; margin: 0 auto; } }
+@media (min-width: 1200px) { .ct-hero-container, .ct-contact-container { max-width: 1140px; margin: 0 auto; } }
+@media (min-width: 1400px) { .ct-hero-container, .ct-contact-container { max-width: 1320px; margin: 0 auto; } }
