@@ -106,7 +106,7 @@ export default function CliniciansSection() {
             <span className="cl-section-tag">Dashboard Preview</span>
             <h2 className="cl-section-title">Your patient panel — every morning, updated overnight</h2>
             <p className="cl-section-subtitle">
-              Patients sorted by flare risk. RTM logging progress visible at a glance. Nightly AI summaries waiting when you log in.
+              Patients sorted by flare risk. RTM logging progress visible at a glance. Nightly AI summaries waiting when you log in. (Sample data shown for illustration — not real patient information.)
             </p>
           </div>
 
@@ -239,7 +239,7 @@ export default function CliniciansSection() {
             <Reveal className="cl-feature-card" delay={4}>
               <h3 className="cl-feature-title">AI-generated nightly insights</h3>
               <p className="cl-feature-desc">
-                Get plain-language summaries generated each night detailing what changed, what is driving risk, and what to watch out for.
+                ImmunoTrack’s clinical AI engine generates plain-language summaries for each patient every night — what changed, what’s driving risk, what to watch at the next visit.
               </p>
             </Reveal>
           </div>

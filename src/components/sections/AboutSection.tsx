@@ -15,7 +15,7 @@ export default function AboutSection() {
               We built ImmunoTrack because allergy patients deserve better care between visits.
             </h1>
             <p className="ab-hero-subtitle">
-             The platform is built on HIPAA-compliant AWS infrastructure, uses AI for nightly insight generation, and is designed to comply with CMS Remote Therapeutic Monitoring guidelines.
+             The platform is built on HIPAA-eligible AWS infrastructure, uses a proprietary AI engine for nightly insight generation, and is designed to comply with CMS Remote Therapeutic Monitoring guidelines.
             </p>
           </div>
           <div className="ab-hero-image">
