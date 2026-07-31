@@ -45,8 +45,8 @@ export default function CliniciansSection() {
             <span className="cl-stats-label">days per period for RTM billing</span>
           </div>
           <div className="cl-stats-item">
-            <span className="cl-stats-val"><AnimatedCounter value={5} /></span>
-            <span className="cl-stats-label">RTM CPT codes 98975-98981</span>
+            <span className="cl-stats-val"><AnimatedCounter value={6} /></span>
+            <span className="cl-stats-label">RTM CPT codes 98975–98981</span>
           </div>
           <div className="cl-stats-item">
             <span className="cl-stats-val">Nightly</span>
@@ -66,7 +66,7 @@ export default function CliniciansSection() {
             <span className="cl-section-tag">RTM Billing</span>
             <h2 className="cl-section-title">Built around RTM — not bolted on.</h2>
             <p className="cl-section-subtitle">
-              ImmunoTrack tracks the data that RTM billing requires — symptom scores, medication adherence, and therapy response. The platform shows each patient&apos;s daily logging progress toward the 16-day threshold per 30-day period, and exports the documentation your billing team needs.
+              ImmunoTrack tracks the data that RTM billing requires — symptom scores, medication adherence, and therapy response. The platform shows each patient&apos;s daily logging progress toward the 16-day threshold per 30-day period, and exports the documentation your billing team needs. All 6 RTM CPT codes (98975–98981) supported, including the CMS 2026 tiered additions.
             </p>
           </div>
 
@@ -84,6 +84,10 @@ export default function CliniciansSection() {
               <p className="cl-cpt-desc">Device supply — respiratory system</p>
             </Reveal>
             <Reveal className="cl-cpt-card" delay={3}>
+              <span className="cl-cpt-code">CPT 98979</span>
+              <p className="cl-cpt-desc">Device supply — musculoskeletal system (CMS 2026)</p>
+            </Reveal>
+            <Reveal className="cl-cpt-card" delay={4}>
               <span className="cl-cpt-code">CPT 98980</span>
               <p className="cl-cpt-desc">Treatment management, first 20 minutes</p>
             </Reveal>
@@ -265,7 +269,7 @@ export default function CliniciansSection() {
             </Reveal>
             <Reveal className="cl-specialty-card" delay={2}>
               <h3 className="cl-specialty-title">Asthma & Pulmonology</h3>
-              <p className="cl-specialty-desc">Rescue inhaler utilization alerts, peak flow charts, and standardized asthma control scoring.</p>
+              <p className="cl-specialty-desc">Rescue inhaler utilization alerts, symptom-based asthma control scoring and standardized asthma control scoring.</p>
             </Reveal>
             <Reveal className="cl-specialty-card" delay={3}>
               <h3 className="cl-specialty-title">Academic / Hospital</h3>

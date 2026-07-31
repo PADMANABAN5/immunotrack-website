@@ -57,7 +57,7 @@ export default function PatientsSection() {
               </div>
               <h3 className="pt-feature-title">Daily symptom logging</h3>
               <p className="pt-feature-desc">
-                Rate respiratory, nasal, and skin symptoms in under 2 minutes. Log every day to qualify for insurance-covered remote monitoring.
+                Rate respiratory, nasal, and skin symptoms in under 2 minutes. Log every day so your clinician can pursue RTM billing where covered by your plan.
               </p>
             </Reveal>
 
@@ -70,7 +70,7 @@ export default function PatientsSection() {
               </div>
               <h3 className="pt-feature-title">Medication tracking</h3>
               <p className="pt-feature-desc">
-                 Log your doses, set reminder times, and keep your care team up to date on how your treatment plan is working.
+                Log your doses, set reminder times, and keep your care team up to date on how your treatment plan is working.
               </p>
             </Reveal>
 
@@ -116,12 +116,12 @@ export default function PatientsSection() {
               <span className="pt-section-tag">RTM Explained Simply</span>
               <h2 className="pt-section-title">What is Remote Therapeutic Monitoring?</h2>
               <p className="pt-rtm-desc">
-                Remote Therapeutic Monitoring (RTM) is a healthcare service where your clinician monitors your health between visits using data you log on your phone. When you log regularly, your clinician can see how your symptoms are responding to treatment and may be able to bill your insurance for that monitoring. Most patients need to log on at least 16 days in a 30-day period to qualify.
-              </p>
+               Remote Therapeutic Monitoring (RTM) is a healthcare service where your clinician monitors your health between visits using data you log on your phone. When you log regularly, your clinician can see how your symptoms are responding to treatment. Depending on your insurance plan, your clinician may be able to bill for that monitoring — typically when patients log on 16 or more days within a 30-day period. Coverage and eligibility vary by plan; your clinician will determine whether RTM billing applies to your care.
+             </p>
             </div>
             <Reveal className="pt-rtm-stat-card">
               <span className="pt-rtm-stat-val"><AnimatedCounter value={16} /><span className="pt-rtm-stat-of">/30</span></span>
-              <span className="pt-rtm-stat-label">days of logging per monitoring period</span>
+              <span className="pt-rtm-stat-label">typical logging goal per monitoring period</span>
             </Reveal>
           </div>
         </div>

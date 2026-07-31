@@ -84,7 +84,7 @@ export default function PrivacyPage() {
                 <line x1="8" y1="2" x2="8" y2="6"/>
                 <line x1="3" y1="10" x2="21" y2="10"/>
               </svg>
-              Effective Date: April 1, 2026 &nbsp;·&nbsp; Version 1.1 &nbsp;·&nbsp; Last Updated: April 2026
+              Effective Date: May 1, 2026 &nbsp;·&nbsp; Version 1.2 &nbsp;·&nbsp; Last Updated: July 2026
             </div>
           </div>
           <div className="pp-hero-image">
@@ -163,8 +163,7 @@ export default function PrivacyPage() {
               <p className="pp-p">
                 Clinicians may enter or review patient data on behalf of their patients as part of their clinical
                 workflow. Clinicians are responsible for ensuring they have appropriate authority to submit patient
-                information to the Platform. Clinicians may also configure Digital Action Plans that are displayed
-                to patients within the app.
+                information to the Platform.
               </p>
             </div>
           </article>
@@ -277,7 +276,7 @@ export default function PrivacyPage() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong>Anthropic (Claude AI)</strong></td>
+                      <td><strong>AWS Bedrock (AI Processing)</strong></td>
                       <td>Nightly AI insight generation — flare risk scoring and trigger correlation</td>
                       <td>De-identified symptom, medication, and environmental data</td>
                     </tr>
@@ -297,7 +296,7 @@ export default function PrivacyPage() {
                       <td>Device token only — no PHI in notification payload</td>
                     </tr>
                     <tr>
-                      <td><strong>Epic / Modernizing Medicine</strong></td>
+                      <td><strong>EMR Integration Partner</strong></td>
                       <td>EMR integration — clinician workflow embedding (planned)</td>
                       <td>Structured clinical data per FHIR R4 standard</td>
                     </tr>

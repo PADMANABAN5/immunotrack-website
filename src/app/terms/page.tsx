@@ -81,7 +81,7 @@ export default function TermsPage() {
                 <line x1="8" y1="2" x2="8" y2="6"/>
                 <line x1="3" y1="10" x2="21" y2="10"/>
               </svg>
-              Version 1.1 — May 2026 Immunotrack Inc. 
+              Version 1.2 — May 2026 · ImmunoTrack Inc.
             </div>
           </div>
           <div className="ts-hero-image">
@@ -128,7 +128,7 @@ export default function TermsPage() {
             </div>
             <div className="ts-section-body">
               <p className="ts-p">
-                ImmunoTrack is operated by <strong>Aman Medical Consulting LLC</strong>, a technology company headquartered in Atlanta, Georgia (&ldquo;ImmunoTrack,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the ImmunoTrack mobile application and any related services (collectively, the &ldquo;App&rdquo;).
+                ImmunoTrack is operated by <strong>ImmunoTrack Inc.</strong>, a technology company headquartered in Atlanta, Georgia (&ldquo;ImmunoTrack,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the ImmunoTrack mobile application and any related services (collectively, the &ldquo;App&rdquo;).
               </p>
               <p className="ts-p">
                 By creating an account or using the App, you agree to these Terms. If you do not agree, please do not use the App.
@@ -268,7 +268,7 @@ export default function TermsPage() {
             </div>
             <div className="ts-section-body">
               <p className="ts-p">
-                To the fullest extent permitted by law, <strong>ImmunoTrack and Aman Medical Consulting LLC</strong> will not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App, including any reliance on health insights, AI-generated content, or medication reminders provided within the App.
+                To the fullest extent permitted by law, <strong>ImmunoTrack Inc.</strong> will not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App, including any reliance on health insights, AI-generated content, or medication reminders provided within the App.
               </p>
               <p className="ts-p">
                 Our total liability to you for any claim arising from these Terms or your use of the App will not exceed the amount you have paid to use the App in the twelve months preceding the claim, or $100, whichever is greater.
@@ -287,7 +287,7 @@ export default function TermsPage() {
             </div>
             <div className="ts-section-body">
               <p className="ts-p">
-                All content, design, software, and technology in the App is owned by <strong>Aman Medical Consulting LLC</strong> or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works from any part of the App without our prior written permission.
+                All content, design, software, and technology in the App is owned by <strong>ImmunoTrack Inc.</strong> or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works from any part of the App without our prior written permission.
               </p>
             </div>
           </article>
@@ -348,7 +348,7 @@ export default function TermsPage() {
                 If you have questions about these Terms, please contact us:
               </p>
               <div className="ts-contact-block">
-                <p><strong>Aman Medical Consulting LLC</strong></p>
+                <p><strong>ImmunoTrack Inc.</strong></p>
                 <p>Email: <a href="mailto:support@immunotrack.ai" className="ts-link">support@immunotrack.ai</a></p>
                 <p>Address: Atlanta, Georgia, United States of America</p>
               </div>

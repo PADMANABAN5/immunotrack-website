@@ -370,9 +370,15 @@
   }
 }
 
+@media (min-width: 768px) {
+  .cl-cpt-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (min-width: 992px) {
   .cl-cpt-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

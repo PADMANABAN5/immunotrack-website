@@ -450,9 +450,11 @@ export default function CookiesPage() {
                   On your first visit to immunotrack.ai, a cookie notice will be
                   displayed explaining that the site uses strictly necessary and
                   functional cookies only. Because we do not use advertising or
-                  analytics cookies, we do not require opt-in consent for our
-                  current cookie usage under most jurisdictions. The notice
-                  records your acknowledgment.
+                  analytics cookies, ImmunoTrack believes its current cookie
+                  usage may not require opt-in consent under many jurisdictions
+                  — however, cookie consent requirements vary by location and
+                  applicable law, and this notice does not constitute legal
+                  advice. The notice records your acknowledgment.
                 </p>
                 <p>
                   If ImmunoTrack adds analytics or advertising cookies in a
