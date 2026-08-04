@@ -30,6 +30,7 @@ const useIsomorphicLayoutEffect =
  */
 export default function OneScrollPage() {
   const activeIdRef = useRef<SectionId | null>(null);
+  const isNavigatingRef = useRef(true);
 
   useIsomorphicLayoutEffect(() => {
     window.history.scrollRestoration = "manual";
@@ -37,6 +38,15 @@ export default function OneScrollPage() {
     if (target) {
       scrollToSectionElement(target, { instant: true });
       activeIdRef.current = target;
+      
+      // Secondary scroll in case Next.js scroll restoration/reset overrides it
+      const timer = setTimeout(() => {
+        scrollToSectionElement(target, { instant: true });
+        isNavigatingRef.current = false;
+      }, 100);
+      return () => clearTimeout(timer);
+    } else {
+      isNavigatingRef.current = false;
     }
   }, []);
 
@@ -50,6 +60,8 @@ export default function OneScrollPage() {
 
     const observer = new IntersectionObserver(
       (entries) => {
+        if (isNavigatingRef.current) return;
+
         entries.forEach((entry) => {
           intersecting.set(entry.target.id as SectionId, entry.isIntersecting);
         });
