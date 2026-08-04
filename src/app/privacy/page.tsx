@@ -593,6 +593,18 @@ export default function PrivacyPage() {
         {/* ─── Sticky Sidebar ─── */}
         <aside className="pp-sidebar" aria-label="Privacy policy summary">
 
+          {/* Section nav */}
+          <nav className="pp-nav-card" aria-label="Jump to section">
+            <h3 className="pp-nav-title">Jump to Section</h3>
+            <ul className="pp-nav-list">
+              {sections.map((s) => (
+                <li key={s.id}>
+                  <a href={`#${s.id}`} className="pp-nav-link">{s.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           {/* At a Glance */}
           <div className="pp-glance-card">
             <h2 className="pp-glance-title">Privacy Policy At a Glance</h2>
@@ -610,18 +622,6 @@ export default function PrivacyPage() {
               ))}
             </ul>
           </div>
-
-          {/* Section nav */}
-          <nav className="pp-nav-card" aria-label="Jump to section">
-            <h3 className="pp-nav-title">Jump to Section</h3>
-            <ul className="pp-nav-list">
-              {sections.map((s) => (
-                <li key={s.id}>
-                  <a href={`#${s.id}`} className="pp-nav-link">{s.label}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
 
           {/* Questions */}
           <div className="pp-questions-card">
