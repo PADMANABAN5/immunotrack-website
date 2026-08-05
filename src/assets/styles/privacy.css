@@ -134,6 +134,7 @@
   border-radius: 8px;
   padding: 8px 16px;
   align-self: flex-start;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 991px) {
@@ -194,7 +195,7 @@
   padding: 60px 16px 48px;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 20px;
   align-items: start;
   position: relative;
@@ -516,6 +517,7 @@
 
 /* Section nav card */
 .pp-nav-card {
+  display: none;
   background: var(--pp-bg-card);
   border: 1px solid var(--pp-border);
   border-radius: var(--pp-radius-lg);
@@ -658,7 +660,7 @@
   .pp-layout {
     max-width: 720px;
     padding: 36px 24px 64px;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
 
@@ -700,13 +702,17 @@
   .pp-layout {
     max-width: 960px;
     padding: 40px 30px 72px;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: minmax(0, 1fr) 300px;
     gap: 28px;
   }
 
   .pp-sidebar {
     position: sticky;
     top: 88px;
+  }
+
+  .pp-nav-card {
+    display: block;
   }
 
   .pp-section-header {
@@ -740,7 +746,7 @@
   .pp-layout {
     max-width: 1140px;
     padding: 48px 36px 80px;
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: minmax(0, 1fr) 340px;
     gap: 32px;
   }
 }
@@ -755,7 +761,7 @@
   .pp-layout {
     max-width: 1320px;
     padding: 56px 48px 96px;
-    grid-template-columns: 1fr 360px;
+    grid-template-columns: minmax(0, 1fr) 360px;
     gap: 40px;
   }
 }
