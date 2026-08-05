@@ -41,12 +41,12 @@ export default function CliniciansSection() {
       <section className="cl-stats-section" aria-label="Stats Summary">
         <div className="cl-stats-bar">
           <div className="cl-stats-item">
-            <span className="cl-stats-val"><AnimatedCounter value={16} /></span>
+            <span className="cl-stats-val">2–30</span>
             <span className="cl-stats-label">days per period for RTM billing</span>
           </div>
           <div className="cl-stats-item">
             <span className="cl-stats-val"><AnimatedCounter value={6} /></span>
-            <span className="cl-stats-label">RTM CPT codes 98975–98981</span>
+            <span className="cl-stats-label">RTM CPT codes</span>
           </div>
           <div className="cl-stats-item">
             <span className="cl-stats-val">Nightly</span>
@@ -66,7 +66,7 @@ export default function CliniciansSection() {
             <span className="cl-section-tag">RTM Billing</span>
             <h2 className="cl-section-title">Built around RTM — not bolted on.</h2>
             <p className="cl-section-subtitle">
-              ImmunoTrack tracks the data that RTM billing requires — symptom scores, medication adherence, and therapy response. The platform shows each patient&apos;s daily logging progress toward the 16-day threshold per 30-day period, and exports the documentation your billing team needs. All 6 RTM CPT codes (98975–98981) supported, including the CMS 2026 tiered additions.
+              ImmunoTrack tracks the data that RTM billing requires — symptom scores, medication adherence, and therapy response. The platform shows each patient&apos;s daily logging progress toward RTM billing thresholds (2–15 days or 16–30 days) per 30-day period, and exports the documentation your billing team needs. All 6 RTM CPT codes supported, including the CMS 2026 tiered additions.
             </p>
           </div>
 
@@ -77,15 +77,15 @@ export default function CliniciansSection() {
             </Reveal>
             <Reveal className="cl-cpt-card" delay={1}>
               <span className="cl-cpt-code">CPT 98976</span>
-              <p className="cl-cpt-desc">Device supply with scheduled recording</p>
+              <p className="cl-cpt-desc">Device supply, respiratory system, 16–30 days</p>
             </Reveal>
             <Reveal className="cl-cpt-card" delay={2}>
-              <span className="cl-cpt-code">CPT 98977</span>
-              <p className="cl-cpt-desc">Device supply — respiratory system</p>
+              <span className="cl-cpt-code">CPT 98984</span>
+              <p className="cl-cpt-desc">Device supply, respiratory system, 2–15 days</p>
             </Reveal>
             <Reveal className="cl-cpt-card" delay={3}>
               <span className="cl-cpt-code">CPT 98979</span>
-              <p className="cl-cpt-desc">Device supply — musculoskeletal system (CMS 2026)</p>
+              <p className="cl-cpt-desc">Treatment management, first 10 minutes</p>
             </Reveal>
             <Reveal className="cl-cpt-card" delay={4}>
               <span className="cl-cpt-code">CPT 98980</span>

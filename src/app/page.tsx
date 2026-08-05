@@ -151,11 +151,9 @@ export default function Page() {
             <span className="hm-testimonial-tag">Why ImmunoTrack</span>
           </div>
 
-          <blockquote className="hm-testimonial-quote">
-            &ldquo;Built to give allergy and immunology practices visibility between
-            visits — nightly flare risk scores, RTM logging progress, and
-            symptom trends, without adding work to your day.&rdquo;
-          </blockquote>
+          <div className='block' style={{ fontSize: '1.5rem', fontWeight: '800' }}>
+            &ldquo;Allergy and immunology practices needed real visibility between visits — not one more dashboard to babysit. ImmunoTrack surfaces flare risk overnight, tracks RTM progress automatically, and shows symptom trends without adding a single task to your day.&rdquo;
+          </div>
         </div>
       </section>
 
