@@ -576,6 +576,10 @@ body {
     border-bottom: 1px solid rgba(255,255,255,.15);
     padding-bottom: 25px;
   }
+  .footer-bottom p {
+    grid-column: 4;
+    grid-row: 3;
+  }
 }
 
 /* =====================
@@ -600,6 +604,7 @@ body {
   .footer-logo {
     width: 100px;
   }
+
 }
 /* =====================
    DESKTOP NAV (≥ 992px / LG)

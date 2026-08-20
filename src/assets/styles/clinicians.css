@@ -3,7 +3,14 @@
    prefix: cl-
    ============================================================ */
 
-:root {
+:root {
+
+
+
+
+
+
+
   --cl-bg-light:      #f8fafc;
   --cl-border:        #e2e8f0;
   --cl-text-head:     var(--color-navy-mid);
@@ -350,7 +357,7 @@
 /* ── RTM BILLING SECTION ────────────────────────────────── */
 .cl-billing-section {
   background: var(--cl-bg-light);
-  padding: 120px 16px;
+  padding: 80px 16px;
 }
 
 .cl-billing-content {
@@ -428,7 +435,7 @@
 /* ── DASHBOARD PREVIEW SECTION ──────────────────────────── */
 .cl-dashboard-section {
   background: #ffffff;
-  padding: 120px 16px;
+  padding: 80px 16px;
 }
 
 .cl-dashboard-content {
@@ -614,7 +621,7 @@
 /* ── FEATURES SECTION ───────────────────────────────────── */
 .cl-features-section {
   background: var(--cl-bg-light);
-  padding: 120px 16px;
+  padding: 80px 16px;
 }
 
 .cl-features-content {
@@ -665,7 +672,7 @@
 /* ── SPECIALTIES SECTION ────────────────────────────────── */
 .cl-specialties-section {
   background: #ffffff;
-  padding: 120px 16px;
+  padding: 80px 16px;
 }
 
 .cl-specialties-content {

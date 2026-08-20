@@ -3,7 +3,14 @@
    prefix: ob-
    ============================================================ */
 
-:root {
+:root {
+
+
+
+
+
+
+
   --ob-bg-light:      #f8fafc;
   --ob-border:        #e2e8f0;
   --ob-text-head:     var(--color-navy-mid);
@@ -161,7 +168,8 @@
 
 /* ── SECTION HEADER ─────────────────────────────────────── */
 .ob-section-tag {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   font-size: 0.75rem;
   font-weight: 800;
   color: var(--color-cyan-d);
@@ -180,6 +188,7 @@
   color: var(--color-navy);
   margin-bottom: 20px;
   letter-spacing: -0.01em;
+  text-align: left;
 }
 
 .ob-section-subtitle {
@@ -187,6 +196,7 @@
   color: var(--ob-text-muted);
   line-height: 1.65;
   max-width: 800px;
+  text-align: left;
 }
 
 /* ── TABLE SECTION ──────────────────────────────────────── */
@@ -256,7 +266,7 @@
 /* ── CONFIG VS DAYONE GRIDS ─────────────────────────────── */
 .ob-config-section {
   background: var(--ob-bg-light);
-  padding: 120px 16px;
+  padding: 80px 16px;
 }
 
 .ob-section-content {
@@ -339,7 +349,7 @@
 /* ── TIER SYSTEM SECTION ────────────────────────────────── */
 .ob-tier-section {
   background: #ffffff;
-  padding: 120px 16px;
+  padding: 80px 16px;
 }
 
 .ob-tier-grid {
@@ -419,7 +429,7 @@
 /* ── EXAMPLES SECTION ───────────────────────────────────── */
 .ob-examples-section {
   background: var(--ob-bg-light);
-  padding: 120px 16px;
+  padding: 80px 16px;
 }
 
 .ob-examples-grid {
