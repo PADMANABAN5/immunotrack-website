@@ -1,9 +1,12 @@
-import OneScrollPage from "@/components/OneScrollPage";
+import type { Metadata } from "next";
+import SupportSection from "@/components/sections/SupportSection";
 
-// No page-specific metadata here, matching the original support/page.tsx
-// (it was a "use client" component and couldn't export metadata) — this
-// route falls back to the root layout's default title/description, exactly
-// as it did before.
+export const metadata: Metadata = {
+  title: "Help & Support — ImmunoTrack",
+  description:
+    "Get help with the ImmunoTrack app. FAQs, contact support, and legal documents. Our team responds within one business day.",
+};
+
 export default function SupportPage() {
-  return <OneScrollPage />;
+  return <SupportSection />;
 }

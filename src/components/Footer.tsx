@@ -1,12 +1,37 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import "@/assets/styles/globals.css";
 import footerLogo from "@/assets/images/new-logo-trans.png";
 import notificationIcon from "@/assets/icons/noun-notification-3408005.svg";
 import profileIcon from "@/assets/icons/noun-profile-8205839.svg";
 import timelineIcon from "@/assets/icons/noun-timeline-8109095.svg";
 
+const platformLinks = [
+  { href: "/clinicians", label: "For Clinicians" },
+  { href: "/patients", label: "For Patients" },
+  { href: "/about", label: "About" },
+  { href: "/support", label: "Help & Support" },
+  { href: "/download", label: "Download the App" },
+];
+
+const legalLinks = [
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Service" },
+  { href: "/cookies", label: "Cookie Policy" },
+];
+
 export default function Footer() {
+  const pathname = usePathname();
+
+  function linkClass(href: string) {
+    const isActive =
+      pathname === href || pathname.startsWith(href + "/");
+    return isActive ? "footer-link-active" : undefined;
+  }
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -27,7 +52,7 @@ export default function Footer() {
             </Link>
 
             <p>
-              ImmunoTrack AI-Driven Clinical Intelligence for Allergy & Asthma ©
+              ImmunoTrack AI-Driven Clinical Intelligence for Allergy &amp; Asthma ©
               2026 ImmunoTrack Inc.
             </p>
           </div>
@@ -38,19 +63,13 @@ export default function Footer() {
             <h3>PLATFORM</h3>
 
             <ul>
-              <li>
-                <Link href="/clinicians">For Clinicians</Link>
-              </li>
-              <li>
-                <Link href="/patients">For Patients</Link>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-
-              <li>
-                <Link href="/download">Download the App</Link>
-              </li>
+              {platformLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <Link href={href} className={linkClass(href)}>
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -60,19 +79,17 @@ export default function Footer() {
             <h3>LEGAL</h3>
 
             <ul>
-              <li>
-                <Link href="/privacy">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link href="/terms">Terms of Service</Link>
-              </li>
-              <li>
-                <Link href="/cookies">Cookie Policy</Link>
-              </li>
+              {legalLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <Link href={href} className={linkClass(href)}>
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* SUPPORT */}
+          {/* CONTACT */}
 
           <div className="footer-column">
             <h3>CONTACT</h3>

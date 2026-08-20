@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import OneScrollPage from "@/components/OneScrollPage";
+import CliniciansSection from "@/components/sections/CliniciansSection";
 
 export const metadata: Metadata = {
   title: "ImmunoTrack for Clinicians — RTM Billing & Patient Monitoring",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function CliniciansPage() {
-  return <OneScrollPage />;
+  return <CliniciansSection />;
 }

@@ -336,6 +336,12 @@ body {
   background-size: 100% 1px;
 }
 
+.footer a.footer-link-active {
+  color: #2fd6e5;
+  background-size: 100% 1px;
+  font-weight: 700;
+}
+
 /* =====================
    SUPPORT SECTION
 ===================== */
