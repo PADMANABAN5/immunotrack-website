@@ -3,7 +3,14 @@
    prefix: pt-
    ============================================================ */
 
-:root {
+:root {
+
+
+
+
+
+
+
   --pt-bg-light:      #f8fafc;
   --pt-border:        #e2e8f0;
   --pt-text-head:     var(--color-navy-mid);
@@ -253,6 +260,21 @@
 
 /* ── SECTION HEADER TEMPLATE ────────────────────────────── */
 .pt-section-tag {
+  display: block;
+  width: fit-content;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-cyan-d);
+  background-color: var(--color-cyan-pale);
+  border: 1px solid var(--color-cyan-d);
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+.pt-section-tag-2{
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 800;
@@ -272,8 +294,16 @@
   color: var(--color-navy);
   margin-bottom: 20px;
   letter-spacing: -0.01em;
+  text-align: center;
 }
 
+.pt-section-title-2{
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
 /* ── FEATURES SECTION ───────────────────────────────────── */
 .pt-features-section {
   background: var(--pt-bg-light);

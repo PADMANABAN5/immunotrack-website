@@ -123,8 +123,8 @@ export default function PatientsSection() {
         <div className="pt-container">
           <div className="pt-rtm-grid">
             <div className="pt-rtm-copy">
-              <span className="pt-section-tag">RTM Explained Simply</span>
-              <h2 className="pt-section-title">What is Remote Therapeutic Monitoring?</h2>
+              <span className="pt-section-tag-2">RTM Explained Simply</span>
+              <h2 className="pt-section-title-2">What is Remote Therapeutic Monitoring?</h2>
               <p className="pt-rtm-desc">
                Remote Therapeutic Monitoring (RTM) is a healthcare service where your clinician monitors your health between visits using data you log on your phone. When you log regularly, your clinician can see how your symptoms are responding to treatment. Depending on your insurance plan, your clinician may be able to bill your insurance for that monitoring. Most patients qualify by logging 2–15 days (lower tier) or 16–30 days (higher tier) in a 30-day period — your clinician's billing team determines which applies to your monitoring plan.
              </p>
