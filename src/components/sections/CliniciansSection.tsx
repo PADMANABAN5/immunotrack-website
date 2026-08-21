@@ -264,14 +264,10 @@ export default function CliniciansSection() {
               <p className="cl-specialty-desc">Primary specialty. Core clinical scales including ACQ-6, SNOT-22, and POEM are fully integrated.</p>
             </Reveal>
             <Reveal className="cl-specialty-card" delay={1}>
-              <h3 className="cl-specialty-title">Pediatric Allergy</h3>
-              <p className="cl-specialty-desc">Age-appropriate scoring metrics and unified guardian-tracked accounts.</p>
-            </Reveal>
-            <Reveal className="cl-specialty-card" delay={2}>
               <h3 className="cl-specialty-title">Asthma & Pulmonology</h3>
               <p className="cl-specialty-desc">Rescue inhaler utilization alerts, symptom-based asthma control scoring and standardized asthma control scoring.</p>
             </Reveal>
-            <Reveal className="cl-specialty-card" delay={3}>
+            <Reveal className="cl-specialty-card" delay={2}>
               <h3 className="cl-specialty-title">Academic / Hospital</h3>
               <p className="cl-specialty-desc">Multi-clinician collaborative workspaces, advanced cohort segmentation, and cohort-level analytics.</p>
             </Reveal>

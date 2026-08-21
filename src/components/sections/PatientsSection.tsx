@@ -3,6 +3,13 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import "@/assets/styles/patients.css";
+import "@/assets/styles/download.css";
+import { DOWNLOAD_LINKS } from "@/config/download-links";
+import {
+  AppStoreBadgeContent,
+  GooglePlayBadgeContent,
+  StoreBadge,
+} from "@/components/StoreBadges";
 
 export default function PatientsSection() {
   return (
@@ -16,12 +23,15 @@ export default function PatientsSection() {
               Track your allergies and asthma. Share what matters with your care team.
             </h1>
             <p className="pt-hero-subtitle">
-              "ImmunoTrack is the app your clinician uses to monitor your health between visits. Log your symptoms daily, track your medications, and let AI spot the patterns.
+              &ldquo;ImmunoTrack is the app your clinician uses to monitor your health between visits. Log your symptoms daily, track your medications, and let AI spot the patterns.
             </p>
-            <div className="pt-hero-actions">
-              <Link href="/download" className="pt-btn pt-btn-cyan pui-btn pui-focus">
-                Download the App
-              </Link>
+            <div className="pt-hero-actions" style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
+              <StoreBadge href={DOWNLOAD_LINKS.appStoreUrl} className="dl-badge-btn hero-btn" label="Download on the App Store">
+                <AppStoreBadgeContent />
+              </StoreBadge>
+              <StoreBadge href={DOWNLOAD_LINKS.googlePlayUrl} className="dl-badge-btn hero-btn" label="Get it on Google Play">
+                <GooglePlayBadgeContent />
+              </StoreBadge>
             </div>
           </div>
           <div className="pt-hero-image">
@@ -165,10 +175,13 @@ export default function PatientsSection() {
         <div className="pt-cta-container">
           <h2 className="pt-cta-title">Get the ImmunoTrack patient app</h2>
           <p className="pt-cta-desc">Available on iOS and Android. Your clinician will send you an invite — download the app and follow the link to get started.</p>
-          <div className="pt-cta-actions">
-            <Link href="/download" className="pt-btn pt-btn-cyan pui-btn pui-focus">
-              Download the App
-            </Link>
+          <div className="pt-cta-actions" style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
+            <StoreBadge href={DOWNLOAD_LINKS.appStoreUrl} className="dl-badge-btn hero-btn" label="Download on the App Store">
+              <AppStoreBadgeContent />
+            </StoreBadge>
+            <StoreBadge href={DOWNLOAD_LINKS.googlePlayUrl} className="dl-badge-btn hero-btn" label="Get it on Google Play">
+              <GooglePlayBadgeContent />
+            </StoreBadge>
           </div>
         </div>
       </section>

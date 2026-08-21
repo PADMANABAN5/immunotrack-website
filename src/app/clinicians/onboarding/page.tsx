@@ -14,37 +14,31 @@ const phases = [
     phase: "1. Super Admin setup",
     who: "ImmunoTrack Super Admin",
     what: "Creates practice record and provisions clinician seat (name, NPI, email). Triggers activation email.",
-    when: "Before clinician Day 1",
   },
   {
     phase: "2. Practice Admin setup",
     who: "Practice Admin",
     what: "Completes clinician profile: mobile, specialty, welcome message. Visible in clinician profile on Day 1.",
-    when: "Before or on Day 1",
   },
   {
     phase: "3. Account activation",
     who: "Clinician",
     what: "Clicks activation link. Sets password and MFA. Confirms profile details.",
-    when: "Day 1",
   },
   {
     phase: "4. Platform orientation",
     who: "Clinician + ImmunoTrack",
     what: "Clinician reviews dashboard, patient invite flow, RTM consent process (hard opt-in at patient onboarding), and billing panel. Guided by ImmunoTrack onboarding team.",
-    when: "Day 1–2",
   },
   {
     phase: "5. First patient invite",
     who: "Clinician",
     what: "Sends first patient invite. Default welcome message pre-filled. Clinician confirms or edits before sending.",
-    when: "Day 1–7",
   },
   {
     phase: "6. Ongoing",
     who: "Clinician + ImmunoTrack",
     what: "Clinician manages patient panel, reviews alerts, exports billing reports. Practice Admin manages team. ImmunoTrack support available.",
-    when: "Ongoing",
   },
 ];
 
@@ -59,13 +53,6 @@ export default function ClinicianOnboarding() {
           <p className="ob-hero-subtitle">
             This playbook outlines the complete onboarding flow for practices enrolling in the ImmunoTrack remote therapeutic monitoring program.
           </p>
-          <div className="ob-hero-meta">
-            <span>Living Document</span>
-            <span>&bull;</span>
-            <span>v1.3</span>
-            <span>&bull;</span>
-            <span>June 2026</span>
-          </div>
         </div>
       </section>
 
@@ -75,10 +62,9 @@ export default function ClinicianOnboarding() {
           <table className="ob-table">
             <thead>
               <tr>
-                <th style={{ width: "20%" }}>Phase</th>
-                <th style={{ width: "25%" }}>Responsibility</th>
-                <th style={{ width: "40%" }}>What Happens</th>
-                <th style={{ width: "15%" }}>When</th>
+                <th style={{ width: "25%" }}>Phase</th>
+                <th style={{ width: "30%" }}>Responsibility</th>
+                <th style={{ width: "45%" }}>What Happens</th>
               </tr>
             </thead>
             <tbody>
@@ -89,7 +75,6 @@ export default function ClinicianOnboarding() {
                     <span className="ob-table-who">{p.who}</span>
                   </td>
                   <td>{p.what}</td>
-                  <td style={{ fontWeight: 600 }}>{p.when}</td>
                 </tr>
               ))}
             </tbody>
@@ -219,7 +204,7 @@ export default function ClinicianOnboarding() {
               <span className="ob-tier-label">Tier 1</span>
               <h3 className="ob-tier-title">System Default</h3>
               <p className="ob-tier-desc">
-                Platform config fallback used if no custom welcome message is defined. Stored globally and always active.
+                Platform configuration fallback used if no custom welcome message is defined. Stored globally and always active.
               </p>
               <div className="ob-system-quote">
                 &ldquo;Welcome to our monitoring program. Your clinician uses ImmunoTrack to keep track of your health between visits. We look forward to supporting you.&rdquo;
@@ -266,18 +251,12 @@ export default function ClinicianOnboarding() {
               </p>
             </Reveal>
             <Reveal className="ob-example-card" delay={1}>
-              <div className="ob-example-type">Pediatric Allergy</div>
-              <p className="ob-example-text">
-                &ldquo;Welcome to our monitoring program. We&apos;re glad to have you with us. Daily logging helps us understand your child&apos;s symptoms and adjust their care plan.&rdquo;
-              </p>
-            </Reveal>
-            <Reveal className="ob-example-card" delay={2}>
               <div className="ob-example-type">Asthma Clinic</div>
               <p className="ob-example-text">
                 &ldquo;Welcome to ImmunoTrack. Tracking your daily symptoms helps us keep your asthma well-controlled and catch any changes early.&rdquo;
               </p>
             </Reveal>
-            <Reveal className="ob-example-card" delay={3}>
+            <Reveal className="ob-example-card" delay={2}>
               <div className="ob-example-type">Academic / Hospital Practice</div>
               <p className="ob-example-text">
                 &ldquo;Welcome. Your clinician at [Practice name] has enrolled you in a remote monitoring program. This helps us monitor your condition between appointments.&rdquo;
