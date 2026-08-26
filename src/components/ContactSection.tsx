@@ -4,6 +4,7 @@ import profileIcon   from "@/assets/icons/noun-profile-8205839.svg";
 import insightsIcon  from "@/assets/icons/noun-insights-8300657.svg";
 import trackingIcon  from "@/assets/icons/noun-tracking-8269731.svg";
 import alertIcon     from "@/assets/icons/noun-alert-8253230.svg";
+import ContactForm   from "@/components/ContactForm";
 
 interface ContactCard {
   id: string;
@@ -157,6 +158,9 @@ export default function ContactSection({
           </a>
         ))}
       </div>
+
+      {/* ── Direct Contact Form ── */}
+      <ContactForm />
 
       {/* ── Footer strip ── */}
       <div className="cs-footer-strip">
