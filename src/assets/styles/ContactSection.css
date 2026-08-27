@@ -347,16 +347,18 @@
 }
 
 .cs-form-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #0b1d33;
-  margin: 0 0 6px 0;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--color-navy, #02124f);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.01em;
 }
 
 .cs-form-subtitle {
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: #64748b;
-  margin: 0;
+  margin: 0 0 24px 0;
+  line-height: 1.6;
 }
 
 .cs-form-row {
@@ -402,8 +404,8 @@
 .cs-form-input:focus,
 .cs-form-select:focus,
 .cs-form-textarea:focus {
-  border-color: #0284c7;
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+  border-color: var(--color-cyan-d, #1bb8c7);
+  box-shadow: 0 0 0 3px rgba(27, 184, 199, 0.18);
 }
 
 .cs-form-textarea {
@@ -420,27 +422,49 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #0b1d33;
-  color: #2dd6e5;
-  font-weight: 600;
-  font-size: 0.875rem;
+  background: var(--color-navy, #02124f);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
   padding: 14px 28px;
-  border: 1px solid rgba(45, 214, 229, 0.4);
+  border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
+  box-shadow: 0 4px 14px rgba(2, 18, 79, 0.18);
 }
 
 .cs-form-btn:hover:not(:disabled) {
-  background: #142b47;
-  box-shadow: 0 4px 14px rgba(45, 214, 229, 0.25);
-  transform: translateY(-1px);
+  background: var(--color-navy-mid, #151a58);
+  color: #ffffff;
+  box-shadow: 0 12px 24px -6px rgba(2, 18, 79, 0.3);
+  transform: translateY(-2px);
 }
 
 .cs-form-btn:disabled {
   opacity: 0.65;
   cursor: not-allowed;
+}
+
+.cs-form-disclaimer {
+  font-size: 0.8125rem;
+  color: #64748b;
+  margin-top: 16px;
+  text-align: center;
+  line-height: 1.55;
+}
+
+.cs-form-link {
+  color: var(--color-cyan-d, #1bb8c7);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.cs-form-link:hover {
+  color: var(--color-navy-mid, #151a58);
 }
 
 .cs-form-alert {

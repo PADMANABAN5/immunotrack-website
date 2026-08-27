@@ -191,7 +191,7 @@ export default function SupportSection() {
               <div className="sp-email-icon-wrap" aria-hidden="true">
                <svg
                   width="26" height="26" viewBox="0 0 24 24"
-                  fill="none" stroke="#c0392b"
+                  fill="none" stroke="#991b1b"
                   strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                 >
                   <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
@@ -364,9 +364,9 @@ export default function SupportSection() {
             </p>
           </div>
         </div>
-        <p className="sp-app-version">
+        {/* <p className="sp-app-version">
           ImmunoTrack v1.1 &middot; &copy; 
-        </p>
+        </p> */}
       </section>
 
     </section>

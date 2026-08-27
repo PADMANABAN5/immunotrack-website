@@ -6,7 +6,13 @@
 /* ============================================================
    DESIGN TOKENS
    ============================================================ */
-:root {
+:root {
+
+
+
+
+
+
   --sp-text-body:   #2b2f5e;
   --sp-text-muted:  #6b6f9a;
   --sp-text-head:   var(--color-navy-mid);
@@ -294,7 +300,7 @@
 .sp-section-divider {
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-navy), var(--color-cyan));
+  background: var(--color-cyan);
   border-radius: 2px;
   margin: 0 auto 56px;
 }
@@ -467,7 +473,7 @@
 .sp-contact-divider {
   width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-navy), var(--color-cyan));
+  background: var(--color-cyan);
   border-radius: 2px;
   margin: 0 auto 40px;
 }
@@ -618,17 +624,25 @@
   border-radius: 50%;
   display: flex;
   align-items: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  color: #991b1b;
 }
 
 .sp-urgent-label {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--sp-red-text);
-  margin: 0 0 8px;
+  color: #991b1b;
+  margin: 0 0 6px;
 }
 
 .sp-urgent-body {
@@ -637,9 +651,9 @@
 
 .sp-urgent-text {
   font-size: 0.95rem;
-  color: #5a2020;
-  margin: 0 0 20px;
-  line-height: 1.65;
+  color: #991b1b;
+  margin: 0 0 16px;
+  line-height: 1.6;
 }
 
 .sp-911-btn {
@@ -836,38 +850,46 @@
    Two required lines at the very bottom of the support page.
    ============================================================ */
 .sp-emergency-footer {
-  background: #1a0505;
-  border-top: 3px solid var(--sp-red-text);
-  padding: 32px 24px;
+  background: #ffffff;
+  padding: 40px 24px;
   text-align: center;
+  border-top: none;
 }
 
 .sp-emergency-footer-inner {
   display: inline-flex;
   align-items: flex-start;
   gap: 16px;
-  margin-bottom: 16px;
+  background: #fdf2f2;
+  border: 1px solid #fecaca;
+  border-radius: 16px;
+  padding: 24px 28px;
+  max-width: 680px;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.05);
   text-align: left;
+  box-sizing: border-box;
 }
 
 .sp-emergency-footer-icon {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(192, 57, 43, 0.2);
-  border: 2px solid rgba(192, 57, 43, 0.5);
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: #e88080;
+  color: #991b1b;
 }
 
 .sp-emergency-line {
-  font-size: 0.92rem;
-  color: #e8b4b4;
+  font-size: 0.95rem;
+  color: #991b1b;
   margin: 0 0 5px;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 .sp-emergency-line:last-child {
@@ -875,22 +897,22 @@
 }
 
 .sp-emergency-911 {
-  color: #ff8080;
+  color: #991b1b;
   font-weight: 700;
   text-decoration: underline;
-  text-decoration-color: rgba(255, 128, 128, 0.5);
+  text-underline-offset: 3px;
   transition: color 0.2s;
 }
 
 .sp-emergency-911:hover {
-  color: #fff;
+  color: #7f1d1d;
 }
 
 .sp-app-version {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.28);
-  margin: 0;
-  letter-spacing: 0.04em;
+  font-size: 0.8rem;
+  color: var(--sp-text-muted);
+  margin-top: 16px;
+  text-align: center;
 }
 
 

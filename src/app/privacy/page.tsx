@@ -575,7 +575,7 @@ export default function PrivacyPage() {
                   </tr>
                   <tr>
                     <td>1.1</td>
-                    <td>April 2026</td>
+                    <td>May 1, 2026</td>
                     <td>
                       Updated entity to ImmunoTrack Inc. Updated email to
                       privacy@immunotrack.ai. Added environmental data section, lab result upload,
