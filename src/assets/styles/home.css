@@ -198,16 +198,16 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
+  align-items: center;
+  gap: 16px;
 }
 
 @media (min-width: 992px) {
   .hm-compliance-container {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 32px;
+    justify-content: center;
+    gap: 24px;
   }
 }
 

@@ -427,15 +427,17 @@
 }
 
 .cl-notice-box {
-  background: #fffbeb;
-  border: 1px solid #fef3c7;
-  border-left: 4px solid #f59e0b;
-  border-radius: 12px;
-  padding: 24px;
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: #78350f;
-  font-style: italic;
+  max-width: 820px;
+  margin: 28px auto 0;
+  background: var(--color-cyan-pale, #f0fdfe);
+  border: 1px solid rgba(45, 214, 229, 0.3);
+  border-left: 4px solid var(--color-cyan-d, #1bb8c7);
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--color-navy-mid, #151a58);
+  text-align: center;
 }
 
 /* ── DASHBOARD PREVIEW SECTION ──────────────────────────── */

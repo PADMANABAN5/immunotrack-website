@@ -189,7 +189,7 @@ export default function CliniciansSection() {
       <section className="cl-onboarding-section" aria-label="Onboarding Banner">
         <div className="cl-onboarding-container">
           <div className="cl-onboarding-copy">
-            <h2 className="cl-onboarding-title">Onboarding your practice takes less than a day.</h2>
+            <h2 className="cl-onboarding-title">Onboarding your practice is quick and easy.</h2>
             <p className="cl-onboarding-body">
               ImmunoTrack handles setup. We configure your practice profile, NPI, and RTM billing settings before you log in. On day one you activate your account, verify your profile, and send your first patient invite.
             </p>
