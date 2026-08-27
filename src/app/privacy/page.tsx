@@ -532,7 +532,6 @@ export default function PrivacyPage() {
                     immunotrack.ai
                   </a>
                 </p>
-                <p>State of Georgia / Delaware, United States of America</p>
               </div>
 
               <div className="pp-callout pp-callout--info" role="note">

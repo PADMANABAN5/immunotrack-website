@@ -350,7 +350,6 @@ export default function TermsPage() {
               <div className="ts-contact-block">
                 <p><strong>ImmunoTrack Inc.</strong></p>
                 <p>Email: <a href="mailto:support@immunotrack.ai" className="ts-link">support@immunotrack.ai</a></p>
-                <p>Address: Atlanta, Georgia, United States of America</p>
               </div>
             </div>
           </article>

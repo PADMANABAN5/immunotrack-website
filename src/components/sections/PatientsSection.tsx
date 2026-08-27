@@ -23,7 +23,7 @@ export default function PatientsSection() {
               Track your allergies and asthma. Share what matters with your care team.
             </h1>
             <p className="pt-hero-subtitle">
-              &ldquo;ImmunoTrack is the app your clinician uses to monitor your health between visits. Log your symptoms daily, track your medications, and let AI spot the patterns.
+              ImmunoTrack is the app your clinician uses to monitor your health between visits. Log your symptoms daily, track your medications, and let AI spot the patterns.
             </p>
             <div className="pt-hero-actions" style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
               <StoreBadge href={DOWNLOAD_LINKS.appStoreUrl} className="dl-badge-btn hero-btn" label="Download on the App Store">

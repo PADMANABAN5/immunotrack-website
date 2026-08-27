@@ -408,6 +408,11 @@
   color: var(--pp-text-body);
 }
 
+.pp-table tbody td:nth-child(1),
+.pp-table tbody td:nth-child(2) {
+  white-space: nowrap;
+}
+
 .pp-table tbody tr:last-child td { border-bottom: none; }
 
 /* Contact block */

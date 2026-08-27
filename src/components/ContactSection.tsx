@@ -35,38 +35,10 @@ interface ContactSectionProps {
 }
 
 /* ── Default cards ──────────────────────────────────────── */
-const defaultCards: ContactCard[] = [
-  {
-    id: "contact-privacy-email",
-    label: "Privacy & Data Questions",
-    value: "privacy@immunotrack.ai",
-    hint: "HIPAA · Cookie Policy · Data Rights",
-    href: "mailto:privacy@immunotrack.ai",
-    iconVariant: "cyan",
-    icon: profileIcon,
-    iconHeight: 22,
-  },
-  {
-    id: "contact-support-email",
-    label: "General Support",
-    value: "support@immunotrack.ai",
-    hint: "Platform · Billing · Technical",
-    href: "mailto:support@immunotrack.ai",
-    iconVariant: "cyan",
-    icon: insightsIcon,
-    iconHeight: 25,
-  },
-];
+const defaultCards: ContactCard[] = [];
 
 /* ── Default footer items ───────────────────────────────── */
 const defaultFooterItems: FooterItem[] = [
-  {
-    icon: trackingIcon,
-    iconVariant: "cyan",
-    iconHeight: 20,
-    label: "Mailing Address",
-    text: "ImmunoTrack Inc.",
-  },
   {
     icon: alertIcon,
     iconVariant: "cyan",
@@ -131,33 +103,35 @@ export default function ContactSection({
       </div>
 
       {/* ── Contact cards ── */}
-      <div className="cs-cards-grid">
-        {cards.map((card) => (
-          <a
-            key={card.id}
-            href={card.href}
-            className="cs-card pui-focus"
-            id={card.id}
-          >
-            <div className={`cs-card-icon cs-icon-${card.iconVariant}`}>
-              <Image
-                src={card.icon}
-                alt=""
-                width={22}
-                height={card.iconHeight ?? 22}
-                aria-hidden="true"
-                style={{ filter: card.iconVariant === "cyan" ? cyanFilter : navyFilter }}
-              />
-            </div>
-            <div className="cs-card-body">
-              <p className="cs-card-label">{card.label}</p>
-              <p className="cs-card-value">{card.value}</p>
-              {card.hint && <p className="cs-card-hint">{card.hint}</p>}
-            </div>
-            <div className="cs-card-arrow">→</div>
-          </a>
-        ))}
-      </div>
+      {cards.length > 0 && (
+        <div className="cs-cards-grid">
+          {cards.map((card) => (
+            <a
+              key={card.id}
+              href={card.href}
+              className="cs-card pui-focus"
+              id={card.id}
+            >
+              <div className={`cs-card-icon cs-icon-${card.iconVariant}`}>
+                <Image
+                  src={card.icon}
+                  alt=""
+                  width={22}
+                  height={card.iconHeight ?? 22}
+                  aria-hidden="true"
+                  style={{ filter: card.iconVariant === "cyan" ? cyanFilter : navyFilter }}
+                />
+              </div>
+              <div className="cs-card-body">
+                <p className="cs-card-label">{card.label}</p>
+                <p className="cs-card-value">{card.value}</p>
+                {card.hint && <p className="cs-card-hint">{card.hint}</p>}
+              </div>
+              <div className="cs-card-arrow">→</div>
+            </a>
+          ))}
+        </div>
+      )}
 
       {/* ── Direct Contact Form ── */}
       <ContactForm />

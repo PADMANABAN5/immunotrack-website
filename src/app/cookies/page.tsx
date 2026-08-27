@@ -647,36 +647,9 @@ export default function CookiesPage() {
           {/* ── Section 9 — reusable ContactSection component ── */}
           <div id="section-9">
             <ContactSection
-             
               title="Contact Us"
               subtitle="If you have questions about this Cookie Policy or how ImmunoTrack uses cookies, please contact us:"
-              cards={[
-                {
-                  id: "contact-privacy-email",
-                  label: "Privacy and data questions",
-                  value: "privacy@immunotrack.ai",
-                  // hint: "HIPAA · Cookie Policy · Data Rights",
-                  href: "mailto:privacy@immunotrack.ai",
-                  iconVariant: "cyan",
-                  icon: profileIcon,
-                },
-                {
-                  id: "contact-support-email",
-                  label: "General support",
-                  value: "support@immunotrack.ai",
-                  // hint: "Platform · Billing · Technical",
-                  href: "mailto:support@immunotrack.ai",
-                  iconVariant: "cyan",
-                  icon: insightsIcon,
-                },
-              ]}
               footerItems={[
-                {
-                  icon: trackingIcon,
-                  iconVariant: "cyan" as const,
-                  label: "Mailing Address",
-                  text: "ImmunoTrack Inc.",
-                },
                 {
                   icon: alertIcon,
                   iconVariant: "cyan" as const,
@@ -691,7 +664,7 @@ export default function CookiesPage() {
                         rel="noopener noreferrer"
                         className="cs-footer-link"
                       >
-                        hhs.gov/ocr/privacy/hipaa/complaints/
+                        hhs.gov/ocr
                       </a>
                     </>
                   ),

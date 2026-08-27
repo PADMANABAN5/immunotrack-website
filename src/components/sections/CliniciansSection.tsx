@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import aiInsightsImg from "@/assets/images/ImmunoTrack_AI_Insights.png";
+import rtmBillingImg from "@/assets/images/ImmunoTrack_RTM_Billing.png";
 import "@/assets/styles/clinicians.css";
 
 export default function CliniciansSection() {
@@ -70,32 +72,15 @@ export default function CliniciansSection() {
             </p>
           </div>
 
-          <div className="cl-cpt-grid">
-            <Reveal className="cl-cpt-card">
-              <span className="cl-cpt-code">CPT 98975</span>
-              <p className="cl-cpt-desc">RTM initial setup and patient education</p>
-            </Reveal>
-            <Reveal className="cl-cpt-card" delay={1}>
-              <span className="cl-cpt-code">CPT 98976</span>
-              <p className="cl-cpt-desc">Device supply, respiratory system, 16–30 days</p>
-            </Reveal>
-            <Reveal className="cl-cpt-card" delay={2}>
-              <span className="cl-cpt-code">CPT 98984</span>
-              <p className="cl-cpt-desc">Device supply, respiratory system, 2–15 days</p>
-            </Reveal>
-            <Reveal className="cl-cpt-card" delay={3}>
-              <span className="cl-cpt-code">CPT 98979</span>
-              <p className="cl-cpt-desc">Treatment management, first 10 minutes</p>
-            </Reveal>
-            <Reveal className="cl-cpt-card" delay={4}>
-              <span className="cl-cpt-code">CPT 98980</span>
-              <p className="cl-cpt-desc">Treatment management, first 20 minutes</p>
-            </Reveal>
-            <Reveal className="cl-cpt-card" delay={4}>
-              <span className="cl-cpt-code">CPT 98981</span>
-              <p className="cl-cpt-desc">Treatment management, each additional 20 minutes</p>
-            </Reveal>
-          </div>
+          <Reveal className="cl-cpt-image-container mb-10">
+            <Image
+              src={rtmBillingImg}
+              alt="ImmunoTrack RTM Billing CPT Codes"
+              width={1200}
+              height={600}
+              className="w-full h-auto rounded-2xl shadow-lg border border-slate-200/60 object-contain mx-auto"
+            />
+          </Reveal>
 
           <div className="cl-notice-box">
             RTM billing is the clinician&apos;s responsibility. ImmunoTrack provides documentation and tracking support — it does not submit claims. Clinicians should confirm RTM coverage with their payers before enrolling patients.
@@ -114,90 +99,15 @@ export default function CliniciansSection() {
             </p>
           </div>
 
-          {/* CSS clinician dashboard mockup */}
-          <div className="cl-dashboard-preview">
-            <div className="cl-db-mockup">
-              <div className="cl-db-header">
-                <span className="cl-db-title">ImmunoTrack — clinician dashboard</span>
-                <span className="cl-db-status">Last updated: tonight 2:04 AM &middot; 12 patients</span>
-              </div>
-
-              <div className="cl-db-summary">
-                <div className="cl-db-sum-card">
-                  <div className="cl-db-sum-label">High risk today</div>
-                  <div className="cl-db-sum-val danger">3</div>
-                </div>
-                <div className="cl-db-sum-card">
-                  <div className="cl-db-sum-label">RTM on track this period</div>
-                  <div className="cl-db-sum-val">9 / 12</div>
-                </div>
-                <div className="cl-db-sum-card">
-                  <div className="cl-db-sum-label">Avg flare probability</div>
-                  <div className="cl-db-sum-val warning">34%</div>
-                </div>
-              </div>
-
-              <div className="cl-db-table-wrapper">
-                <table className="cl-db-table">
-                  <thead>
-                    <tr>
-                      <th>Patient</th>
-                      <th>Flare risk</th>
-                      <th>RTM days</th>
-                      <th>Last log</th>
-                      <th>Trend</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Sarah M. &mdash; Allergic asthma</td>
-                      <td>
-                        <span className="cl-badge cl-badge-high">High &mdash; 72%</span>
-                      </td>
-                      <td>13 / 16</td>
-                      <td>Today</td>
-                      <td>
-                        <span className="cl-trend rising">Rising</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>James T. &mdash; Allergic rhinitis</td>
-                      <td>
-                        <span className="cl-badge cl-badge-high">High &mdash; 61%</span>
-                      </td>
-                      <td>8 / 16</td>
-                      <td>Yesterday</td>
-                      <td>
-                        <span className="cl-trend rising">Rising</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Priya K. &mdash; Eczema + asthma</td>
-                      <td>
-                        <span className="cl-badge cl-badge-mod">Moderate &mdash; 38%</span>
-                      </td>
-                      <td>16 / 16 &nbsp;&checkmark;</td>
-                      <td>Today</td>
-                      <td>
-                        <span className="cl-trend stable">Stable</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>David L. &mdash; Seasonal allergy</td>
-                      <td>
-                        <span className="cl-badge cl-badge-low">Low &mdash; 12%</span>
-                      </td>
-                      <td>15 / 16</td>
-                      <td>Today</td>
-                      <td>
-                        <span className="cl-trend improving">Improving</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+          <Reveal className="cl-dashboard-preview">
+            <Image
+              src={aiInsightsImg}
+              alt="ImmunoTrack Clinician Dashboard AI Insights"
+              width={1200}
+              height={600}
+              className="w-full h-auto rounded-2xl shadow-xl border border-slate-200/60 object-contain mx-auto"
+            />
+          </Reveal>
         </div>
       </section>
 

@@ -294,7 +294,7 @@
 .sp-section-divider {
   width: 60px;
   height: 3px;
-  background: var(--color-cyan);
+  background: linear-gradient(90deg, var(--color-navy), var(--color-cyan));
   border-radius: 2px;
   margin: 0 auto 56px;
 }
@@ -467,7 +467,7 @@
 .sp-contact-divider {
   width: 50px;
   height: 3px;
-  background: var(--color-cyan);
+  background: linear-gradient(90deg, var(--color-navy), var(--color-cyan));
   border-radius: 2px;
   margin: 0 auto 40px;
 }
