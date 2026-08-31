@@ -12,9 +12,9 @@ export async function POST(req: NextRequest) {
     }
 
     // Input Validation
-    if (!name || typeof name !== "string" || name.trim().length < 2) {
+    if (!name || typeof name !== "string" || name.trim().length < 3) {
       return NextResponse.json(
-        { success: false, error: "Please provide a valid name (at least 2 characters)." },
+        { success: false, error: "Please provide a valid name (at least 3 characters)." },
         { status: 400 }
       );
     }

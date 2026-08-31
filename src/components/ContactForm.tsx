@@ -15,6 +15,13 @@ const US_STATES = [
   "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ];
 
+interface FormErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+  message?: string;
+}
+
 export default function ContactForm() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -29,6 +36,7 @@ export default function ContactForm() {
     website_hp: "", // Honeypot field
   });
 
+  const [fieldErrors, setFieldErrors] = useState<FormErrors>({});
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState<{
     type: "success" | "error";
@@ -41,10 +49,70 @@ export default function ContactForm() {
     }
   }, [status]);
 
+  const validateForm = (): FormErrors => {
+    const errors: FormErrors = {};
+
+    // Name validation
+    if (!formData.name.trim()) {
+      errors.name = "Full name is required.";
+    } else if (formData.name.trim().length < 3) {
+      errors.name = "Full name must be at least 3 characters.";
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      errors.email = "Email address is required.";
+    } else if (!emailRegex.test(formData.email.trim())) {
+      errors.email = "Please enter a valid email address (e.g. name@example.com).";
+    }
+
+    // Phone validation (optional field, validate format if filled)
+    if (formData.phone.trim() && !/^[\d\s()+-]{7,20}$/.test(formData.phone.trim())) {
+      errors.phone = "Please enter a valid phone number.";
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      errors.message = "Message or questions is required.";
+    } else if (formData.message.trim().length < 5) {
+      errors.message = "Message must be at least 5 characters.";
+    }
+
+    return errors;
+  };
+
+  const handleInputChange = (field: keyof typeof formData, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    // Clear error for field as user types
+    if (fieldErrors[field as keyof FormErrors]) {
+      setFieldErrors((prev) => ({ ...prev, [field]: undefined }));
+    }
+  };
+
+  const handleBlur = (field: keyof FormErrors) => {
+    const errors = validateForm();
+    if (errors[field]) {
+      setFieldErrors((prev) => ({ ...prev, [field]: errors[field] }));
+    }
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitting(true);
     setStatus(null);
+
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setFieldErrors(validationErrors);
+      setStatus({
+        type: "error",
+        message: "Please fix the errors below before submitting your request.",
+      });
+      return;
+    }
+
+    setFieldErrors({});
+    setSubmitting(true);
 
     try {
       const response = await fetch("/api/contact", {
@@ -148,14 +216,18 @@ export default function ContactForm() {
               <input
                 id="contact-name"
                 type="text"
-                className="cs-form-input"
+                className={`cs-form-input ${fieldErrors.name ? "cs-form-input-error" : ""}`}
                 placeholder="Dr. Meera Patel"
-                required
                 value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
+                onChange={(e) => handleInputChange("name", e.target.value)}
+                onBlur={() => handleBlur("name")}
+                aria-invalid={!!fieldErrors.name}
               />
+              {fieldErrors.name && (
+                <span className="cs-form-field-error" role="alert">
+                  ⚠ {fieldErrors.name}
+                </span>
+              )}
             </div>
 
             <div className="cs-form-group">
@@ -168,9 +240,7 @@ export default function ContactForm() {
                 className="cs-form-input"
                 placeholder="City Allergy Clinic"
                 value={formData.practice}
-                onChange={(e) =>
-                  setFormData({ ...formData, practice: e.target.value })
-                }
+                onChange={(e) => handleInputChange("practice", e.target.value)}
               />
             </div>
           </div>
@@ -183,14 +253,18 @@ export default function ContactForm() {
               <input
                 id="contact-email"
                 type="email"
-                className="cs-form-input"
+                className={`cs-form-input ${fieldErrors.email ? "cs-form-input-error" : ""}`}
                 placeholder="mpatel@cityallergy.com"
-                required
                 value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
+                onChange={(e) => handleInputChange("email", e.target.value)}
+                onBlur={() => handleBlur("email")}
+                aria-invalid={!!fieldErrors.email}
               />
+              {fieldErrors.email && (
+                <span className="cs-form-field-error" role="alert">
+                  ⚠ {fieldErrors.email}
+                </span>
+              )}
             </div>
 
             <div className="cs-form-group">
@@ -200,13 +274,18 @@ export default function ContactForm() {
               <input
                 id="contact-phone"
                 type="tel"
-                className="cs-form-input"
+                className={`cs-form-input ${fieldErrors.phone ? "cs-form-input-error" : ""}`}
                 placeholder="(404) 555-0100"
                 value={formData.phone}
-                onChange={(e) =>
-                  setFormData({ ...formData, phone: e.target.value })
-                }
+                onChange={(e) => handleInputChange("phone", e.target.value)}
+                onBlur={() => handleBlur("phone")}
+                aria-invalid={!!fieldErrors.phone}
               />
+              {fieldErrors.phone && (
+                <span className="cs-form-field-error" role="alert">
+                  ⚠ {fieldErrors.phone}
+                </span>
+              )}
             </div>
           </div>
 
@@ -219,9 +298,7 @@ export default function ContactForm() {
                 id="contact-specialty"
                 className="cs-form-select"
                 value={formData.specialty}
-                onChange={(e) =>
-                  setFormData({ ...formData, specialty: e.target.value })
-                }
+                onChange={(e) => handleInputChange("specialty", e.target.value)}
               >
                 <option value="">Select specialty</option>
                 <option value="Allergy & Immunology">Allergy &amp; Immunology</option>
@@ -239,9 +316,7 @@ export default function ContactForm() {
                 id="contact-state"
                 className="cs-form-select"
                 value={formData.state}
-                onChange={(e) =>
-                  setFormData({ ...formData, state: e.target.value })
-                }
+                onChange={(e) => handleInputChange("state", e.target.value)}
               >
                 <option value="">Select state</option>
                 {US_STATES.map((st) => (
@@ -259,15 +334,19 @@ export default function ContactForm() {
             </label>
             <textarea
               id="contact-message"
-              className="cs-form-textarea"
+              className={`cs-form-textarea ${fieldErrors.message ? "cs-form-textarea-error" : ""}`}
               placeholder="Tell us about your patient panel size, EHR system, or anything else we should know..."
-              required
               rows={4}
               value={formData.message}
-              onChange={(e) =>
-                setFormData({ ...formData, message: e.target.value })
-              }
+              onChange={(e) => handleInputChange("message", e.target.value)}
+              onBlur={() => handleBlur("message")}
+              aria-invalid={!!fieldErrors.message}
             />
+            {fieldErrors.message && (
+              <span className="cs-form-field-error" role="alert">
+                ⚠ {fieldErrors.message}
+              </span>
+            )}
           </div>
 
           <button

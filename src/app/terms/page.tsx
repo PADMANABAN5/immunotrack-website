@@ -357,7 +357,20 @@ export default function TermsPage() {
 
         {/* Sticky Sidebar */}
         <aside className="ts-sidebar" aria-label="Terms of Service summary">
-          {/* At a Glance */}
+
+          {/* Section nav */}
+          <nav className="ts-nav-card" aria-label="Jump to section">
+            <h3 className="ts-nav-title">Jump to Section</h3>
+            <ul className="ts-nav-list">
+              {sections.map((s) => (
+                <li key={s.id}>
+                  <a href={`#${s.id}`} className="ts-nav-link">{s.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+           {/* At a Glance */}
           <div className="ts-glance-card">
             <h2 className="ts-glance-title">Terms At a Glance</h2>
             <ul className="ts-glance-list">
@@ -374,18 +387,6 @@ export default function TermsPage() {
               ))}
             </ul>
           </div>
-
-          {/* Section nav */}
-          <nav className="ts-nav-card" aria-label="Jump to section">
-            <h3 className="ts-nav-title">Jump to Section</h3>
-            <ul className="ts-nav-list">
-              {sections.map((s) => (
-                <li key={s.id}>
-                  <a href={`#${s.id}`} className="ts-nav-link">{s.label}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
         </aside>
       </div>
     </main>

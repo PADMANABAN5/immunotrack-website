@@ -5,6 +5,10 @@ import { usePathname } from "next/navigation";
 
 const links = [
   {
+    name: "Home",
+    href: "/",
+  },
+  {
     name: "For Clinicians",
     href: "/clinicians",
   },
@@ -33,7 +37,10 @@ export default function Navigation({ onNavigate }: NavigationProps) {
   return (
     <>
       {links.map((link) => {
-        const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+        const isActive =
+          link.href === "/"
+            ? pathname === "/"
+            : pathname === link.href || pathname.startsWith(link.href + "/");
         return (
           <Link
             key={link.name}

@@ -413,6 +413,30 @@
   resize: vertical;
 }
 
+/* ── Form Field Validation Error Styles ─────────────────── */
+.cs-form-input-error,
+.cs-form-select-error,
+.cs-form-textarea-error {
+  border-color: #ef4444 !important;
+  background-color: #fff5f5 !important;
+}
+
+.cs-form-input-error:focus,
+.cs-form-select-error:focus,
+.cs-form-textarea-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+}
+
+.cs-form-field-error {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #dc2626;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .cs-form-hp {
   display: none !important;
 }

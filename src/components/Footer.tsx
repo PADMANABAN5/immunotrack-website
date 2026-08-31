@@ -10,6 +10,7 @@ import profileIcon from "@/assets/icons/noun-profile-8205839.svg";
 import timelineIcon from "@/assets/icons/noun-timeline-8109095.svg";
 
 const platformLinks = [
+  { href: "/", label: "Home" },
   { href: "/clinicians", label: "For Clinicians" },
   { href: "/patients", label: "For Patients" },
   { href: "/about", label: "About" },
@@ -28,7 +29,9 @@ export default function Footer() {
 
   function linkClass(href: string) {
     const isActive =
-      pathname === href || pathname.startsWith(href + "/");
+      href === "/"
+        ? pathname === "/"
+        : pathname === href || pathname.startsWith(href + "/");
     return isActive ? "footer-link-active" : undefined;
   }
 
