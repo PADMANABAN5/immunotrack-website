@@ -638,7 +638,7 @@ export default function PrivacyPage() {
               privacy@immunotrack.ai
             </a>
             <p className="pp-questions-sla">We typically respond within 1 business day.</p>
-            <Link href="/support" className="pp-questions-link" id="privacy-support-link" scroll={false}>
+            <Link href="/support" className="pp-questions-link" id="privacy-support-link">
               Visit our Help &amp; Support Center →
             </Link>
           </div>
