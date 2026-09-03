@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import "@/assets/styles/cookies.css";
 import ContactSection from "@/components/ContactSection";
 
@@ -12,6 +13,45 @@ import profileIcon    from "@/assets/icons/noun-profile-8205839.svg";
 import insightsIcon   from "@/assets/icons/noun-insights-8300657.svg";
 import trackingIcon   from "@/assets/icons/noun-tracking-8269731.svg";
 import alertIcon      from "@/assets/icons/noun-alert-8253230.svg";
+
+const glanceItems = [
+  {
+    icon: trackingIcon,
+    iconHeight: 20,
+    title: "No Ad Trackers",
+    desc: "We do not use advertising cookies, retargeting pixels, or third-party ad trackers.",
+  },
+  {
+    icon: profileIcon,
+    iconHeight: 20,
+    title: "Strictly Necessary",
+    desc: "Cookies are used only for authentication, security, and essential platform functionality.",
+  },
+  {
+    icon: cloudSyncIcon,
+    iconHeight: 19,
+    title: "HIPAA Compliant",
+    desc: "No Protected Health Information (PHI) is ever stored in browser cookies or web storage.",
+  },
+  {
+    icon: insightsIcon,
+    iconHeight: 22,
+    title: "You're in Control",
+    desc: "Clear guidelines on how to manage or block cookies through your browser settings.",
+  },
+];
+
+const sections = [
+  { id: "section-1", label: "What Are Cookies" },
+  { id: "section-2", label: "Cookies We Use" },
+  { id: "section-3", label: "Cookies We Do Not Use" },
+  { id: "section-4", label: "How to Control Cookies" },
+  { id: "section-5", label: "HIPAA & Web Storage" },
+  { id: "section-6", label: "Do Not Track Signals" },
+  { id: "section-7", label: "Cookie Retention" },
+  { id: "section-8", label: "Policy Changes" },
+  { id: "section-9", label: "Contact Us" },
+];
 
 export const metadata: Metadata = {
   title: "Cookie Policy — ImmunoTrack",
@@ -70,8 +110,10 @@ export default function CookiesPage() {
               clinician dashboard. It explains what cookies are, how we use
               them, and how you can manage them. This policy does not apply to
               the ImmunoTrack patient mobile app, which does not use browser
-              cookies.Questions about this policy should be directed to
-              privacy@immunotrack.ai.
+              cookies. Questions about this policy should be directed to{" "}
+              <a href="mailto:privacy@immunotrack.ai" className="ck-link">
+                privacy@immunotrack.ai
+              </a>.
             </p>
           </div>
 
@@ -656,8 +698,7 @@ export default function CookiesPage() {
                   label: "HIPAA Complaints",
                   text: (
                     <>
-                      You may also file a complaint with the U.S. Department of Health and Human
-                      Services Office for Civil Rights at{" "}
+                      You may file a complaint with the U.S. Department of Health &amp; Human Services —{" "}
                       <a
                         href="https://www.hhs.gov/ocr/privacy/hipaa/complaints/"
                         target="_blank"
@@ -676,21 +717,33 @@ export default function CookiesPage() {
 
 
           {/* ── Summary Banner ── */}
-          <article id="section-10" className="ck-section-card">
+          <article id="version-history" className="ck-section-card">
             <div className="ck-section-header">
               <h2 className="ck-section-title">Version History</h2>
             </div>
             <div className="ck-section-body">
-              <ul className="ck-list" role="list">
-                <li className="ck-list-item">
-                  <span>
-                    <strong>Version 1.0 — May 1, 2026:</strong> Initial version.
-                    Covers immunotrack.ai public website and clinician portal.
-                    No analytics or advertising cookies. Cloudflare and AWS
-                    Cognito infrastructure cookies documented.
-                  </span>
-                </li>
-              </ul>
+              <div className="ck-table-wrap">
+                <table className="ck-table ck-version-table" aria-label="Version history">
+                  <thead>
+                    <tr>
+                      <th>VERSION</th>
+                      <th>DATE</th>
+                      <th>CHANGES</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.0</td>
+                      <td>May 1, 2026</td>
+                      <td>
+                        Initial version. Covers immunotrack.ai public website and clinician portal.
+                        No analytics or advertising cookies. Cloudflare and AWS
+                        Cognito infrastructure cookies documented.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </article>
         </div>

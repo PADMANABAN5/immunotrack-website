@@ -49,6 +49,8 @@ export default function DownloadPage() {
               width={540}
               height={380}
               priority
+              unoptimized
+              quality={100}
               className="dl-hero-mockups"
             />
           </div>

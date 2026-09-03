@@ -76,9 +76,10 @@ export default function CliniciansSection() {
             <Image
               src={rtmBillingImg}
               alt="ImmunoTrack RTM Billing CPT Codes"
-              width={1200}
-              height={600}
-              className="w-full h-auto rounded-2xl shadow-lg border border-slate-200/60 object-contain mx-auto"
+              unoptimized
+              quality={100}
+              priority
+              className="w-full h-auto rounded-2xl shadow-sm border border-slate-200 object-contain mx-auto"
             />
           </Reveal>
 
@@ -103,9 +104,9 @@ export default function CliniciansSection() {
             <Image
               src={aiInsightsImg}
               alt="ImmunoTrack Clinician Dashboard AI Insights"
-              width={1200}
-              height={600}
-              className="w-full h-auto rounded-2xl shadow-xl border border-slate-200/60 object-contain mx-auto"
+              unoptimized
+              quality={100}
+              className="w-full h-auto rounded-2xl shadow-sm border border-slate-200 object-contain mx-auto"
             />
           </Reveal>
         </div>
@@ -121,37 +122,91 @@ export default function CliniciansSection() {
 
           <div className="cl-features-grid">
             <Reveal className="cl-feature-card">
-              <h3 className="cl-feature-title">Patient panel with flare risk scores</h3>
+              <div className="cl-feature-header">
+                <div className="cl-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <h3 className="cl-feature-title">Patient panel with flare risk scores</h3>
+              </div>
               <p className="cl-feature-desc">
                 All patients are automatically sorted by flare risk level and updated nightly, letting you prioritize high-risk patients instantly.
               </p>
             </Reveal>
+
             <Reveal className="cl-feature-card" delay={1}>
-              <h3 className="cl-feature-title">Symptom trend graphs</h3>
+              <div className="cl-feature-header">
+                <div className="cl-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                </div>
+                <h3 className="cl-feature-title">Symptom trend graphs</h3>
+              </div>
               <p className="cl-feature-desc">
                 Real-time trend analysis for respiratory, nasal, and skin symptoms over customizable time frames, providing granular between-visit tracking.
               </p>
             </Reveal>
+
             <Reveal className="cl-feature-card" delay={2}>
-              <h3 className="cl-feature-title">Medication adherence tracking</h3>
+              <div className="cl-feature-header">
+                <div className="cl-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m10.5 20.5-7-7a4.95 4.95 0 1 1 7-7l7 7a4.95 4.95 0 1 1-7 7Z"></path>
+                    <line x1="8.5" y1="8.5" x2="15.5" y2="15.5"></line>
+                  </svg>
+                </div>
+                <h3 className="cl-feature-title">Medication adherence tracking</h3>
+              </div>
               <p className="cl-feature-desc">
                 Review full patient dose history, missed dose streaks, and rescue inhaler usage patterns directly from your central console.
               </p>
             </Reveal>
+
             <Reveal className="cl-feature-card" delay={3}>
-              <h3 className="cl-feature-title">Environmental trigger correlation</h3>
+              <div className="cl-feature-header">
+                <div className="cl-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                  </svg>
+                </div>
+                <h3 className="cl-feature-title">Environmental trigger correlation</h3>
+              </div>
               <p className="cl-feature-desc">
                 Local pollen counts, air quality index (AQI), and weather metrics are automatically pulled by zip code and paired with patient symptom spikes.
               </p>
             </Reveal>
+
             <Reveal className="cl-feature-card" delay={4}>
-              <h3 className="cl-feature-title">RTM progress tracking</h3>
+              <div className="cl-feature-header">
+                <div className="cl-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+                <h3 className="cl-feature-title">RTM progress tracking</h3>
+              </div>
               <p className="cl-feature-desc">
                 Keep tabs on logging progress for every patient. Instantly see who has reached the 16-day billing threshold, with exportable summaries.
               </p>
             </Reveal>
+
             <Reveal className="cl-feature-card" delay={4}>
-              <h3 className="cl-feature-title">AI-generated nightly insights</h3>
+              <div className="cl-feature-header">
+                <div className="cl-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                  </svg>
+                </div>
+                <h3 className="cl-feature-title">AI-generated nightly insights</h3>
+              </div>
               <p className="cl-feature-desc">
                 ImmunoTrack’s clinical AI engine generates plain-language summaries for each patient every night — what changed, what’s driving risk, what to watch at the next visit.
               </p>

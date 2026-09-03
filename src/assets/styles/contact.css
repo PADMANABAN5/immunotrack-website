@@ -3,7 +3,7 @@
    prefix: ct-
    ============================================================ */
 
-:root {
+:root {
   --ct-bg-light:      #f8fafc;
   --ct-border:        #e2e8f0;
   --ct-text-head:     var(--color-navy-mid);
@@ -15,11 +15,24 @@
   --ct-shadow-lg:     0 32px 56px -18px rgba(2, 18, 79, 0.18), 0 8px 20px -8px rgba(2, 18, 79, 0.08);
 }
 
-/* ── LAYOUT WIDTH CONSISTENCY ───────────────────────────── */
+/* ── LAYOUT WIDTH CONSISTENCY (Capped at 960px centered) ──── */
+.ct-page-main {
+  padding: 40px 16px 80px;
+  background: var(--color-bg-page, #f4f7fb);
+  min-height: 80vh;
+}
+
+.ct-page-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .ct-hero-container,
 .ct-contact-container {
   width: 100%;
-  max-width: 1320px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -203,7 +216,7 @@
 /* ── CONTACT FORM SECTION ────────────────────────────────── */
 .ct-contact {
   background: var(--ct-bg-light);
-  padding: 80px 16px;
+  padding: 48px 16px;
 }
 
 .ct-contact-container {
@@ -212,7 +225,7 @@
 
 .ct-contact-header {
   max-width: 600px;
-  margin: 0 auto 48px;
+  margin: 0 auto 28px;
   text-align: center;
 }
 
@@ -283,7 +296,6 @@
   border: 1.5px solid var(--ct-border);
   border-radius: 10px;
   font-size: 1rem;
-
   color: var(--ct-text-body);
   transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
   background: #ffffff;
@@ -359,19 +371,10 @@
 }
 
 .ct-detail-link {
-  color: var(--color-cyan);
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.25s ease;
-  position: relative;
-}
-
-.ct-detail-link:hover {
   color: var(--color-cyan-d);
   text-decoration: underline;
 }
 
-/* ── INJECTED RESPONSIVE LADDER ─────────────────────────── */
 @media (min-width: 576px) { .ct-hero-container, .ct-contact-container { max-width: 540px; } }
 @media (min-width: 768px) { .ct-hero-container, .ct-contact-container { max-width: 720px; } }
 @media (min-width: 992px) { .ct-hero-container, .ct-contact-container { max-width: 960px; } }

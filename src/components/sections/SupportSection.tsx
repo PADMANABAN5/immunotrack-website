@@ -220,7 +220,7 @@ export default function SupportSection() {
         className="sp-faq-section"
         aria-labelledby="faq-section-title"
       >
-        <div className="sp-section">
+        <div className="sp-faq-container">
           <h2 className="sp-section-title" id="faq-section-title">
             Frequently Asked Questions
           </h2>
@@ -268,9 +268,9 @@ export default function SupportSection() {
                     <polyline points="10 9 9 9 8 9" />
                   </svg>
                 </div>
+                <h3 className="sp-legal-card-title">Terms of Service</h3>
               </div>
               <div className="sp-legal-card-body">
-                <h3 className="sp-legal-card-title">Terms of Service</h3>
                 <p className="sp-legal-card-desc">
                   Your rights and responsibilities when using the ImmunoTrack
                   platform and mobile application.
@@ -303,9 +303,9 @@ export default function SupportSection() {
                     <polyline points="9 12 11 14 15 10" />
                   </svg>
                 </div>
+                <h3 className="sp-legal-card-title">Privacy Policy</h3>
               </div>
               <div className="sp-legal-card-body">
-                <h3 className="sp-legal-card-title">Privacy Policy</h3>
                 <p className="sp-legal-card-desc">
                   How we collect, protect, and handle your health data in
                   compliance with HIPAA standards.

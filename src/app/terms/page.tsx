@@ -102,21 +102,19 @@ export default function TermsPage() {
         {/* Main Content Column */}
         <div className="ts-content">
           {/* Important Notice Box (7.2) */}
-          <div className="ts-lead-card" id="notice-box">
-            <div className="ts-callout ts-callout--warning" role="alert">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-                strokeLinejoin="round" aria-hidden="true" style={{ marginTop: "4px" }}>
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                <line x1="12" y1="9" x2="12" y2="13"/>
-                <line x1="12" y1="17" x2="12.01" y2="17"/>
-              </svg>
-              <div>
-                <p style={{ fontWeight: 800, fontSize: "15px", marginBottom: "4px" }}>IMPORTANT MEDICAL NOTICE</p>
-                <p className="ts-lead-text">
-                  ImmunoTrack is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition. It is a health tracking and monitoring tool. Always follow the advice of your licensed healthcare provider.
-                </p>
-              </div>
+          <div className="ts-callout ts-callout--warning" id="notice-box" role="alert">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+              strokeLinejoin="round" aria-hidden="true" style={{ marginTop: "4px", flexShrink: 0 }}>
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <div>
+              <p style={{ fontWeight: 800, fontSize: "15px", marginBottom: "4px", color: "#78350f" }}>IMPORTANT MEDICAL NOTICE</p>
+              <p className="ts-lead-text" style={{ color: "#78350f" }}>
+                ImmunoTrack is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition. It is a health tracking and monitoring tool. Always follow the advice of your licensed healthcare provider.
+              </p>
             </div>
           </div>
 
@@ -316,7 +314,10 @@ export default function TermsPage() {
             </div>
             <div className="ts-section-body">
               <p className="ts-p">
-                You may stop using the App at any time. You may request deletion of your account and health data by contacting <a href="mailto:support@immunotrack.ai" className="ts-link">support@immunotrack.ai</a>. We will process your request in accordance with applicable law and our data retention obligations.
+                You may stop using the App at any time. You may request deletion of your account and health data by contacting{" "}
+                <a href="mailto:support@immunotrack.ai" className="ts-link">
+                  support@immunotrack.ai
+                </a>. We will process your request in accordance with applicable law and our data retention obligations.
               </p>
               <p className="ts-p">
                 We reserve the right to suspend or terminate your access to the App if you violate these Terms or engage in conduct that we reasonably believe harms other users, our platform, or third parties.
@@ -380,7 +381,7 @@ export default function TermsPage() {
                     <Image src={item.icon} alt="" width={20} height={item.iconHeight} className="ts-icon-cyan" />
                   </div>
                   <div>
-                    <p className="ts-glance-item-title">{item.title}</p>
+                    <h3 className="ts-glance-item-title">{item.title}</h3>
                     <p className="ts-glance-item-desc">{item.desc}</p>
                   </div>
                 </li>

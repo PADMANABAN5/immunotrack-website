@@ -71,7 +71,7 @@
   background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
               linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   color: #ffffff;
-  padding: 100px 16px 140px;
+  padding: 48px 16px;
   text-align: center;
   overflow: hidden;
 }
@@ -219,7 +219,8 @@
 .ob-table-section {
   position: relative;
   z-index: 10;
-  margin-top: -60px;
+  margin-top: 36px;
+  margin-bottom: 40px;
   padding: 0 16px;
 }
 
@@ -228,15 +229,16 @@
   border: 1px solid rgba(2, 18, 79, 0.05);
   border-radius: 20px;
   box-shadow: var(--ob-shadow-lg);
-  overflow-x: auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .ob-table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   text-align: left;
   font-size: 0.9rem;
-  min-width: 800px;
 }
 
 .ob-table th {
@@ -282,11 +284,11 @@
 /* ── CONFIG VS DAYONE GRIDS ─────────────────────────────── */
 .ob-config-section {
   background: var(--ob-bg-light);
-  padding: 80px 16px;
+  padding: 24px 16px;
 }
 
 .ob-section-content {
-  margin-bottom: 56px;
+  margin-bottom: 16px;
 }
 
 .ob-grid-2col {
@@ -364,15 +366,15 @@
 
 /* ── TIER SYSTEM SECTION ────────────────────────────────── */
 .ob-tier-section {
-  background: #ffffff;
-  padding: 80px 16px;
+  background: var(--ob-bg-light);
+  padding: 20px 16px;
 }
 
 .ob-tier-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  margin-top: 48px;
+  margin-top: 16px;
 }
 
 @media (min-width: 992px) {
@@ -445,14 +447,14 @@
 /* ── EXAMPLES SECTION ───────────────────────────────────── */
 .ob-examples-section {
   background: var(--ob-bg-light);
-  padding: 80px 16px;
+  padding: 20px 16px;
 }
 
 .ob-examples-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  margin-top: 48px;
+  margin-top: 16px;
 }
 
 @media (min-width: 768px) {
@@ -494,8 +496,8 @@
 
 /* ── ONBOARDING SECTION ─────────────────────────────────── */
 .ob-onboarding-section {
-  background: #ffffff;
-  padding: 40px 16px 100px;
+  background: var(--ob-bg-light);
+  padding: 20px 16px 32px;
 }
 
 .ob-onboarding-container {

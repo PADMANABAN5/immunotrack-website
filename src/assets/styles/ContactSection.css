@@ -115,7 +115,7 @@
   align-items: center;
   gap: 16px;
   padding: 20px;
-  background: #f3f5fb;
+  background: #f8fafc;
   border: 1.5px solid rgba(21, 26, 88, 0.1);
   border-radius: 20px;
   text-decoration: none;
@@ -203,10 +203,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 24px 28px 28px;
-  background: #f0fdfe;
+  background: #f8fafc;
   border: 1px solid rgba(45, 214, 229, 0.2);
   border-radius: 20px;
   overflow: hidden;
+}
+
+.cs-footer-strip.cs-footer-single {
+  grid-template-columns: 1fr;
 }
 
 .cs-footer-item {
@@ -260,10 +264,12 @@
 }
 
 .cs-footer-link {
-  font-weight: 500;
+  font-weight: 700;
   color: var(--color-cyan-d);
   text-decoration: underline;
   text-underline-offset: 2px;
+  white-space: nowrap;
+  display: inline;
   transition: color 0.15s ease;
 }
 

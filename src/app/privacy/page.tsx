@@ -559,7 +559,7 @@ export default function PrivacyPage() {
           <div className="pp-version-card" id="version-history">
             <h2 className="pp-version-title">Version History</h2>
             <div className="pp-table-wrap">
-              <table className="pp-table" aria-label="Version history">
+              <table className="pp-table pp-version-table" aria-label="Version history">
                 <thead>
                   <tr>
                     <th>Version</th>
@@ -614,7 +614,7 @@ export default function PrivacyPage() {
                     <Image src={item.icon} alt="" width={20} height={item.iconHeight} className="pp-icon-cyan" />
                   </div>
                   <div>
-                    <p className="pp-glance-item-title">{item.title}</p>
+                    <h3 className="pp-glance-item-title">{item.title}</h3>
                     <p className="pp-glance-item-desc">{item.desc}</p>
                   </div>
                 </li>

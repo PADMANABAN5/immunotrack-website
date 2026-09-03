@@ -102,7 +102,7 @@
   background: radial-gradient(circle at 50% 120%, rgba(45, 214, 229, 0.12) 0%, transparent 60%),
               linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
   color: #ffffff;
-  padding: 40px 16px 140px;
+  padding: 48px 16px 40px;
   overflow: hidden;
 }
 
@@ -118,7 +118,8 @@
 
 @media (min-width: 992px) {
   .ck-hero {
-    height: 640px;
+    height: auto;
+    padding: 52px 16px 40px;
     background-color: var(--color-navy);
   }
 }
@@ -352,11 +353,10 @@
    MAIN LAYOUT — responsive widths, capped at 1200px
    ============================================================ */
 .ck-layout {
-  /* XS default: full width */
   width: 100%;
-  max-width: 100%;
-  margin: -60px auto 0;
-  padding: 60px 16px 80px;
+  max-width: 960px;
+  margin: 20px auto 0;
+  padding: 0 16px 64px;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -368,7 +368,7 @@
 @media (min-width: 576px) {
   .ck-layout {
     max-width: 540px;
-    padding: 56px 0 80px;
+    padding: 36px 0 64px;
   }
 }
 
@@ -386,17 +386,17 @@
   }
 }
 
-/* X-Large ≥1200px → 1200px */
+/* X-Large ≥1200px → 960px */
 @media (min-width: 1200px) {
   .ck-layout {
-    max-width: 1200px;
+    max-width: 960px;
   }
 }
 
-/* XX-Large ≥1400px → stays at 1200px */
+/* XX-Large ≥1400px → stays at 960px */
 @media (min-width: 1400px) {
   .ck-layout {
-    max-width: 1200px;
+    max-width: 960px;
     padding: 64px 0 96px;
   }
 }
@@ -658,14 +658,13 @@
    ============================================================ */
 .ck-callout {
   margin-top: 20px;
-  padding: 16px 20px;
-  border-radius: var(--ck-radius);
-  background: var(--ck-amber-bg);
-  border-left: 4px solid var(--ck-amber-b);
-  color: var(--ck-amber-text);
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.75;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: #fff8e7;
+  border: 1px solid rgba(212, 160, 23, 0.4);
+  color: #78350f;
+  font-size: 0.9rem;
+  line-height: 1.65;
 }
 
 .ck-callout-header {
@@ -676,8 +675,8 @@
 }
 
 .ck-callout-header strong {
-  font-weight: 500;
-  color: var(--ck-amber-text);
+  font-weight: 700;
+  color: #78350f;
 }
 
 /* ============================================================
@@ -830,6 +829,52 @@
   margin-bottom: 3px;
   color: var(--ck-green-text);
 }
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+.ck-table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--ck-border);
+  margin-top: 4px;
+}
+
+.ck-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.ck-table thead th {
+  background: var(--color-navy);
+  color: #ffffff;
+  padding: 12px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ck-version-table thead th:nth-child(1) { width: 14%; }
+.ck-version-table thead th:nth-child(2) { width: 24%; }
+.ck-version-table thead th:nth-child(3) { width: 62%; }
+
+.ck-table tbody tr:nth-child(even) { background: #f8fafc; }
+.ck-table tbody tr:hover { background: #eef6fd; transition: background 0.15s; }
+
+.ck-table tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--ck-border);
+  vertical-align: top;
+  line-height: 1.55;
+  color: var(--ck-text-body);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.ck-table tbody tr:last-child td { border-bottom: none; }
 
 /* ============================================================
    SUMMARY BANNER

@@ -46,8 +46,7 @@ const defaultFooterItems: FooterItem[] = [
     label: "HIPAA Complaints",
     text: (
       <>
-        You may also file a complaint with the U.S. Department of Health &amp;
-        Human Services —{" "}
+        You may file a complaint with the U.S. Department of Health &amp; Human Services —{" "}
         <a
           href="https://www.hhs.gov/ocr/privacy/hipaa/complaints/"
           target="_blank"
@@ -137,7 +136,7 @@ export default function ContactSection({
       <ContactForm />
 
       {/* ── Footer strip ── */}
-      <div className="cs-footer-strip">
+      <div className={`cs-footer-strip ${footerItems.length === 1 ? "cs-footer-single" : ""}`}>
         {footerItems.map((item, i) => (
           <div key={i} className="cs-footer-item">
             <div className={`cs-footer-icon-wrap cs-icon-${item.iconVariant}`}>

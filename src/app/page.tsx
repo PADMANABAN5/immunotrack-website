@@ -67,11 +67,15 @@ export default function Page() {
         <div className="hm-pillars-grid">
           {/* Pillar 1 */}
           <div className="hm-pillar-card">
-            <div className="hm-pillar-icon-wrap">
-              <Image src={lungsIcon} alt="RTM-Ready Icon" width={28} height={26} className="hm-pillar-icon" />
+            <div className="hm-pillar-header">
+              <div className="hm-pillar-icon-wrap">
+                <Image src={lungsIcon} alt="RTM-Ready Icon" width={22} height={22} className="hm-pillar-icon" />
+              </div>
+              <div>
+                <div className="hm-pillar-tag">Billing &amp; Compliance</div>
+                <h3 className="hm-pillar-title">RTM-Ready</h3>
+              </div>
             </div>
-            <div className="hm-pillar-tag">Billing &amp; Compliance</div>
-            <h3 className="hm-pillar-title">RTM-Ready</h3>
             <p className="hm-pillar-desc">
               Built for Remote Therapeutic Monitoring. ImmunoTrack supports CPT codes 98975–98981 and tracks the non-physiological data your billing requires: symptom scores, medication adherence, and therapy response.
             </p>
@@ -79,11 +83,15 @@ export default function Page() {
 
           {/* Pillar 2 */}
           <div className="hm-pillar-card">
-            <div className="hm-pillar-icon-wrap">
-              <Image src={predictionIcon} alt="Nightly AI Insights Icon" width={28} height={29} className="hm-pillar-icon" />
+            <div className="hm-pillar-header">
+              <div className="hm-pillar-icon-wrap">
+                <Image src={predictionIcon} alt="Nightly AI Insights Icon" width={22} height={22} className="hm-pillar-icon" />
+              </div>
+              <div>
+                <div className="hm-pillar-tag">Predictive Analytics</div>
+                <h3 className="hm-pillar-title">Nightly AI Insights</h3>
+              </div>
             </div>
-            <div className="hm-pillar-tag">Predictive Analytics</div>
-            <h3 className="hm-pillar-title">Nightly AI Insights</h3>
             <p className="hm-pillar-desc">
               Every night, ImmunoTrack runs a flare risk model across your patient panel. Patients at elevated risk surface to the top of your dashboard so you can act early.
             </p>
@@ -91,11 +99,15 @@ export default function Page() {
 
           {/* Pillar 3 */}
           <div className="hm-pillar-card">
-            <div className="hm-pillar-icon-wrap">
-              <Image src={airQualityIcon} alt="Environmental Triggers Icon" width={28} height={26} className="hm-pillar-icon" />
+            <div className="hm-pillar-header">
+              <div className="hm-pillar-icon-wrap">
+                <Image src={airQualityIcon} alt="Environmental Triggers Icon" width={22} height={22} className="hm-pillar-icon" />
+              </div>
+              <div>
+                <div className="hm-pillar-tag">Data Integration</div>
+                <h3 className="hm-pillar-title">Environmental Triggers</h3>
+              </div>
             </div>
-            <div className="hm-pillar-tag">Data Integration</div>
-            <h3 className="hm-pillar-title">Environmental Triggers</h3>
             <p className="hm-pillar-desc">
               Pollen, air quality, and weather data are automatically paired with each patient&apos;s symptom log every night, helping you identify what&apos;s driving flares.
             </p>
@@ -151,9 +163,9 @@ export default function Page() {
             <span className="hm-testimonial-tag">Why ImmunoTrack</span>
           </div>
 
-          <div className='block' style={{ fontSize: '1.5rem', fontWeight: '800' }}>
+          <blockquote className="hm-testimonial-quote">
             &ldquo;Allergy and immunology practices needed real visibility between visits — not one more dashboard to babysit. ImmunoTrack surfaces flare risk overnight, tracks RTM progress automatically, and shows symptom trends without adding a single task to your day.&rdquo;
-          </div>
+          </blockquote>
         </div>
       </section>
 
