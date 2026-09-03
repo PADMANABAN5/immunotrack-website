@@ -293,7 +293,7 @@
   font-weight: 800;
   color: var(--sp-text-head);
   text-align: center;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
 }
 
 .sp-section-divider {
@@ -301,7 +301,7 @@
   height: 3px;
   background: var(--color-cyan);
   border-radius: 2px;
-  margin: 0 auto 32px;
+  margin: 0 auto 20px;
 }
 
 /* ============================================================
@@ -481,7 +481,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 /* Email card */
@@ -1004,8 +1004,20 @@
 }
 
 .sp-contact-strip,
-.sp-contact-section,
-.sp-faq-section,
+.sp-contact-section {
+  padding-top: 24px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.sp-faq-section {
+  padding-top: 12px;
+  padding-bottom: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 .sp-legal-section {
   padding-top: 24px;
   padding-bottom: 24px;
