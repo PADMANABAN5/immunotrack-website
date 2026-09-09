@@ -271,19 +271,6 @@ body {
   align-items: start;
 }
 
-/* CONTACT column — distinct floating glass card, matching the header's
-   premium glass treatment. Targets the last (contact) column only; the
-   other three columns keep their plain layout. */
-.footer-top > .footer-column:last-child {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(45, 214, 229, 0.16);
-  border-radius: 20px;
-  padding: 20px 24px;
-  backdrop-filter: blur(16px) saturate(160%);
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
-  box-shadow: 0 20px 40px -20px rgba(2, 18, 79, 0.4);
-}
-
 .footer-brand h2 {
   font-size: 32px;
   margin-bottom: 16px;
@@ -372,11 +359,21 @@ body {
   display: block;
 }
 
-.support-item p {
+.support-item p,
+.support-item a,
+.footer-email-link {
   font-size: 14px;
   color: #cfd4e6;
   line-height: 1.5;
   margin: 0;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.support-item a:hover,
+.footer-email-link:hover {
+  color: #2fd6e5;
+  text-decoration: none;
 }
 
 .support-item:hover {
@@ -566,10 +563,6 @@ body {
 
   .footer-brand h2 {
     font-size: 30px;
-  }
-
-  .footer-top > .footer-column:last-child {
-    padding: 20px;
   }
 
   .support-item {

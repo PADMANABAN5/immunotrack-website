@@ -8,7 +8,7 @@
   --pp-bg-page:     #f8fafc;
   --pp-bg-card:     #ffffff;
   --pp-border:      #e4e8f0;
-  --pp-text-head:   #0f172a;
+  --pp-text-body:   #0f172a;
   --pp-text-body:   #1e293b;
   --pp-text-muted:  #475569;
   --pp-red:         #c0392b;
@@ -268,7 +268,7 @@
 .pp-section-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--pp-text-head);
+  color: var(--pp-text-body);
   margin: 0;
 }
 
@@ -450,7 +450,7 @@
 .pp-version-title {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--pp-text-head);
+  color: var(--pp-text-body);
   margin: 0 0 18px;
 }
 
@@ -477,7 +477,7 @@
 .pp-glance-title {
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--pp-text-head);
+  color: var(--pp-text-body);
   margin: 0 0 20px;
   padding-bottom: 12px;
   border-bottom: 2px solid var(--color-cyan);
@@ -519,7 +519,7 @@
 .pp-glance-item-title {
   font-size: 0.93rem;
   font-weight: 700;
-  color: var(--pp-text-head);
+  color: var(--pp-text-body);
   margin: 0 0 4px;
   line-height: 1.5;
   font-family: inherit;
@@ -596,7 +596,7 @@
 .pp-questions-title {
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--pp-text-head);
+  color: var(--pp-text-body);
   margin: 0 0 10px;
   font-family: inherit;
 }

@@ -109,7 +109,11 @@ export default function Footer() {
 
               <div>
                 <strong>General Inquiries</strong>
-                <p>support@immunotrack.ai</p>
+                <p>
+                  <a href="mailto:support@immunotrack.ai" className="footer-email-link">
+                    support@immunotrack.ai
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -120,7 +124,11 @@ export default function Footer() {
 
               <div>
                 <strong>Privacy Questions</strong>
-                <p>privacy@immunotrack.ai</p>
+                <p>
+                  <a href="mailto:privacy@immunotrack.ai" className="footer-email-link">
+                    privacy@immunotrack.ai
+                  </a>
+                </p>
               </div>
             </div>
 

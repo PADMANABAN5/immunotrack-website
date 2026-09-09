@@ -247,7 +247,7 @@ export default function PrivacyPage() {
                 </svg>
                 <p>
                   To exercise any of these rights, contact us at:{" "}
-                  <a href="mailto:privacy@immunotrack.ai">privacy@immunotrack.ai</a>
+                  <a href="mailto:privacy@immunotrack.ai" className="pp-link">privacy@immunotrack.ai</a>
                 </p>
               </div>
             </div>

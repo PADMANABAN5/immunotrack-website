@@ -633,8 +633,11 @@ export default function CookiesPage() {
               </p>
               <p className="ck-p">
                 If you believe a child under 13 has submitted personal
-                information through the website, please contact us at
-                privacy@immunotrack.ai and we will delete it promptly.
+                information through the website, please contact us at{" "}
+                <a href="mailto:privacy@immunotrack.ai" className="ck-link">
+                  privacy@immunotrack.ai
+                </a>{" "}
+                and we will delete it promptly.
               </p>
             </div>
           </article>
