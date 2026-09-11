@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -7,55 +8,40 @@
   --color-cyan-d: #1bb8c7;
   --color-cyan-pale: #f0fdfe;
   --color-bg-light-section: #f8fafc;
-  --font-sans: "Avenir", sans-serif;
+  --font-sans: var(--font-inter, "Inter"), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-avenir: var(--font-avenir, "Avenir"), "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* @font-face {
-  font-family: "Avenir";
-  src: url("./fonts/AvenirLTStd-Roman.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
+html,
+body {
+  font-synthesis: none;
+  -webkit-font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-@font-face {
-  font-family: "Avenir";
-  src: url("./fonts/AvenirLTStd-Oblique.otf") format("opentype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("./fonts/Avenir LT 55 Roman.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("./fonts/Avenir LT 55 Oblique.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("./fonts/Avenir LT 85 Heavy.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("./fonts/Avenir LT 86 Heavy Oblique.ttf") format("truetype");
-  font-weight: 800;
-  font-style: italic;
-} */
 
 body {
   background: #f8fafc;
   color: var(--foreground);
-  font-family: "Avenir", sans-serif;
+  font-family: var(--font-inter, "Inter"), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-avenir, "Avenir"), "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.font-avenir {
+  font-family: var(--font-avenir, "Avenir"), "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.font-sans {
+  font-family: var(--font-inter, "Inter"), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* Custom styles for ImmunoTrack Header components */

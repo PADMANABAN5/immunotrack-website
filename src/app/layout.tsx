@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import "./../assets/styles/globals.css";
 import "./../assets/styles/premium.css";
-import { avenir } from "@/fonts";
+import { avenir, inter } from "@/fonts";
 
 const siteUrl = "https://immunotrack.ai";
 
@@ -62,8 +62,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-       <body className={avenir.className}>
+    <html lang="en" className={`${inter.variable} ${avenir.variable}`} suppressHydrationWarning>
+       <body className={`${inter.className} font-sans antialiased`}>
         <Header />
         <main className="pt-24">
           {children}

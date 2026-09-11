@@ -39,7 +39,7 @@ export default function PatientsSection() {
               src="/images/patient-hero-banner.jpeg"
               alt="Patient using ImmunoTrack app"
               width={600}
-              height={330}
+              height={400}
               priority
               className="pt-hero-img"
             />

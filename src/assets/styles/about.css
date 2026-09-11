@@ -161,6 +161,7 @@
 
 .ab-hero-img {
   width: 100%;
+  aspect-ratio: 600 / 400;
   height: auto;
   display: block;
   border-radius: 16px;

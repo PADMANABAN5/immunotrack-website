@@ -134,7 +134,7 @@ export default function SupportSection() {
               src="/images/help-and-support.jpeg"
               alt="Help and support team"
               width={600}
-              height={322}
+              height={400}
               priority
               className="sp-hero-img"
             />

@@ -92,7 +92,7 @@ export default function PrivacyPage() {
               src="/images/privacy-policy.jpeg"
               alt="Privacy and data security"
               width={600}
-              height={335}
+              height={400}
               priority
               className="pp-hero-img"
             />

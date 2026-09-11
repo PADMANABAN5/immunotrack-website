@@ -31,7 +31,7 @@ export default function CliniciansSection() {
               src="/images/clinician-hero-banner.jpeg"
               alt="Clinician with patient using ImmunoTrack"
               width={600}
-              height={420}
+              height={400}
               priority
               className="cl-hero-img"
             />

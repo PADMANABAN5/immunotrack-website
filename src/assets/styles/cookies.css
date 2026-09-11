@@ -141,8 +141,7 @@
   .ck-hero-container {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    padding: 0;
-    height: 100%;
+    align-items: center;
   }
 }
 
@@ -220,6 +219,7 @@
 
 .ck-hero-img {
   width: 100%;
+  aspect-ratio: 600 / 400;
   height: auto;
   display: block;
   border-radius: 16px;
@@ -230,32 +230,6 @@
 
 .ck-hero-image:hover .ck-hero-img {
   transform: scale(1.015);
-}
-
-@media (min-width: 992px) {
-  .ck-hero-image {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 52%;
-    width: auto;
-  }
-
-  .ck-hero-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    box-shadow: none;
-  }
-}
-
-.ck-hero-container {
-  position: relative;
-  z-index: 1;
-  max-width: 640px;
-  margin: 0 auto;
 }
 
 .ck-hero-badge {
@@ -529,6 +503,7 @@
 }
 
 .ck-section-title {
+  font-family: var(--font-avenir, "Avenir"), "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 22px;
   font-weight: 500;
   color: var(--ck-text-heading);
@@ -592,14 +567,15 @@
 
 /* Sub-heading (2.1, 2.2 …) */
 .ck-h3 {
+  font-family: var(--font-avenir, "Avenir"), "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  color: var(--color-navy);
+  color: var(--ck-text-heading);
   margin: 0 0 10px;
   display: flex;
   align-items: center;
   gap: 8px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
 }
 
 .ck-h3-dot {

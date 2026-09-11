@@ -60,7 +60,8 @@
 
 @media (min-width: 992px) {
   .ct-hero {
-    height: 640px;
+    height: auto;
+    padding: 56px 16px;
     background-color: var(--color-navy);
   }
 }
@@ -79,8 +80,7 @@
   .ct-hero-container {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    padding: 0;
-    height: 100%;
+    align-items: center;
   }
 }
 
@@ -151,6 +151,7 @@
 
 .ct-hero-img {
   width: 100%;
+  aspect-ratio: 600 / 400;
   height: auto;
   display: block;
   border-radius: 16px;
@@ -161,25 +162,6 @@
 
 .ct-hero-image:hover .ct-hero-img {
   transform: scale(1.015);
-}
-
-@media (min-width: 992px) {
-  .ct-hero-image {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 52%;
-    width: auto;
-  }
-
-  .ct-hero-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    box-shadow: none;
-  }
 }
 
 /* ── BUTTONS ────────────────────────────────────────────── */

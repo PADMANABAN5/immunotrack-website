@@ -90,7 +90,7 @@ export default function CookiesPage() {
               src="/images/cookie-policy.jpeg"
               alt="Cookie and data privacy policy"
               width={600}
-              height={327}
+              height={400}
               priority
               className="ck-hero-img"
             />
@@ -446,7 +446,7 @@ export default function CookiesPage() {
             </div>
             <div className="ck-section-body">
               <div className="ck-sub-section">
-                <p className="ck-h3">5.1 Browser controls</p>
+                <h3 className="ck-h3">5.1 Browser controls</h3>
                 <p>
                   You can control, disable, or delete cookies through your
                   browser settings. Note that disabling strictly necessary
@@ -487,7 +487,7 @@ export default function CookiesPage() {
                 </p>
               </div>
               <div className="ck-sub-section">
-                <p className="ck-h3">5.2 Cookie notice on immunotrack.ai</p>
+                <h3 className="ck-h3">5.2 Cookie notice on immunotrack.ai</h3>
                 <p>
                   On your first visit to immunotrack.ai, a cookie notice will be
                   displayed explaining that the site uses strictly necessary and
@@ -505,7 +505,7 @@ export default function CookiesPage() {
                 </p>
               </div>
               <div className="ck-sub-section">
-                <p className="ck-h3">5.3 Do Not Track</p>
+                <h3 className="ck-h3">5.3 Do Not Track</h3>
                 <p>
                   Some browsers transmit a &quot;Do Not Track&quot; (DNT)
                   signal. Because ImmunoTrack does not use behavioral tracking
