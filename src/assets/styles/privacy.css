@@ -117,12 +117,18 @@
 }
 
 .pp-hero-label {
-  font-size: 12px;
+  display: inline-block;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--color-cyan);
-  margin: 0 0 20px;
+  background: rgba(45, 214, 229, 0.1);
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(45, 214, 229, 0.2);
+  margin-bottom: 20px;
+  width: fit-content;
   align-self: flex-start;
 }
 
@@ -666,7 +672,7 @@
 @media (min-width: 576px) {
   .pp-hero-container {
     max-width: 540px;
-    padding: 48px 20px;
+    padding: 0 16px;
   }
 
   .pp-layout {
@@ -685,7 +691,7 @@
 @media (min-width: 768px) {
   .pp-hero-container {
     max-width: 720px;
-    padding: 56px 24px;
+    padding: 0 16px;
   }
 
   .pp-hero-copy {
@@ -727,7 +733,7 @@
 @media (min-width: 992px) {
   .pp-hero-container {
     max-width: 960px;
-    padding: 64px 30px;
+    padding: 0 16px;
   }
 
   .pp-hero-copy {
@@ -771,7 +777,7 @@
 @media (min-width: 1200px) {
   .pp-hero-container {
     max-width: 1140px;
-    padding: 72px 36px;
+    padding: 0 16px;
   }
 
   .pp-hero-copy {
@@ -794,7 +800,7 @@
 @media (min-width: 1400px) {
   .pp-hero-container {
     max-width: 1320px;
-    padding: 80px 48px;
+    padding: 0 16px;
   }
 
   .pp-layout {

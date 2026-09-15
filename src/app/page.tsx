@@ -32,10 +32,10 @@ export default function Page() {
               ImmunoTrack gives your practice real-time symptom trends, nightly flare risk scores, and remote therapeutic monitoring — so you can act between visits, not just at them.
             </p>
             <div className="hm-hero-actions">
-              <Link href="/contact" className="hm-btn hm-btn-cyan">
+              <Link href="/contact" className="hm-btn hm-btn-cyan pui-btn pui-focus">
                 Request Clinician Access
               </Link>
-              <Link href="/download" className="hm-btn hm-btn-outline">
+              <Link href="/download" className="hm-btn hm-btn-outline pui-btn pui-focus">
                 Download the Patient App
               </Link>
             </div>
@@ -199,7 +199,7 @@ export default function Page() {
 
           <h2>Ready to bring RTM to your practice?</h2>
           <p>ImmunoTrack handles setup. You log in on day one and invite your first patient.</p>
-          <Link href="/contact" className="hm-btn hm-btn-cyan">
+          <Link href="/contact" className="hm-btn hm-btn-cyan pui-btn pui-focus">
             Request Access
           </Link>
         </div>
