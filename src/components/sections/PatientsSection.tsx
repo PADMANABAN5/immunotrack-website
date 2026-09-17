@@ -69,7 +69,7 @@ export default function PatientsSection() {
                 <h3 className="pt-feature-title">Daily symptom logging</h3>
               </div>
               <p className="pt-feature-desc">
-                Rate respiratory, nasal, and skin symptoms in under 2 minutes. Log every day so your clinician can pursue RTM billing where covered by your plan.
+                Rate respiratory, nasal, and skin symptoms in under 2 minutes. Log every day to ensure that your care team can watch for anything that can cause a flare-up.
               </p>
             </Reveal>
 
