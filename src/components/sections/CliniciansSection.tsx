@@ -15,10 +15,10 @@ export default function CliniciansSection() {
           <div className="cl-hero-content">
             <span className="cl-hero-tag">Built for allergy & immunology</span>
             <h1 className="cl-hero-title">
-              Remote therapeutic monitoring — finally built for allergy and immunology.
+              Remote therapeutic monitoring — finally built for Allergy and Immunology.
             </h1>
             <p className="cl-hero-subtitle">
-              ImmunoTrack gives allergy and immunology practices the tools to monitor patients remotely, qualify for RTM billing, and catch flares before they become ER visits.
+              ImmunoTrack gives providers the tools to monitor patients remotely, qualify for RTM billing, and catch flares before they become ER visits.
             </p>
             <div className="cl-hero-actions">
               <Link href="/contact" className="cl-btn cl-btn-cyan pui-btn pui-focus">
@@ -84,7 +84,9 @@ export default function CliniciansSection() {
           </Reveal>
 
           <div className="cl-notice-box">
-            RTM billing is the clinician&apos;s responsibility. ImmunoTrack provides documentation and tracking support — it does not submit claims. Clinicians should confirm RTM coverage with their payers before enrolling patients.
+            RTM billing is the clinician&apos;s responsibility. ImmunoTrack provides documentation and tracking support — it does not submit claims.
+            <br />
+            Clinicians should confirm RTM coverage with their Payors before enrolling patients.
           </div>
         </div>
       </section>
@@ -149,7 +151,7 @@ export default function CliniciansSection() {
                 <h3 className="cl-feature-title">Symptom trend graphs</h3>
               </div>
               <p className="cl-feature-desc">
-                Real-time trend analysis for respiratory, nasal, and skin symptoms over customizable time frames, providing granular between-visit tracking.
+                Real-time trend analysis for respiratory, nasal, and skin symptoms over customizable time frames, providing granular information between-visit tracking.
               </p>
             </Reveal>
 
@@ -225,28 +227,16 @@ export default function CliniciansSection() {
 
           <div className="cl-specialties-grid">
             <Reveal className="cl-specialty-card">
-              <h3 className="cl-specialty-title">Allergy & Immunology</h3>
+              <h3 className="cl-specialty-title">Allergy, Immunology & Dermatology</h3>
               <p className="cl-specialty-desc">Primary specialty. Core clinical scales including ACQ-6, SNOT-22, and POEM are fully integrated.</p>
             </Reveal>
             <Reveal className="cl-specialty-card" delay={1}>
-              <h3 className="cl-specialty-title">ENT / Otolaryngology</h3>
-              <p className="cl-specialty-desc">Built-in SNOT-22 rhinology and sinus scoring directly applicable to ENT chronic sinusitis management.</p>
+              <h3 className="cl-specialty-title">Asthma & Pulmonology</h3>
+              <p className="cl-specialty-desc">Rescue inhaler utilization alerts, symptom-based asthma control scoring and standardized asthma control scoring.</p>
             </Reveal>
             <Reveal className="cl-specialty-card" delay={2}>
-              <h3 className="cl-specialty-title">Dermatology</h3>
-              <p className="cl-specialty-desc">Integrated POEM scoring for eczema, atopic dermatitis, and complex allergic skin condition monitoring.</p>
-            </Reveal>
-            <Reveal className="cl-specialty-card" delay={3}>
-              <h3 className="cl-specialty-title">Asthma & Pulmonology</h3>
-              <p className="cl-specialty-desc">Rescue inhaler utilization alerts, peak flow tracking, and standardized ACQ-6 composite asthma control scoring.</p>
-            </Reveal>
-            <Reveal className="cl-specialty-card" delay={4}>
-              <h3 className="cl-specialty-title">Sleep Medicine</h3>
-              <p className="cl-specialty-desc">Monitoring upper airway and sinus symptom dynamics where allergic conditions overlap with sleep-disordered breathing.</p>
-            </Reveal>
-            <Reveal className="cl-specialty-card" delay={5}>
-              <h3 className="cl-specialty-title">Pediatric Allergy</h3>
-              <p className="cl-specialty-desc">Age-appropriate symptom scales, family/guardian co-management workflows, and pediatric tracking.</p>
+              <h3 className="cl-specialty-title">Academic / Hospital</h3>
+              <p className="cl-specialty-desc">Multi-clinician collaborative workspaces, advanced cohort segmentation, and cohort-level analytics.</p>
             </Reveal>
           </div>
         </div>
