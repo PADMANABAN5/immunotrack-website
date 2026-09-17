@@ -15,6 +15,28 @@ const US_STATES = [
   "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ];
 
+const SPECIALTY_OPTIONS = [
+  "Allergy & Immunology",
+  "Pediatric Allergy",
+  "ENT / Otolaryngology",
+  "Sleep Medicine",
+  "Dermatology",
+  "Asthma & Pulmonology",
+  "General Pediatrics",
+  "Internal Medicine",
+  "Family Medicine / Primary Care",
+  "Other",
+];
+
+const INSTITUTION_TYPE_OPTIONS = [
+  "Private Practice — Single Clinician",
+  "Private Practice — Group / Multi-Clinician",
+  "Hospital / Health System",
+  "Academic Medical Center",
+  "Federally Qualified Health Center (FQHC)",
+  "Other",
+];
+
 interface FormErrors {
   name?: string;
   email?: string;
@@ -31,6 +53,9 @@ export default function ContactForm() {
     email: "",
     phone: "",
     specialty: "",
+    otherSpecialty: "",
+    institutionType: "",
+    otherInstitutionType: "",
     state: "",
     message: "",
     website_hp: "", // Honeypot field
@@ -115,6 +140,16 @@ export default function ContactForm() {
     setSubmitting(true);
 
     try {
+      const effectiveSpecialty =
+        formData.specialty === "Other" && formData.otherSpecialty.trim()
+          ? `Other: ${formData.otherSpecialty.trim()}`
+          : formData.specialty;
+
+      const effectiveInstitution =
+        formData.institutionType === "Other" && formData.otherInstitutionType.trim()
+          ? `Other: ${formData.otherInstitutionType.trim()}`
+          : formData.institutionType;
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -123,12 +158,13 @@ export default function ContactForm() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          category: formData.specialty ? `Specialty: ${formData.specialty}` : undefined,
+          category: effectiveSpecialty ? `Specialty: ${effectiveSpecialty}` : undefined,
           subject: formData.practice ? `Practice: ${formData.practice} (${formData.state})` : undefined,
           message: [
             formData.practice ? `Practice: ${formData.practice}` : null,
             formData.phone ? `Phone: ${formData.phone}` : null,
-            formData.specialty ? `Specialty: ${formData.specialty}` : null,
+            effectiveSpecialty ? `Specialty: ${effectiveSpecialty}` : null,
+            effectiveInstitution ? `Institution / Practice Type: ${effectiveInstitution}` : null,
             formData.state ? `State: ${formData.state}` : null,
             formData.message ? `Message: ${formData.message}` : null,
           ].filter(Boolean).join("\n"),
@@ -154,6 +190,9 @@ export default function ContactForm() {
         email: "",
         phone: "",
         specialty: "",
+        otherSpecialty: "",
+        institutionType: "",
+        otherInstitutionType: "",
         state: "",
         message: "",
         website_hp: "",
@@ -181,30 +220,27 @@ export default function ContactForm() {
 
         {status && (
           <div
-            className={`cs-form-alert ${
-              status.type === "success"
-                ? "cs-form-alert-success"
-                : "cs-form-alert-error"
+            className={`cs-form-status ${
+              status.type === "success" ? "cs-form-status-success" : "cs-form-status-error"
             }`}
             role="alert"
           >
-            <span>{status.type === "success" ? "✓" : "⚠️"}</span>
-            <span>{status.message}</span>
+            {status.type === "success" ? "✓" : "⚠"} {status.message}
           </div>
         )}
 
-        <form onSubmit={handleSubmit} noValidate>
-          {/* Honeypot field for bot protection */}
+        <form onSubmit={handleSubmit} className="cs-form-body" noValidate>
+          {/* Honeypot field for spam prevention */}
           <div className="cs-form-hp" aria-hidden="true">
+            <label htmlFor="contact-hp">Leave this field blank</label>
             <input
               type="text"
+              id="contact-hp"
               name="website_hp"
+              value={formData.website_hp}
+              onChange={(e) => handleInputChange("website_hp", e.target.value)}
               tabIndex={-1}
               autoComplete="off"
-              value={formData.website_hp}
-              onChange={(e) =>
-                setFormData({ ...formData, website_hp: e.target.value })
-              }
             />
           </div>
 
@@ -214,10 +250,10 @@ export default function ContactForm() {
                 Full name <span className="cs-form-req">*</span>
               </label>
               <input
-                id="contact-name"
                 type="text"
+                id="contact-name"
                 className={`cs-form-input ${fieldErrors.name ? "cs-form-input-error" : ""}`}
-                placeholder="Dr. Meera Patel"
+                placeholder="Dr. Jane Smith"
                 value={formData.name}
                 onChange={(e) => handleInputChange("name", e.target.value)}
                 onBlur={() => handleBlur("name")}
@@ -232,13 +268,13 @@ export default function ContactForm() {
 
             <div className="cs-form-group">
               <label htmlFor="contact-practice" className="cs-form-label">
-                Practice / clinic name
+                Practice / Clinic name
               </label>
               <input
-                id="contact-practice"
                 type="text"
+                id="contact-practice"
                 className="cs-form-input"
-                placeholder="City Allergy Clinic"
+                placeholder="Metropolitan Allergy Clinic"
                 value={formData.practice}
                 onChange={(e) => handleInputChange("practice", e.target.value)}
               />
@@ -251,10 +287,10 @@ export default function ContactForm() {
                 Email address <span className="cs-form-req">*</span>
               </label>
               <input
-                id="contact-email"
                 type="email"
+                id="contact-email"
                 className={`cs-form-input ${fieldErrors.email ? "cs-form-input-error" : ""}`}
-                placeholder="mpatel@cityallergy.com"
+                placeholder="jsmith@clinic.com"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
                 onBlur={() => handleBlur("email")}
@@ -272,10 +308,10 @@ export default function ContactForm() {
                 Phone number
               </label>
               <input
-                id="contact-phone"
                 type="tel"
+                id="contact-phone"
                 className={`cs-form-input ${fieldErrors.phone ? "cs-form-input-error" : ""}`}
-                placeholder="(404) 555-0100"
+                placeholder="(555) 123-4567"
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
                 onBlur={() => handleBlur("phone")}
@@ -301,13 +337,71 @@ export default function ContactForm() {
                 onChange={(e) => handleInputChange("specialty", e.target.value)}
               >
                 <option value="">Select specialty</option>
-                <option value="Allergy & Immunology">Allergy &amp; Immunology</option>
-                <option value="Pediatric Allergy">Pediatric Allergy</option>
-                <option value="Asthma & Pulmonology">Asthma &amp; Pulmonology</option>
-                <option value="Other">Other</option>
+                {SPECIALTY_OPTIONS.map((spec) => (
+                  <option key={spec} value={spec}>
+                    {spec}
+                  </option>
+                ))}
               </select>
             </div>
 
+            <div className="cs-form-group">
+              <label htmlFor="contact-institution" className="cs-form-label">
+                Institution / Practice Type
+              </label>
+              <select
+                id="contact-institution"
+                className="cs-form-select"
+                value={formData.institutionType}
+                onChange={(e) => handleInputChange("institutionType", e.target.value)}
+              >
+                <option value="">Select institution / practice type</option>
+                {INSTITUTION_TYPE_OPTIONS.map((inst) => (
+                  <option key={inst} value={inst}>
+                    {inst}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {(formData.specialty === "Other" || formData.institutionType === "Other") && (
+            <div className="cs-form-row">
+              {formData.specialty === "Other" && (
+                <div className="cs-form-group">
+                  <label htmlFor="contact-other-specialty" className="cs-form-label">
+                    Specify Specialty
+                  </label>
+                  <input
+                    type="text"
+                    id="contact-other-specialty"
+                    className="cs-form-input"
+                    placeholder="e.g. Immunodermatology"
+                    value={formData.otherSpecialty}
+                    onChange={(e) => handleInputChange("otherSpecialty", e.target.value)}
+                  />
+                </div>
+              )}
+
+              {formData.institutionType === "Other" && (
+                <div className="cs-form-group">
+                  <label htmlFor="contact-other-institution" className="cs-form-label">
+                    Specify Institution Type
+                  </label>
+                  <input
+                    type="text"
+                    id="contact-other-institution"
+                    className="cs-form-input"
+                    placeholder="e.g. Multi-specialty Clinic Network"
+                    value={formData.otherInstitutionType}
+                    onChange={(e) => handleInputChange("otherInstitutionType", e.target.value)}
+                  />
+                </div>
+              )}
+            </div>
+          )}
+
+          <div className="cs-form-row">
             <div className="cs-form-group">
               <label htmlFor="contact-state" className="cs-form-label">
                 State

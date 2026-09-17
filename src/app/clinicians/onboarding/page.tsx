@@ -18,7 +18,7 @@ const phases = [
   {
     phase: "2. Practice Admin setup",
     who: "Practice Admin",
-    what: "Completes clinician profile: mobile, specialty, welcome message. Visible in clinician profile on Day 1.",
+    what: "Completes clinician profile: mobile, specialty, institution/practice type, welcome message. Visible in clinician profile on Day 1.",
   },
   {
     phase: "3. Account activation",
@@ -108,7 +108,7 @@ export default function ClinicianOnboarding() {
                   </div>
                   <div>
                     <div className="ob-list-item-title">Practice Profile</div>
-                    <div className="ob-list-item-desc">Clinic Name, Specialties, Address, and Phone numbers are pre-loaded for regulatory compliance.</div>
+                    <div className="ob-list-item-desc">Clinic Name, Specialty, Institution / Practice Type, Address, and Phone numbers are pre-loaded for regulatory compliance.</div>
                   </div>
                 </li>
                 <li className="ob-list-item">

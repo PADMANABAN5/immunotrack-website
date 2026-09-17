@@ -4,8 +4,8 @@ import { useEffect, useRef, useState, type HTMLAttributes, type ReactNode } from
 
 interface RevealProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
-  /** Optional stagger step (1-4) for sequential reveal within a group. */
-  delay?: 1 | 2 | 3 | 4;
+  /** Optional stagger step (1-6) for sequential reveal within a group. */
+  delay?: 1 | 2 | 3 | 4 | 5 | 6;
   /** Element type to render — defaults to "div". Use "form" to wrap a form without an extra wrapper. */
   as?: "div" | "form" | "article" | "li";
 }

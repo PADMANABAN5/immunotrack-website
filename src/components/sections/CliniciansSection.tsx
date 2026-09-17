@@ -229,12 +229,24 @@ export default function CliniciansSection() {
               <p className="cl-specialty-desc">Primary specialty. Core clinical scales including ACQ-6, SNOT-22, and POEM are fully integrated.</p>
             </Reveal>
             <Reveal className="cl-specialty-card" delay={1}>
-              <h3 className="cl-specialty-title">Asthma & Pulmonology</h3>
-              <p className="cl-specialty-desc">Rescue inhaler utilization alerts, symptom-based asthma control scoring and standardized asthma control scoring.</p>
+              <h3 className="cl-specialty-title">ENT / Otolaryngology</h3>
+              <p className="cl-specialty-desc">Built-in SNOT-22 rhinology and sinus scoring directly applicable to ENT chronic sinusitis management.</p>
             </Reveal>
             <Reveal className="cl-specialty-card" delay={2}>
-              <h3 className="cl-specialty-title">Academic / Hospital</h3>
-              <p className="cl-specialty-desc">Multi-clinician collaborative workspaces, advanced cohort segmentation, and cohort-level analytics.</p>
+              <h3 className="cl-specialty-title">Dermatology</h3>
+              <p className="cl-specialty-desc">Integrated POEM scoring for eczema, atopic dermatitis, and complex allergic skin condition monitoring.</p>
+            </Reveal>
+            <Reveal className="cl-specialty-card" delay={3}>
+              <h3 className="cl-specialty-title">Asthma & Pulmonology</h3>
+              <p className="cl-specialty-desc">Rescue inhaler utilization alerts, peak flow tracking, and standardized ACQ-6 composite asthma control scoring.</p>
+            </Reveal>
+            <Reveal className="cl-specialty-card" delay={4}>
+              <h3 className="cl-specialty-title">Sleep Medicine</h3>
+              <p className="cl-specialty-desc">Monitoring upper airway and sinus symptom dynamics where allergic conditions overlap with sleep-disordered breathing.</p>
+            </Reveal>
+            <Reveal className="cl-specialty-card" delay={5}>
+              <h3 className="cl-specialty-title">Pediatric Allergy</h3>
+              <p className="cl-specialty-desc">Age-appropriate symptom scales, family/guardian co-management workflows, and pediatric tracking.</p>
             </Reveal>
           </div>
         </div>
