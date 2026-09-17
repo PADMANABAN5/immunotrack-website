@@ -3,7 +3,14 @@
    prefix: hm-
    ============================================================ */
 
-:root {
+:root {
+
+
+
+
+
+
+
   --hm-bg-light: #f8fafc;
   --hm-border: #e2e8f0;
   --hm-text-head: #0f172a;
@@ -226,7 +233,7 @@
 }
 
 .hm-compliance-tag {
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
