@@ -59,7 +59,7 @@ export default function Page() {
       <section className="hm-pillars" aria-label="Pillars">
         <div className="hm-section-header">
           <span className="hm-section-tag">Built for allergy and immunology practices</span>
-          <h2 className="hm-section-title">Purpose-built for allergy &amp; immunology</h2>
+          <h2 className="hm-section-title">Purpose-built for Allergy &amp; Immunology</h2>
           <p className="hm-section-subtitle">
             Three pillars: AI-driven clinical insight, a patient experience your panel will actually use, and clinical support whenever you need it.
           </p>
@@ -140,7 +140,7 @@ export default function Page() {
               <div className="hm-step-num">2</div>
               <h3 className="hm-step-title">Patient logs daily</h3>
               <p className="hm-step-desc">
-                Respiratory, nasal, and skin symptoms. Medication use. Triggers noticed.
+                Respiratory, nasal, and skin symptoms. Medication use. 
               </p>
             </div>
 
@@ -149,7 +149,7 @@ export default function Page() {
               <div className="hm-step-num">3</div>
               <h3 className="hm-step-title">You review insights</h3>
               <p className="hm-step-desc">
-                Nightly AI summaries. Flare risk scores. RTM progress toward billing threshold.
+                Nightly AI summaries. Flare risk scores. 
               </p>
             </div>
           </div>
@@ -160,11 +160,13 @@ export default function Page() {
       <section className="hm-testimonial" aria-label="Why ImmunoTrack">
         <div className="hm-testimonial-container">
           <div className="hm-testimonial-badge">
-            <span className="hm-testimonial-tag">Why ImmunoTrack</span>
+            <span className="hm-testimonial-tag font-extrabold" style={{ fontWeight: 800 }}>
+              <strong>Why ImmunoTrack</strong>
+            </span>
           </div>
 
           <blockquote className="hm-testimonial-quote">
-            &ldquo;Allergy and immunology practices needed real visibility between visits — not one more dashboard to babysit. ImmunoTrack surfaces flare risk overnight, tracks RTM progress automatically, and shows symptom trends without adding a single task to your day.&rdquo;
+            Allergy and immunology practices needed real visibility between visits — not one more dashboard to babysit. ImmunoTrack surfaces flare risk overnight, tracks RTM progress automatically, and shows symptom trends without adding a single task to your day.
           </blockquote>
         </div>
       </section>
@@ -174,8 +176,9 @@ export default function Page() {
         <div className="hm-footer-cta-container">
           <div className="hm-compliance-container" style={{ width: "100%", marginBottom: "40px", paddingBottom: "32px", borderBottom: "1px solid rgba(255, 255, 255, 0.12)" }}>
             <div className="hm-compliance-header">
-              <span className="hm-compliance-tag">Trusted Standards</span>
-              <span className="hm-compliance-title">We Build To</span>
+              <span className="hm-compliance-tag font-bold">
+                <strong>Trusted Standards</strong>
+              </span>
             </div>
             <div className="hm-compliance-grid">
               <div className="hm-compliance-item">

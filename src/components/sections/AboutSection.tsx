@@ -12,7 +12,7 @@ export default function AboutSection() {
           <div className="ab-hero-content">
             <span className="ab-hero-tag">Our Mission</span>
             <h1 className="ab-hero-title">
-              We built ImmunoTrack because allergy patients deserve better care between visits.
+              We built ImmunoTrack because patients deserve better care between visits.
             </h1>
             <p className="ab-hero-subtitle">
              The platform is built on HIPAA-eligible AWS infrastructure, uses a proprietary AI engine for nightly insight generation, and is designed to comply with CMS Remote Therapeutic Monitoring guidelines.
@@ -54,7 +54,7 @@ export default function AboutSection() {
               </svg>
             </div>
             <h3 className="ab-pillar-title">AI-Powered Insights</h3>
-            <p className="ab-pillar-desc">Turning complex data into actionable clarity.</p>
+            <p className="ab-pillar-desc">Making complex data easy to act on.</p>
           </Reveal>
 
           <Reveal className="ab-pillar-card" delay={2}>

@@ -55,8 +55,11 @@ export default function Footer() {
             </Link>
 
             <p>
-              ImmunoTrack AI-Driven Clinical Intelligence for Allergy &amp; Asthma ©
-              2026 ImmunoTrack Inc.
+              ImmunoTrack AI-Driven Clinical Intelligence
+              <br />
+              for Allergy &amp; Asthma
+              <br />
+              <span className="inline-block mt-2">© 2026 ImmunoTrack Inc.</span>
             </p>
           </div>
 
@@ -156,8 +159,9 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>
             ImmunoTrack is not a medical device and is not intended to diagnose,
-            treat, cure, or prevent any medical condition. Always follow the
-            advice of your licensed healthcare provider.
+            treat, cure, or prevent any medical condition.
+            <br />
+            Always follow the advice of your licensed healthcare provider.
           </p>
         </div>
       </div>

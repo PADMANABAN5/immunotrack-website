@@ -69,7 +69,7 @@ export default function PatientsSection() {
                 <h3 className="pt-feature-title">Daily symptom logging</h3>
               </div>
               <p className="pt-feature-desc">
-                Rate respiratory, nasal, and skin symptoms in under 2 minutes. Log every day so your clinician can pursue RTM billing where covered by your plan.
+                Rate respiratory, nasal, and skin symptoms in under 2 minutes. Log every day to ensure that your care team can watch for anything that can cause a flare-up.
               </p>
             </Reveal>
 
@@ -135,7 +135,7 @@ export default function PatientsSection() {
                 <span className="pt-section-tag-2">RTM Explained Simply</span>
                 <h2 className="pt-section-title-2">What is Remote Therapeutic Monitoring?</h2>
                 <p className="pt-rtm-desc">
-                 Remote Therapeutic Monitoring (RTM) is a healthcare service where your clinician monitors your health between visits using data you log on your phone. When you log regularly, your clinician can see how your symptoms are responding to treatment. Depending on your insurance plan, your clinician may be able to bill your insurance for that monitoring. Most patients qualify by logging 2–15 days (lower tier) or 16–30 days (higher tier) in a 30-day period — your clinician's billing team determines which applies to your monitoring plan.
+                 Remote Therapeutic Monitoring (RTM) is a healthcare service where your clinician monitors your health between visits using data you log on your phone. When you log regularly, your clinician can see how your symptoms are responding to treatment. Depending on your insurance plan, your clinician may be able to bill your insurance for that monitoring. 
                </p>
               </div>
               <Reveal className="pt-rtm-stat-card">

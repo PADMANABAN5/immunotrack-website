@@ -51,7 +51,7 @@ export default function ClinicianOnboarding() {
           <span className="ob-hero-tag">Playbook & Guide</span>
           <h1 className="ob-hero-title">Clinician Onboarding Playbook</h1>
           <p className="ob-hero-subtitle">
-            This playbook outlines the complete onboarding flow for practices enrolling in the ImmunoTrack remote therapeutic monitoring program.
+            This playbook outlines the complete onboarding flow for practices enrolling in the ImmunoTrack Remote Therapeutic Monitoring program.
           </p>
         </div>
       </section>
