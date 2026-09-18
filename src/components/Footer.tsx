@@ -55,7 +55,9 @@ export default function Footer() {
             </Link>
 
             <p>
-              ImmunoTrack AI-Driven Clinical Intelligence for Allergy &amp; Asthma
+              ImmunoTrack AI-Driven Clinical Intelligence
+              <br />
+              for Allergy &amp; Asthma
               <br />
               <span className="inline-block mt-2">© 2026 ImmunoTrack Inc.</span>
             </p>
