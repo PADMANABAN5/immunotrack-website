@@ -228,7 +228,9 @@ export default function CliniciansSection() {
           <div className="cl-specialties-grid">
             <Reveal className="cl-specialty-card">
               <h3 className="cl-specialty-title">Allergy, Immunology & Dermatology</h3>
-              <p className="cl-specialty-desc">Primary specialty. Core clinical scales including ACQ-6, SNOT-22, and POEM are fully integrated.</p>
+              <p className="cl-specialty-desc">
+                Primary specialty. Core clinical scales including <span className="whitespace-nowrap">ACQ-6</span>, <span className="whitespace-nowrap">SNOT-22</span>, and POEM are fully integrated.
+              </p>
             </Reveal>
             <Reveal className="cl-specialty-card" delay={1}>
               <h3 className="cl-specialty-title">Asthma & Pulmonology</h3>
