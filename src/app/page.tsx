@@ -140,7 +140,7 @@ export default function Page() {
               <div className="hm-step-num">2</div>
               <h3 className="hm-step-title">Patient logs daily</h3>
               <p className="hm-step-desc">
-                Respiratory, nasal, and skin symptoms. Medication use. 
+                Respiratory, nasal, and skin symptoms and medication use. 
               </p>
             </div>
 
