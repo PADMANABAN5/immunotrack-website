@@ -347,62 +347,67 @@
    INVITATION ONLY SECTION
    ============================================================ */
 .dl-invite-card {
-  background: var(--color-cyan-pale);
-  border: 2px solid var(--color-cyan);
-  border-radius: var(--dl-radius);
-  padding: 32px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(45, 214, 229, 0.35);
+  border-radius: 16px;
+  padding: 20px 24px;
   display: flex;
-  gap: 24px;
+  gap: 16px;
   align-items: center;
-  box-shadow: 0 20px 40px -18px rgba(45, 214, 229, 0.22), 0 4px 12px -4px rgba(2, 18, 79, 0.04);
-  transition: box-shadow 350ms ease, transform 350ms ease;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  transition: all 350ms ease;
 }
 
 .dl-invite-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(45, 214, 229, 0.6);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 26px 48px -18px rgba(45, 214, 229, 0.3), 0 6px 16px -4px rgba(2, 18, 79, 0.06);
 }
 
 .dl-invite-icon-wrap {
-  width: 80px;
-  height: 80px;
-  background: #ffffff;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(45, 214, 229, 0.4);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--color-cyan);
   flex-shrink: 0;
-  box-shadow: 0 4px 15px rgba(45, 214, 229, 0.1);
+  box-shadow: 0 0 12px rgba(45, 214, 229, 0.15);
 }
 
 .dl-invite-icon-wrap img {
-  filter: brightness(0) saturate(100%) invert(75%) sepia(60%)
-    saturate(500%) hue-rotate(160deg) brightness(100%) contrast(95%);
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(1500%) hue-rotate(145deg) brightness(100%) contrast(100%);
 }
 
 .dl-invite-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .dl-invite-title {
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 800;
-  color: var(--dl-text-head);
+  color: #ffffff;
+  margin-bottom: 0;
 }
 
 .dl-invite-text {
-  font-size: 15px;
-  color: var(--dl-text-body);
+  font-size: 14px;
+  color: #cbd5e1;
   line-height: 1.5;
   text-wrap: balance;
 }
 
 .dl-invite-bold {
-  font-weight: 800;
-  color: var(--dl-text-head);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-cyan);
   margin-top: 4px;
 }
 

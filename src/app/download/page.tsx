@@ -115,17 +115,15 @@ export default function DownloadPage() {
             <Image
               src={alertIcon}
               alt="Invitation Required"
-              width={36}
-              height={35}
+              width={22}
+              height={22}
               aria-hidden="true"
             />
           </div>
           <div className="dl-invite-content">
             <h3 className="dl-invite-title">Invitation Only</h3>
             <p className="dl-invite-text">
-              ImmunoTrack is an invite-only app. You&apos;ll need an invitation from your healthcare provider
-              <br />
-              to create your account and get started.
+              ImmunoTrack is an invite-only app. You&apos;ll need an invitation from your healthcare provider to create your account and get started.
             </p>
             <p className="dl-invite-bold">
               If you don&apos;t have an invitation yet, please contact your doctor.

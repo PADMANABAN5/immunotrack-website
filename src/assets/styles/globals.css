@@ -472,17 +472,18 @@ h6 {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid rgba(255,255,255,.15);
-  display: grid;
-  grid-template-columns: 1fr 2.5fr 1fr;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-bottom p {
   color: #cfd4e6;
   font-size: 13px;
-  grid-column: 2;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   line-height: 1.5;
+  max-width: 950px;
+  width: 100%;
 }
 
 /* Desktop divider */
@@ -579,8 +580,7 @@ h6 {
     padding-bottom: 25px;
   }
   .footer-bottom p {
-    grid-column: 4;
-    grid-row: 3;
+    width: 100%;
   }
 }
 
