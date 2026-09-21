@@ -9,6 +9,7 @@ import footerLogo from "@/assets/images/new-logo-trans.png";
 import notificationIcon from "@/assets/icons/noun-notification-3408005.svg";
 import profileIcon from "@/assets/icons/noun-profile-8205839.svg";
 import timelineIcon from "@/assets/icons/noun-timeline-8109095.svg";
+import alertIcon from "@/assets/icons/noun-alert-8253230.svg";
 import { DOWNLOAD_LINKS } from "@/config/download-links";
 import {
   AppStoreBadgeContent,
@@ -161,7 +162,7 @@ export default function Footer() {
         </div>
 
         {/* DOWNLOAD APP SECTION */}
-        <div className="footer-download-section mt-10 pt-8 border-t border-white/15">
+        <div id="download-app" className="footer-download-section mt-10 pt-8 border-t border-white/15">
           <div className="dl-section-header mb-6 text-center">
             <h2 className="dl-section-title" style={{ color: "#ffffff" }}>Download the ImmunoTrack App</h2>
             <p className="dl-section-subtitle" style={{ color: "#cfd4e6" }}>
@@ -207,6 +208,28 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* INVITATION ONLY CARD */}
+          <div className="dl-invite-card mt-6">
+            <div className="dl-invite-icon-wrap">
+              <Image
+                src={alertIcon}
+                alt="Invitation Required"
+                width={22}
+                height={22}
+                aria-hidden="true"
+              />
+            </div>
+            <div className="dl-invite-content">
+              <h3 className="dl-invite-title">Invitation Only</h3>
+              <p className="dl-invite-text">
+                ImmunoTrack is an invite-only app. You&apos;ll need an invitation from your healthcare provider to create your account and get started.
+              </p>
+              <p className="dl-invite-bold">
+                If you don&apos;t have an invitation yet, please contact your doctor.
+              </p>
             </div>
           </div>
         </div>
