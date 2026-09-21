@@ -49,13 +49,21 @@ export function StoreBadge({
   href,
   className,
   label,
+  tooltip,
   children,
 }: {
   href: string | null;
   className: string;
   label: string;
+  tooltip?: string;
   children: ReactNode;
 }) {
+  const tooltipText =
+    tooltip ||
+    (label.toLowerCase().includes("play") || label.toLowerCase().includes("google")
+      ? "Link coming after Play Store submission"
+      : "Link coming after App Store submission");
+
   if (href) {
     return (
       <a
@@ -64,13 +72,19 @@ export function StoreBadge({
         rel="noopener noreferrer"
         className={`${className} pui-focus`}
         aria-label={label}
+        data-tooltip={tooltipText}
       >
         {children}
       </a>
     );
   }
   return (
-    <span className={className} aria-disabled="true" aria-label={`${label} — coming soon`}>
+    <span
+      className={className}
+      aria-disabled="true"
+      aria-label={`${label} — coming soon`}
+      data-tooltip={tooltipText}
+    >
       {children}
     </span>
   );

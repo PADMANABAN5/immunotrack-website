@@ -302,25 +302,43 @@
 
 /* Tooltip on hover for disabled state */
 .dl-badge-btn::before {
-  content: "Link coming after App Store submission";
+  content: attr(data-tooltip);
   position: absolute;
-  bottom: -40px;
+  top: -46px;
   left: 50%;
   transform: translateX(-50%) translateY(5px);
-  background: var(--color-navy-mid);
-  color: #ffffff;
-  font-size: 11px;
-  padding: 6px 12px;
-  border-radius: 4px;
+  background: #ffffff;
+  color: #02124f;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 6px;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
   transition: all 0.2s ease;
-  z-index: 10;
-  box-shadow: 0 4px 12px rgba(2, 18, 79, 0.2);
+  z-index: 20;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
-.dl-badge-btn:hover::before {
+.dl-badge-btn::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.dl-badge-btn:hover::before,
+.dl-badge-btn:hover::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }

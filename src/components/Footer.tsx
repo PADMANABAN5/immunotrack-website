@@ -4,10 +4,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import "@/assets/styles/globals.css";
+import "@/assets/styles/download.css";
 import footerLogo from "@/assets/images/new-logo-trans.png";
 import notificationIcon from "@/assets/icons/noun-notification-3408005.svg";
 import profileIcon from "@/assets/icons/noun-profile-8205839.svg";
 import timelineIcon from "@/assets/icons/noun-timeline-8109095.svg";
+import { DOWNLOAD_LINKS } from "@/config/download-links";
+import {
+  AppStoreBadgeContent,
+  GooglePlayBadgeContent,
+  StoreBadge,
+} from "@/components/StoreBadges";
 
 const platformLinks = [
   { href: "/", label: "Home" },
@@ -15,7 +22,6 @@ const platformLinks = [
   { href: "/patients", label: "For Patients" },
   { href: "/about", label: "About" },
   { href: "/support", label: "Help & Support" },
-  { href: "/download", label: "Download the App" },
 ];
 
 const legalLinks = [
@@ -154,12 +160,63 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* COPYRIGHT */}
+        {/* DOWNLOAD APP SECTION */}
+        <div className="footer-download-section mt-10 pt-8 border-t border-white/15">
+          <div className="dl-section-header mb-6 text-center">
+            <h2 className="dl-section-title" style={{ color: "#ffffff" }}>Download the ImmunoTrack App</h2>
+            <p className="dl-section-subtitle" style={{ color: "#cfd4e6" }}>
+              Get the app on your phone and start managing your health today.
+            </p>
+          </div>
+
+          <div className="dl-card-container">
+            <div className="dl-grid">
+              {/* iOS Option */}
+              <div className="dl-grid-col">
+                <StoreBadge href={DOWNLOAD_LINKS.appStoreUrl} className="dl-badge-btn" label="Download on the App Store">
+                  <AppStoreBadgeContent />
+                </StoreBadge>
+                <span className="dl-grid-desc">For iPhone and iPad</span>
+              </div>
+
+              {/* Android Option */}
+              <div className="dl-grid-col">
+                <StoreBadge href={DOWNLOAD_LINKS.googlePlayUrl} className="dl-badge-btn" label="Get it on Google Play">
+                  <GooglePlayBadgeContent />
+                </StoreBadge>
+                <span className="dl-grid-desc">For Android devices</span>
+              </div>
+
+              {/* QR Code Option */}
+              <div className="dl-grid-col">
+                <div className="dl-qr-box">
+                  <div className="dl-qr-img-wrap">
+                    <Image
+                      src={DOWNLOAD_LINKS.qrCodeSrc}
+                      alt="ImmunoTrack Download QR Code"
+                      width={96}
+                      height={96}
+                      className="dl-qr-image"
+                    />
+                  </div>
+                  <div className="dl-qr-info">
+                    <h3 className="dl-qr-title">Scan to Download</h3>
+                    <p className="dl-qr-text">
+                      Open your phone camera and scan the QR code to get the app.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* DISCLAIMER / COPYRIGHT */}
 
         <div className="footer-bottom">
           <p>
             ImmunoTrack is not a medical device and is not intended to diagnose,
-            treat, cure, or prevent any medical condition.
+            treat, cure, or prevent any medical condition. It is a health tracking and monitoring tool.
             <br />
             Always follow the advice of your licensed healthcare provider.
           </p>
