@@ -626,3 +626,57 @@ h6 {
     width: 75px;
   }
 }
+
+/* ============================================================
+   FOOTER DOWNLOAD SECTION OVERRIDES
+   Matches the dark navy theme of the footer
+   ============================================================ */
+.footer .dl-card-container {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25) !important;
+  color: #ffffff !important;
+}
+
+.footer .dl-card-container:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(45, 214, 229, 0.3) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35) !important;
+}
+
+.footer .dl-grid-col:not(:last-child)::after {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.footer .dl-grid-desc {
+  color: #cbd5e1 !important;
+  font-weight: 500 !important;
+}
+
+.footer .dl-qr-box {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1.5px dashed rgba(45, 214, 229, 0.35) !important;
+}
+
+.footer .dl-qr-title {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  letter-spacing: normal !important;
+  margin-bottom: 4px !important;
+  text-transform: none !important;
+}
+
+.footer .dl-qr-title::after {
+  display: none !important;
+}
+
+.footer .dl-qr-text {
+  color: #cbd5e1 !important;
+  font-weight: 400 !important;
+}
+
+.footer .dl-badge-btn {
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  background: #000000 !important;
+}
