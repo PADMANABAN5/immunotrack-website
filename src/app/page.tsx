@@ -35,7 +35,7 @@ export default function Page() {
               <Link href="/contact" className="hm-btn hm-btn-cyan pui-btn pui-focus">
                 Request Clinician Access
               </Link>
-              <Link href="/download" className="hm-btn hm-btn-outline pui-btn pui-focus">
+              <Link href="#download-app" className="hm-btn hm-btn-outline pui-btn pui-focus">
                 Download the Patient App
               </Link>
             </div>
