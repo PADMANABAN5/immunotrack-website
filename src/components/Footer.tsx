@@ -216,7 +216,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>
             ImmunoTrack is not a medical device and is not intended to diagnose,
-            treat, cure, or prevent any medical condition. It is a health tracking and monitoring tool.
+            treat, cure, or prevent any medical condition. 
             <br />
             Always follow the advice of your licensed healthcare provider.
           </p>
