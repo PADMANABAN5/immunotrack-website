@@ -11,6 +11,8 @@ import profileIcon from "@/assets/icons/noun-profile-8205839.svg";
 import trackingIcon from "@/assets/icons/noun-tracking-8269731.svg";
 import cloudIcon from "@/assets/icons/noun-cloud-sync-8146798.svg";
 
+import DownloadAppButton from "@/components/DownloadAppButton";
+
 export const metadata: Metadata = {
   title: "ImmunoTrack — AI-Powered RTM for Allergy & Immunology",
   description:
@@ -35,9 +37,7 @@ export default function Page() {
               <Link href="/contact" className="hm-btn hm-btn-cyan pui-btn pui-focus">
                 Request Clinician Access
               </Link>
-              <Link href="#download-app" className="hm-btn hm-btn-outline pui-btn pui-focus">
-                Download the Patient App
-              </Link>
+              <DownloadAppButton />
             </div>
           </div>
           <div className="hm-hero-visual">

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import ScrollToTop from "@/components/ScrollToTop";
 import "./../assets/styles/globals.css";
 import "./../assets/styles/premium.css";
 import { avenir, inter } from "@/fonts";
@@ -64,6 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${avenir.variable}`} suppressHydrationWarning>
        <body className={`${inter.className} font-sans antialiased`}>
+        <ScrollToTop />
         <Header />
         <main className="pt-24">
           {children}
