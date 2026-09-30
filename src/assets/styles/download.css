@@ -134,10 +134,10 @@
 .dl-layout {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 24px 24px 32px;
+  padding: 16px 24px 28px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
 /* Header for download grid */
@@ -145,7 +145,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .dl-section-title {
@@ -178,7 +178,7 @@
   border-radius: var(--dl-radius-lg);
   box-shadow: 0 24px 48px -20px rgba(2, 18, 79, 0.14), 0 4px 12px -4px rgba(2, 18, 79, 0.06);
   border: 1px solid var(--dl-border);
-  padding: 32px 28px;
+  padding: 20px 24px;
   transition: box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1), transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -189,17 +189,18 @@
 
 .dl-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.3fr;
-  gap: 32px;
-  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
 }
 
 .dl-grid-col {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  justify-content: center;
   text-align: center;
-  gap: 16px;
+  gap: 10px;
   position: relative;
 }
 
@@ -207,11 +208,16 @@
 .dl-grid-col:not(:last-child)::after {
   content: "";
   position: absolute;
-  right: -16px;
+  right: -10px;
   top: 10%;
   height: 80%;
   width: 1px;
   background: rgba(21, 26, 88, 0.08);
+}
+
+/* Extra breathing room between QR column and the divider */
+.dl-grid-col:last-child {
+  padding-left: 12px;
 }
 
 .dl-grid-desc {
@@ -225,11 +231,12 @@
   background: var(--dl-bg-page);
   border-radius: var(--dl-radius);
   border: 1.5px dashed rgba(45, 214, 229, 0.4);
-  padding: 24px;
+  padding: 18px 20px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   text-align: left;
+  width: 100%;
 }
 
 .dl-qr-img-wrap {
@@ -268,7 +275,7 @@
   line-height: 1.4;
 }
 
-/* Store Badge Styles (Disabled Placeholder State) */
+/* Store Badge Styles */
 .dl-badge-btn {
   display: inline-flex;
   align-items: center;
@@ -276,7 +283,7 @@
   width: 200px;
   height: 60px;
   background: #000000;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1.5px solid rgba(255, 255, 255, 0.1);
   color: #ffffff;
   text-decoration: none;
@@ -284,6 +291,28 @@
   opacity: 0.65;
   transition: all 0.25s ease;
   position: relative;
+}
+
+/* Inside the download grid — fill the full column */
+.dl-grid-col .dl-badge-btn {
+  width: 88%;
+  margin: 0 auto;
+  flex: 1;
+  border-radius: 14px;
+}
+
+/* Scale up the inner content of grid badges */
+.dl-grid-col .dl-badge-btn > div,
+.dl-grid-col .dl-badge-btn > span > div {
+  transform: scale(1.5);
+  transform-origin: center;
+}
+
+/* Make the store icon prominently sized */
+.dl-grid-col .dl-badge-btn svg {
+  width: 42px !important;
+  height: 42px !important;
+  flex-shrink: 0;
 }
 
 .dl-badge-btn.hero-btn {

@@ -162,8 +162,8 @@ export default function Footer() {
         </div>
 
         {/* DOWNLOAD APP SECTION */}
-        <div id="download-app" className="footer-download-section mt-10 pt-8 border-t border-white/15">
-          <div className="dl-section-header mb-6 text-center">
+        <div id="download-app" className="footer-download-section mt-4 pt-4 border-t border-white/15">
+          <div className="dl-section-header mb-3 text-center">
             <h2 className="dl-section-title" style={{ color: "#ffffff" }}>Download the ImmunoTrack App</h2>
             <p className="dl-section-subtitle" style={{ color: "#cfd4e6" }}>
               Get the app on your phone and start managing your health today.

@@ -181,7 +181,7 @@ export default function PatientsSection() {
       </section>
 
       {/* ── FOOTER CTA BAND ───────────────────────────────────── */}
-      <section className="pt-cta-section" aria-label="Get started">
+      {/* <section className="pt-cta-section" aria-label="Get started">
         <div className="pt-cta-container">
           <h2 className="pt-cta-title">Get the ImmunoTrack patient app</h2>
           <p className="pt-cta-desc">Available on iOS and Android. Your clinician will send you an invite — download the app and follow the link to get started.</p>
@@ -194,7 +194,7 @@ export default function PatientsSection() {
             </StoreBadge>
           </div>
         </div>
-      </section>
+      </section> */}
     </section>
   );
 }
