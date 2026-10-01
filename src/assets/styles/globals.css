@@ -277,7 +277,7 @@ h6 {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
 }
 
 .footer h3::after {
@@ -648,8 +648,9 @@ h6 {
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35) !important;
 }
 
-.footer .dl-grid-col:not(:last-child)::after {
-  background: rgba(255, 255, 255, 0.12) !important;
+.footer .dl-grid-col {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
 }
 
 .footer .dl-grid-desc {
@@ -658,16 +659,14 @@ h6 {
 }
 
 .footer .dl-qr-box {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1.5px dashed rgba(45, 214, 229, 0.35) !important;
+  background: transparent !important;
+  border: none !important;
 }
 
 .footer .dl-qr-title {
   color: #ffffff !important;
-  font-size: 18px !important;
   font-weight: 800 !important;
   letter-spacing: normal !important;
-  margin-bottom: 4px !important;
   text-transform: none !important;
 }
 

@@ -178,7 +178,9 @@
   border-radius: var(--dl-radius-lg);
   box-shadow: 0 24px 48px -20px rgba(2, 18, 79, 0.14), 0 4px 12px -4px rgba(2, 18, 79, 0.06);
   border: 1px solid var(--dl-border);
-  padding: 20px 24px;
+  padding: 16px;
+  max-width: 940px;
+  margin: 0 auto;
   transition: box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1), transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -189,35 +191,27 @@
 
 .dl-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
   align-items: stretch;
 }
 
+/* Each option (App Store / Google Play / QR) is a uniform card:
+   same padding, border, radius and centered content, so all three
+   line up at the same size instead of some being bigger than others.
+   Padding is kept tight so the cards hug their content instead of
+   leaving large empty gaps above/below the button or QR code. */
 .dl-grid-col {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 10px;
-  position: relative;
-}
-
-/* Dividers between columns on desktop */
-.dl-grid-col:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: -10px;
-  top: 10%;
-  height: 80%;
-  width: 1px;
-  background: rgba(21, 26, 88, 0.08);
-}
-
-/* Extra breathing room between QR column and the divider */
-.dl-grid-col:last-child {
-  padding-left: 12px;
+  gap: 6px;
+  padding: 10px 12px;
+  background: var(--dl-bg-page);
+  border: 1px solid var(--dl-border);
+  border-radius: var(--dl-radius);
 }
 
 .dl-grid-desc {
@@ -226,25 +220,32 @@
   font-weight: 500;
 }
 
-/* QR Code Box */
+/* QR Code Box — kept as a compact horizontal row (icon + text side
+   by side) so its height stays close to the button columns' height;
+   stacking the title/description below the QR image made this column
+   much taller than the other two and left large empty gaps around
+   the shorter badge buttons once every column was stretched to match. */
 .dl-qr-box {
-  background: var(--dl-bg-page);
-  border-radius: var(--dl-radius);
-  border: 1.5px dashed rgba(45, 214, 229, 0.4);
-  padding: 18px 20px;
+  background: transparent;
+  border: none;
+  padding: 0;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   text-align: left;
   width: 100%;
+  max-width: 100%;
 }
 
-.dl-qr-img-wrap {
-  width: 110px;
-  height: 110px;
+/* Sized to match the natural height of the title + description next
+   to it (instead of a taller, generic QR size) so the image and text
+   start and end together — a bigger image here was leaving a visible
+   gap of empty space below the shorter text block. */
+.dl-qr-img-wrap { 
   background: #ffffff;
-  border-radius: 8px;
-  padding: 6px;
+  border-radius: 7px;
+  padding: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,19 +261,22 @@
 .dl-qr-info {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+  height: 100%;
 }
 
 .dl-qr-title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 800;
   color: var(--dl-text-head);
 }
 
 .dl-qr-text {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--dl-text-muted);
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 /* Store Badge Styles */
@@ -280,8 +284,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 60px;
+  width: 176px;
+  height: 50px;
   background: #000000;
   border-radius: 10px;
   border: 1.5px solid rgba(255, 255, 255, 0.1);
@@ -293,25 +297,29 @@
   position: relative;
 }
 
-/* Inside the download grid — fill the full column */
+/* Inside the download grid — fill most of the column width (capped)
+   instead of a small fixed width floating in a much wider column,
+   which left large empty gutters on either side of the button. The
+   height stays fixed so it never stretches tall/oversized. */
 .dl-grid-col .dl-badge-btn {
-  width: 88%;
+  width: 100%;
+  max-width: 200px;
+  height: 60px;
   margin: 0 auto;
-  flex: 1;
-  border-radius: 14px;
+  flex: none;
+  border-radius: 10px;
 }
 
-/* Scale up the inner content of grid badges */
 .dl-grid-col .dl-badge-btn > div,
 .dl-grid-col .dl-badge-btn > span > div {
-  transform: scale(1.5);
-  transform-origin: center;
+  transform: none;
 }
 
-/* Make the store icon prominently sized */
+/* Keep the store icon sized to match the badge instead of the old
+   1.5x scale, which made the buttons look oversized and uneven. */
 .dl-grid-col .dl-badge-btn svg {
-  width: 42px !important;
-  height: 42px !important;
+  width: 22px !important;
+  height: 22px !important;
   flex-shrink: 0;
 }
 
@@ -385,6 +393,8 @@
   align-items: center;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
   transition: all 350ms ease;
+  max-width: 940px;
+  margin: 28px auto 0;
 }
 
 .dl-invite-card:hover {
@@ -417,6 +427,8 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex: 1;
+  min-width: 0;
 }
 
 .dl-invite-title {
@@ -430,7 +442,7 @@
   font-size: 14px;
   color: #cbd5e1;
   line-height: 1.5;
-  text-wrap: balance;
+  max-width: 90%;
 }
 
 .dl-invite-bold {
@@ -464,16 +476,15 @@
 
   .dl-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 12px;
   }
 
-  .dl-grid-col:not(:last-child)::after {
-    display: none;
-  }
-
-  .dl-qr-box {
+  /* Stacked on one column, each row would otherwise stretch to the
+     full card width — cap it so the button/QR row stays a sensible
+     size instead of floating with empty space on either side. */
+  .dl-grid-col {
+    max-width: 420px;
     width: 100%;
-    max-width: 450px;
     margin: 0 auto;
   }
 }
@@ -481,10 +492,6 @@
 @media (max-width: 767.98px) {
   .dl-hero-title {
     font-size: 38px;
-  }
-
-  .dl-card-container {
-    padding: 32px 20px;
   }
 
   .dl-invite-card {
@@ -500,9 +507,7 @@
 }
 
 @media (max-width: 480px) {
-  .dl-qr-box {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+  .dl-grid-col {
+    padding: 14px 12px;
   }
 }
