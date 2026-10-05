@@ -163,71 +163,69 @@ export default function Footer() {
 
         {/* DOWNLOAD APP SECTION */}
         <div id="download-app" className="footer-download-section mt-4 pt-4 border-t border-white/15">
-          <div className="dl-section-header mb-3 text-center">
-            <h2 className="dl-section-title" style={{ color: "#ffffff" }}>Download the ImmunoTrack App</h2>
-            <p className="dl-section-subtitle" style={{ color: "#cfd4e6" }}>
-              Get the app on your phone and start managing your health today.
-            </p>
-          </div>
+          <div className="dl-new-grid">
+            {/* Col 1: Title + Subtitle */}
+            <div className="dl-new-col dl-new-col--title">
+              <h2 className="dl-new-title">
+                Download the{" "}
+                <span className="dl-new-title-accent">ImmunoTrack App</span>
+              </h2>
+              <p className="dl-new-subtitle">
+                Get the app on your phone and start managing your health today.
+              </p>
+            </div>
 
-          <div className="dl-card-container">
-            <div className="dl-grid">
-              {/* iOS Option */}
-              <div className="dl-grid-col">
-                <StoreBadge href={DOWNLOAD_LINKS.appStoreUrl} className="dl-badge-btn" label="Download on the App Store">
+            {/* Col 2: App Store + Google Play stacked */}
+            <div className="dl-new-col dl-new-col--badges">
+              <div className="dl-new-badges-stack">
+                <StoreBadge href={DOWNLOAD_LINKS.appStoreUrl} className="dl-badge-btn hero-btn" label="Download on the App Store">
                   <AppStoreBadgeContent />
                 </StoreBadge>
-                <span className="dl-grid-desc">For iPhone and iPad</span>
-              </div>
-
-              {/* Android Option */}
-              <div className="dl-grid-col">
-                <StoreBadge href={DOWNLOAD_LINKS.googlePlayUrl} className="dl-badge-btn" label="Get it on Google Play">
+                <StoreBadge href={DOWNLOAD_LINKS.googlePlayUrl} className="dl-badge-btn hero-btn" label="Get it on Google Play">
                   <GooglePlayBadgeContent />
                 </StoreBadge>
-                <span className="dl-grid-desc">For Android devices</span>
               </div>
-
-              {/* QR Code Option */}
-              <div className="dl-grid-col">
-                <div className="dl-qr-box">
-                  <div className="dl-qr-img-wrap">
-                    <Image
-                      src={DOWNLOAD_LINKS.qrCodeSrc}
-                      alt="ImmunoTrack Download QR Code"
-                      width={96}
-                      height={96}
-                      className="dl-qr-image"
-                    />
-                  </div>
-                  <div className="dl-qr-info">
-                    <h3 className="dl-qr-title">Scan to Download</h3>
-                    <p className="dl-qr-text">
-                      Open your phone camera and scan the QR code to get the app.
-                    </p>
-                  </div>
-                </div>
+              <div className="dl-new-badge-labels">
+                <span>For iPhone and iPad</span>
+                <span>|</span>
+                <span>For Android devices</span>
               </div>
             </div>
-          </div>
 
-          {/* INVITATION ONLY CARD */}
-          <div className="dl-invite-card mt-6">
-            <div className="dl-invite-icon-wrap">
-              <Image
-                src={alertIcon}
-                alt="Invitation Required"
-                width={22}
-                height={22}
-                aria-hidden="true"
-              />
+            {/* Col 3: QR Code */}
+            <div className="dl-new-col dl-new-col--qr">
+              <div className="dl-new-qr-wrap">
+                <Image
+                  src={DOWNLOAD_LINKS.qrCodeSrc}
+                  alt="ImmunoTrack Download QR Code"
+                  width={110}
+                  height={110}
+                  className="dl-qr-image"
+                />
+              </div>
+              <h3 className="dl-new-qr-title">Scan to Download</h3>
+              <p className="dl-new-qr-text">
+                Open your phone camera and scan the <br />
+                QR code to get the app.
+              </p>
             </div>
-            <div className="dl-invite-content">
-              <h3 className="dl-invite-title">Invitation Only</h3>
-              <p className="dl-invite-text">
+
+            {/* Col 4: Invitation Only */}
+            <div className="dl-new-col dl-new-col--invite">
+              <div className="dl-new-invite-icon">
+                <Image
+                  src={alertIcon}
+                  alt="Invitation Required"
+                  width={24}
+                  height={24}
+                  aria-hidden="true"
+                />
+              </div>
+              <h3 className="dl-new-invite-title">Invitation Only</h3>
+              <p className="dl-new-invite-text">
                 ImmunoTrack is an invite-only app. You&apos;ll need an invitation from your healthcare provider to create your account and get started.
               </p>
-              <p className="dl-invite-bold">
+              <p className="dl-new-invite-bold">
                 If you don&apos;t have an invitation yet, please contact your doctor.
               </p>
             </div>

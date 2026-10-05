@@ -632,111 +632,260 @@ h6 {
 }
 
 /* ============================================================
-   FOOTER DOWNLOAD SECTION OVERRIDES
-   Matches the dark navy theme of the footer
+   FOOTER DOWNLOAD SECTION — NEW 4-COLUMN LAYOUT
+   Col 1: Title  |  Col 2: Badges  |  Col 3: QR  |  Col 4: Invite
    ============================================================ */
-.footer .dl-card-container {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25) !important;
-  color: #ffffff !important;
+
+/* Outer grid */
+.footer .dl-new-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 0.95fr 1fr 1.05fr;
+  gap: 0;
+  align-items: stretch;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer .dl-card-container:hover {
-  background: rgba(255, 255, 255, 0.06) !important;
-  border-color: rgba(45, 214, 229, 0.3) !important;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35) !important;
+/* Each column cell */
+.footer .dl-new-col {
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer .dl-new-col:last-child {
+  border-right: none;
 }
 
-.footer .dl-grid-col {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+/* Col 1 – Title */
+.footer .dl-new-col--title {
+  background: transparent;
+  gap: 12px;
+  text-align: center;
+  align-items: center;
+  padding: 22px 24px;
 }
 
-.footer .dl-grid-desc {
-  color: #cbd5e1 !important;
-  font-weight: 500 !important;
+.footer .dl-new-title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
 }
 
-.footer .dl-qr-box {
-  background: transparent !important;
-  border: none !important;
+.footer .dl-new-title-accent {
+  color: #ffffff;
 }
 
-.footer .dl-qr-title {
-  color: #ffffff !important;
-  font-weight: 800 !important;
-  letter-spacing: normal !important;
-  text-transform: none !important;
+.footer .dl-new-subtitle {
+  font-size: 15.5px;
+  color: #adb5cc;
+  line-height: 1.45;
+  margin: 0;
 }
 
-.footer .dl-qr-title::after {
-  display: none !important;
+/* Col 2 – Badges */
+.footer .dl-new-col--badges {
+  background: rgba(255, 255, 255, 0.025);
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  border-right: none !important;
+  position: relative;
 }
 
-.footer .dl-qr-text {
-  color: #cbd5e1 !important;
-  font-weight: 400 !important;
+.footer .dl-new-col--badges::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 18%;
+  bottom: 18%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.18);
 }
 
-.footer .dl-badge-btn {
+.footer .dl-new-badges-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Override the default .dl-badge-btn inside the new layout */
+.footer .dl-new-col--badges .dl-badge-btn {
+  width: 100% !important;
+  max-width: 195px !important;
+  height: 54px !important;
+  border-radius: 10px !important;
   border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  background: #000000 !important;
+  opacity: 0.95;
+  flex: none !important;
+  margin: 0 !important;
+}
+
+.footer .dl-new-col--badges .dl-badge-btn.hero-btn {
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
   background: #000000 !important;
 }
 
-.footer .dl-invite-card {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(45, 214, 229, 0.35) !important;
-  border-radius: 16px !important;
-  padding: 20px 24px !important;
-  gap: 16px !important;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2) !important;
+.footer .dl-new-col--badges .dl-badge-btn svg {
+  width: 26px !important;
+  height: 26px !important;
+  flex-shrink: 0;
 }
 
-.footer .dl-invite-card:hover {
-  background: rgba(255, 255, 255, 0.06) !important;
-  border-color: rgba(45, 214, 229, 0.6) !important;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3) !important;
-  transform: translateY(-2px) !important;
+.footer .dl-new-col--badges .dl-badge-btn > div,
+.footer .dl-new-col--badges .dl-badge-btn > span > div {
+  transform: none !important;
 }
 
-.footer .dl-invite-icon-wrap {
-  width: 44px !important;
-  height: 44px !important;
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(45, 214, 229, 0.4) !important;
-  box-shadow: 0 0 12px rgba(45, 214, 229, 0.15) !important;
-  flex-shrink: 0 !important;
+.footer .dl-new-badge-labels {
+  display: flex;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #a2abcf;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.footer .dl-invite-icon-wrap img {
-  width: 22px !important;
-  height: 22px !important;
-  filter: brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(1500%) hue-rotate(145deg) brightness(100%) contrast(100%) !important;
+/* Col 3 – QR */
+.footer .dl-new-col--qr {
+  background: rgba(255, 255, 255, 0.025);
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px 16px;
 }
 
-.footer .dl-invite-title {
-  color: #ffffff !important;
-  font-size: 17px !important;
-  font-weight: 800 !important;
-  margin-bottom: 4px !important;
-  letter-spacing: normal !important;
-  text-transform: none !important;
+.footer .dl-new-qr-wrap {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
-.footer .dl-invite-title::after {
-  display: none !important;
+.footer .dl-new-qr-wrap img {
+  width: 88px !important;
+  height: 88px !important;
 }
 
-.footer .dl-invite-text {
-  color: #cbd5e1 !important;
-  font-size: 14px !important;
-  line-height: 1.5 !important;
+.footer .dl-new-qr-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
-.footer .dl-invite-bold {
-  color: var(--color-cyan) !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  margin-top: 6px !important;
+.footer .dl-new-qr-title::after {
+  display: none;
+}
+
+.footer .dl-new-qr-text {
+  font-size: 13.5px;
+  color: #adb5cc;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Col 4 – Invite */
+.footer .dl-new-col--invite {
+  background: rgba(45, 214, 229, 0.05);
+  border-left: 1px solid rgba(45, 214, 229, 0.2);
+  border-right: none;
+  padding: 16px 14px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.footer .dl-new-invite-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(45, 214, 229, 0.12);
+  border: 1px solid rgba(45, 214, 229, 0.35);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-bottom: 2px;
+}
+
+.footer .dl-new-invite-icon img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(1500%) hue-rotate(145deg) brightness(100%) contrast(100%);
+}
+
+.footer .dl-new-invite-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.footer .dl-new-invite-title::after {
+  display: none;
+}
+
+.footer .dl-new-invite-text {
+  font-size: 14px;
+  color: #adb5cc;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.footer .dl-new-invite-bold {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-cyan);
+  margin: 0;
+  margin-top: 2px;
+}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width: 900px) {
+  .footer .dl-new-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer .dl-new-col {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer .dl-new-col:nth-child(2n) {
+    border-right: none;
+  }
+  .footer .dl-new-col--invite {
+    border-left: none;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 580px) {
+  .footer .dl-new-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer .dl-new-col {
+    border-right: none;
+  }
+  .footer .dl-new-col--invite {
+    grid-column: span 1;
+  }
 }
