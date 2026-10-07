@@ -702,11 +702,11 @@
 /* ── SPECIALTIES SECTION ────────────────────────────────── */
 .cl-specialties-section {
   background: var(--cl-bg-light);
-  padding: 20px 16px;
+  padding: 32px 16px 44px;
 }
 
 .cl-specialties-content {
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .cl-specialties-grid {
@@ -731,27 +731,34 @@
   background: #ffffff;
   border: 1px solid var(--cl-border);
   border-radius: var(--cl-radius);
-  padding: 30px 24px;
-  transition: all 0.3s ease;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  box-shadow: 0 2px 8px -2px rgba(2, 18, 79, 0.04);
 }
 
 .cl-specialty-card:hover {
   border-color: var(--color-cyan);
   box-shadow: var(--cl-shadow);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .cl-specialty-title {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--color-navy);
   margin-bottom: 12px;
+  line-height: 1.35;
 }
 
 .cl-specialty-desc {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--cl-text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
+  margin-bottom: 0;
+  flex-grow: 1;
 }
 
 /* ── ONBOARDING SECTION ─────────────────────────────────── */

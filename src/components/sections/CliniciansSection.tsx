@@ -3,8 +3,62 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import aiInsightsImg from "@/assets/images/ImmunoTrack_AI_Insights.png";
-import rtmBillingImg from "@/assets/images/ImmunoTrack_RTM_Billing.png";
+import rtmBillingImg from "@/assets/images/RTM_Billing_Summary_Dashboard.png";
 import "@/assets/styles/clinicians.css";
+
+interface SpecialtySupport {
+  id: string;
+  title: string;
+  description: string;
+}
+
+const SUPPORTED_SPECIALTIES: SpecialtySupport[] = [
+  {
+    id: "allergy-immunology",
+    title: "Allergy & Immunology",
+    description: "Primary specialty. Core clinical scales including ACQ-6, SNOT-22, and POEM are fully integrated.",
+  },
+  {
+    id: "pediatric-allergy",
+    title: "Pediatric Allergy",
+    description: "Age-appropriate symptom scales, family/guardian co-management workflows, and pediatric tracking.",
+  },
+  {
+    id: "ent-otolaryngology",
+    title: "ENT / Otolaryngology",
+    description: "Built-in SNOT-22 rhinology and sinus scoring directly applicable to ENT chronic sinusitis management.",
+  },
+  {
+    id: "sleep-medicine",
+    title: "Sleep Medicine",
+    description: "Monitoring upper airway and sinus symptom dynamics where allergic conditions overlap with sleep-disordered breathing.",
+  },
+  {
+    id: "dermatology",
+    title: "Dermatology",
+    description: "Integrated POEM scoring for eczema, atopic dermatitis, and complex allergic skin condition monitoring.",
+  },
+  {
+    id: "asthma-pulmonology",
+    title: "Asthma & Pulmonology",
+    description: "Rescue inhaler utilization alerts, peak flow tracking, and standardized ACQ-6 composite asthma control scoring.",
+  },
+  {
+    id: "general-pediatrics",
+    title: "General Pediatrics",
+    description: "Pediatric co-management workflows for allergic disease alongside specialist referrals.",
+  },
+  {
+    id: "internal-medicine",
+    title: "Internal Medicine",
+    description: "Between-visit monitoring for internists managing adult allergic and immunologic conditions.",
+  },
+  {
+    id: "family-medicine-primary-care",
+    title: "Family Medicine / Primary Care",
+    description: "Primary care workflows for managing mild-to-moderate allergy and asthma without specialist referral.",
+  },
+];
 
 export default function CliniciansSection() {
   return (
@@ -75,7 +129,7 @@ export default function CliniciansSection() {
           <Reveal className="cl-cpt-image-container mb-10">
             <Image
               src={rtmBillingImg}
-              alt="ImmunoTrack RTM Billing CPT Codes"
+              alt="ImmunoTrack RTM Billing Summary Dashboard"
               unoptimized
               quality={100}
               priority
@@ -223,23 +277,26 @@ export default function CliniciansSection() {
           <div className="cl-specialties-content">
             <span className="cl-section-tag">Specialties</span>
             <h2 className="cl-section-title">Who we support</h2>
+            <p className="cl-section-subtitle">
+              Comprehensive remote monitoring configured for allergy, respiratory, ENT, dermatology, and primary care clinicians.
+            </p>
           </div>
 
           <div className="cl-specialties-grid">
-            <Reveal className="cl-specialty-card">
-              <h3 className="cl-specialty-title">Allergy, Immunology & Dermatology</h3>
-              <p className="cl-specialty-desc">
-                Primary specialty. Core clinical scales including <span className="whitespace-nowrap">ACQ-6</span>, <span className="whitespace-nowrap">SNOT-22</span>, and POEM are fully integrated.
-              </p>
-            </Reveal>
-            <Reveal className="cl-specialty-card" delay={1}>
-              <h3 className="cl-specialty-title">Asthma & Pulmonology</h3>
-              <p className="cl-specialty-desc">Rescue inhaler utilization alerts, symptom-based asthma control scoring and standardized asthma control scoring.</p>
-            </Reveal>
-            <Reveal className="cl-specialty-card" delay={2}>
-              <h3 className="cl-specialty-title">Academic / Hospital</h3>
-              <p className="cl-specialty-desc">Multi-clinician collaborative workspaces, advanced cohort segmentation, and cohort-level analytics.</p>
-            </Reveal>
+            {SUPPORTED_SPECIALTIES.map((spec, index) => {
+              const delay = (index % 3 === 0 ? undefined : (index % 3) as 1 | 2);
+
+              return (
+                <Reveal
+                  key={spec.id}
+                  className="cl-specialty-card"
+                  delay={delay}
+                >
+                  <h3 className="cl-specialty-title">{spec.title}</h3>
+                  <p className="cl-specialty-desc">{spec.description}</p>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
