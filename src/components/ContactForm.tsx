@@ -17,12 +17,10 @@ const US_STATES = [
 
 const SPECIALTY_OPTIONS = [
   "Allergy & Immunology",
-  "Pediatric Allergy",
   "ENT / Otolaryngology",
   "Sleep Medicine",
   "Dermatology",
   "Asthma & Pulmonology",
-  "General Pediatrics",
   "Internal Medicine",
   "Family Medicine / Primary Care",
   "Other",
