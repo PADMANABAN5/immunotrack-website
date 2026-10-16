@@ -166,7 +166,7 @@ export default function Page() {
           </div>
 
           <blockquote className="hm-testimonial-quote">
-            Allergy and immunology practices needed real visibility between visits — not one more dashboard to babysit. ImmunoTrack surfaces flare risk overnight, tracks RTM progress automatically, and shows symptom trends without adding a single task to your day.
+            Allergy and immunology practices needed real visibility between visits — not one more dashboard to babysit. ImmunoTrack scores flare risk overnight, tracks RTM progress automatically, and shows symptom trends without adding a single task to your day.
           </blockquote>
         </div>
       </section>
